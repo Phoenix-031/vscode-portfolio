@@ -1,0 +1,39 @@
+import { MotionConfig } from 'framer-motion'
+import React from 'react'
+import profileimg from '../assets/profilepic.jpg'
+import  {motion} from 'framer-motion'
+
+const About = () => {
+  return (
+    <motion.div className='row-start-2 bg-drk00' 
+        initial={{opacity:0}}
+    animate = {{opacity:1}}
+    exit={{opacity:0}}
+    >
+      <div className='w-full flex justify-center items-center text-2xl text-white font-varela font-medium h-40'>
+        <h1 className=''>
+          <span className='relative block before:block before:absolute before:bottom-10 before:font-Enriqueta before:text-3xl before:right-36 before:content-["<h1>"]  after:block after:absolute after:top-10 after:left-36 after:font-Enriqueta after:text-3xl after:content-["</h1>"]' >About Me</span>
+        </h1>
+      </div>
+      <div className="flex gap-4 justify-between items-center px-10 py-10">
+        <div className=' rounded-xl overflow-hidden h-96'>
+          <img src={profileimg} alt="" className='object-contain' />
+        </div>
+        <div className=' w-3/5 h-full text-poppins text-white text-xl'>
+          <p>         I'm a computer Science and Engineering student and an aspiring software Engineer. I love to solve or atleast try to come up with a solution to real world problems with the help of Technolodgy, the new technolodgies rolling out everyday keeps me on edge. I'm a keen learner spending most of my time working on projects involving various tech stacks. I love competitve programming it's and i have a particular interest towards malware analysis and design. I love Open Source and have been contributer in various events thereby addying to my learning experiences.
+
+          </p>
+          <ul className='flex gap-4 justify-start items-center pt-5 flex-wrap'>
+            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Competitve Programming</li>
+            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>FullStack(Backend Heavy)</li>
+            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Open source</li>
+            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Malware analysis</li>
+            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Devops</li>
+          </ul>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
+export default About
