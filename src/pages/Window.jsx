@@ -8,15 +8,22 @@ import Projects from './Projects'
 import Blogs from './Blogs'
 import Githubview from "./Githubview"
 import Settings from './Settings'
-// import Portfoliocontent from './Portfoliocontent'
+import { useLocation } from 'react-router-dom'
+
+import { AnimatePresence } from 'framer-motion'
 
 
 const Window = () => {
+
+      const location = useLocation()
+  
   return (
-    <div className='col-start-3 grid grid-rows-windiv overflow-auto '>
-        <Filestab />
-        
-        <Routes>
+    
+    <div className='col-start-3 grid grid-rows-windiv overflow-hidden h-full'>
+        <Filestab className="sticky" />
+
+        <AnimatePresence>
+      <Routes  location={location} key={location.pathname}>
           <Route exact path="home" element={ <Home /> } />
           <Route exact path="about" element={ <About /> } />
           <Route exact path="blogs" element={ <Blogs /> } />
@@ -26,6 +33,7 @@ const Window = () => {
           <Route exact path="settings" element={ <Settings /> } />
           
       </Routes>
+        </AnimatePresence>
       
     </div>
   )

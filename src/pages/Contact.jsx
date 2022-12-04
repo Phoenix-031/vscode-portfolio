@@ -5,7 +5,7 @@ import  {motion} from 'framer-motion'
 
 const Contact = () => {
   return (
-    <motion.div className='row-start-2 bg-drk00 w-full flex '
+    <motion.div className='row-start-2 bg-drk00 w-full flex overflow-auto'
         initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}

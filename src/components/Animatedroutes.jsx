@@ -3,9 +3,7 @@ import { Routes,Route } from 'react-router-dom'
 import ProfileLogin from '../pages/ProfileLogin'
 import { useLocation } from 'react-router-dom'
 
-// import Topnav from './components/Topnav'
-// import Footer from './components/Footer'
-// import Content from './pages/Content'
+
 import Portfoliocontent from '../pages/Portfoliocontent'
 
 import Home from '../pages/Home'
@@ -21,7 +19,6 @@ import {AnimatePresence}  from 'framer-motion'
 const Animatedroutes = () => {
 
     const location = useLocation()
-    // console.log(location.pathname)
     
     
   return (

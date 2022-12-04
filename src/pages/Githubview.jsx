@@ -57,8 +57,13 @@ const Githubview = () => {
   } else {
 
     return (
-      <motion.div>
-        <div className='row-start-2 bg-drk00  flex flex-col justify-start items-center gap-6 h-full '>
+      <motion.div 
+              initial={{opacity:0}}
+    animate = {{opacity:1}}
+    exit={{opacity:0}}
+    className="h-full overflow-auto bg-drk00"
+      >
+        <div className='row-start-2 bg-drk00 flex flex-col justify-start items-center gap-6 h-full '>
 
           <div className='flex justify-center items-center gap-4 grid-cols-none grid-rows-none mt-8 py-8 w-8/12 bg-drk01'>
             <p className='font-poppins text-xl text-white flex gap-2 justify-center items-center'>

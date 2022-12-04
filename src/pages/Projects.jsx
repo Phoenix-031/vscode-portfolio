@@ -29,7 +29,12 @@ const Projects = () => {
   } else {
 
       return (
-    <motion.div>
+    <motion.div 
+    initial={{opacity:0}}
+    animate = {{opacity:1}}
+    exit={{opacity:0}}
+    className="overflow-auto h-full"
+    >
     
     <div className='row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-3 justify-center items-center pt-2 pl-5 overflow-auto'>
       {

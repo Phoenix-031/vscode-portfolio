@@ -5,7 +5,7 @@ import Window from './Window'
 
 const Content = () => {
   return (
-    <div className='row-start-2 row-end-3 grid grid-cols-collayout overflow-auto'>
+    <div className='row-start-2 row-end-3 grid grid-cols-collayout h-full overflow-hidden'>
         <Sidenav />
         <Sidefilestab />
         <Window />

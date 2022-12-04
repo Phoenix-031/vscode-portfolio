@@ -10,7 +10,7 @@ const Dropdown = () => {
     const [open,setOpen] = useState(false)
 
     const handledropdown = () => {
-        setOpen(true)
+        setOpen(!open)
     }
      
     

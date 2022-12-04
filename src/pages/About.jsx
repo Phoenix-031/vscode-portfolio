@@ -1,11 +1,10 @@
-import { MotionConfig } from 'framer-motion'
 import React from 'react'
 import profileimg from '../assets/profilepic.jpg'
 import  {motion} from 'framer-motion'
 
 const About = () => {
   return (
-    <motion.div className='row-start-2 bg-drk00' 
+    <motion.div className='row-start-2 bg-drk00 h-full overflow-auto' 
         initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}
