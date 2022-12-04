@@ -23,16 +23,16 @@ const Window = () => {
         <Filestab className="sticky" />
 
         <AnimatePresence>
-      <Routes  location={location} key={location.pathname}>
-          <Route exact path="home" element={ <Home /> } />
-          <Route exact path="about" element={ <About /> } />
-          <Route exact path="blogs" element={ <Blogs /> } />
-          <Route exact path="contact" element={ <Contact /> } />
-          <Route exact path="projects" element={ <Projects /> } />
-          <Route exact path="github" element={ <Githubview /> } />
-          <Route exact path="settings" element={ <Settings /> } />
-          
-      </Routes>
+          <Routes  location={location} key={location.pathname}>
+              <Route exact path="home" element={ <Home /> } />
+              <Route exact path="about" element={ <About /> } />
+              <Route exact path="blogs" element={ <Blogs /> } />
+              <Route exact path="contact" element={ <Contact /> } />
+              <Route exact path="projects" element={ <Projects /> } />
+              <Route exact path="github" element={ <Githubview /> } />
+              <Route exact path="settings" element={ <Settings /> } />
+              
+          </Routes>
         </AnimatePresence>
       
     </div>

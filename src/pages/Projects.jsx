@@ -36,10 +36,10 @@ const Projects = () => {
     className="overflow-auto h-full"
     >
     
-    <div className='row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-3 justify-center items-center pt-2 pl-5 overflow-auto'>
+    <div className='row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-6 justify-center items-center pt-10 pl-5 overflow-auto'>
       {
-        projects && projects.map(p => (
-          <Card cardinfo = {p} key={p._id}/>
+        projects && projects.map((p,ind) => (
+          <Card cardinfo = {p} cardno = {ind} key={p._id}/>
         ))
       }
     </div>

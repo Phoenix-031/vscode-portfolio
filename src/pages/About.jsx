@@ -1,5 +1,5 @@
 import React from 'react'
-import profileimg from '../assets/profilepic.jpg'
+import profileimg from '../assets/profile2.jpg'
 import  {motion} from 'framer-motion'
 
 const About = () => {

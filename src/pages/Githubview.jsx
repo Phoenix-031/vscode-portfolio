@@ -58,20 +58,20 @@ const Githubview = () => {
 
     return (
       <motion.div 
-              initial={{opacity:0}}
-    animate = {{opacity:1}}
-    exit={{opacity:0}}
+    //           initial={{opacity:0}}
+    // animate = {{opacity:1}}
+    // exit={{opacity:0}}
     className="h-full overflow-auto bg-drk00"
       >
         <div className='row-start-2 bg-drk00 flex flex-col justify-start items-center gap-6 h-full '>
 
           <div className='flex justify-center items-center gap-4 grid-cols-none grid-rows-none mt-8 py-8 w-8/12 bg-drk01'>
-            <p className='font-poppins text-xl text-white flex gap-2 justify-center items-center'>
+            <div className='font-poppins text-xl text-white flex gap-2 justify-center items-center'>
               <div className='rounded-full w-24 h-24 object-contain overflow-hidden'>
                 <img src={info.avatar_url} alt="" />
               </div>
               <p>{info.login}</p>
-            </p>
+            </div>
             <p className='font-poppins text-xl text-white'></p>
             <p className='font-poppins text-xl text-white'>{info.public_repos} Repos</p>
             <p className='font-poppins text-xl text-white'>{info.followers} Followers</p>
@@ -81,7 +81,7 @@ const Githubview = () => {
           <div className='flex flex-wrap justify-center items-end gap-4 pl-5 pt-2'>
             {
               repos && repos.map((repo,ind) => (
-                <Githubcard gitinfo = {repo} key={ind}/>
+                <Githubcard cardno={ind} gitinfo = {repo} key={ind}/>
               ))
             }
           </div>

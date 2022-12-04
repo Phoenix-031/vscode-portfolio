@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 import ricon from '../icons/png/react.png'
 import hicon from '../icons/png/html.png'
@@ -11,32 +12,69 @@ import jsonicon from '../icons/png/json.png'
 const List = (props) => {
   return (
     <>
-            <ul className={`w-full pl-4 text-green-500 flex flex-col transition-all duration-100 ease-in`}>
-                <li className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'>
+            <motion.ul className={`w-full pl-4 text-green-500 flex flex-col transition-all duration-100 ease-in`}>
+                <motion.li  className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'
+                initial={{opacity:0,translateY:-100}}
+                animate={{opacity:1,translateY:0}}
+                transition={{
+                    delay:0.2
+                }}
+
+                >
                     <img src={ricon} alt=""  height={16} width={16}/>
                     <Link to="/home">home.jsx</Link>
-                </li>
-                <li className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'>
+                </motion.li>
+                <motion.li  className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'
+                initial={{opacity:0,translateY:-100}}
+                animate={{opacity:1,translateY:0}}
+                transition={{
+                    delay:0.3
+                }}
+                >
                     <img src={hicon} alt=""  height={16} width={16}/>
                      <Link to='/about'>about.html</Link>
-                </li>
-                <li className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'>
+                </motion.li>
+                <motion.li  className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'
+                initial={{opacity:0,translateY:-90}}
+                animate={{opacity:1,translateY:0}}
+                transition={{
+                    delay:0.4
+                }}
+                >
                     <img src={jicon} alt="" height={16} width={16} />
                     <Link to='/projects'>projects.js</Link>
-                </li>
-                <li className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'>
+                </motion.li>
+                <motion.li  className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'
+                initial={{opacity:0,translateY:-80}}
+                animate={{opacity:1,translateY:0}}
+                transition={{
+                    delay:0.5
+                }}
+                >
                     <img src={jsonicon} alt="" height={16} width={16}/>
                     <Link to='/blogs'>blogs.json</Link>
-                </li>
-                <li className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'>
+                </motion.li>
+                <motion.li  className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'
+                initial={{opacity:0,translateY:-75}}
+                animate={{opacity:1,translateY:0}}
+                transition={{
+                    delay:0.6
+                }}
+                >
                     <img src={cicon} alt=""  height={16} width={16}/>
                     <Link to='/contact'>contact.css</Link>
-                </li>
-                <li className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'>
+                </motion.li>
+                <motion.li  className='flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00'
+                initial={{opacity:0,translateY:-70}}
+                animate={{opacity:1,translateY:0}}
+                transition={{
+                    delay:0.7
+                }}
+                >
                     <img src={micon} alt=""  height={16} width={16}/>
                     <Link to='/github'>github.md</Link>
-                </li>
-            </ul>
+                </motion.li>
+            </motion.ul>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 // import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const Card = (props) => {
 
@@ -7,9 +8,32 @@ const Card = (props) => {
 
   
   return (
-    <div className='border-white border-2 rounded-xl max-h-max bg-gray-800 px-3 py-3 text-white text-lg font-urbanist w-4/12 flex flex-col justify-start items-center gap-4' >
+    <motion.div className='border-white border-2 rounded-xl max-h-max bg-gray-800 px-3 py-3 text-white text-lg font-urbanist w-4/12 flex flex-col justify-start items-center gap-4'
+    initial={{opacity:0,
+      translateX: props.cardno % 2 ===0 ? -150 : 150
+    }}
+     whileInView={{
+      opacity:1,
+      translateX:0
+     }}
+     transition={{
+      delay:props.cardno * 0.2,
+      ease:'easeIn',
+      duration:0.6,
+      type:'spring',
+      stiffness:100
+     }}
+     >
       <div className='overflow-hidden'>
-        <img src={props.cardinfo.imgurl} alt="" className='transition-all duration-75 ease-in hover:rotate-6 hover:scale-100'/>
+        <motion.img src={props.cardinfo.imgurl} alt="" className='transition-all duration-75 ease-in hover:rotate-6 hover:scale-100'
+        initial={{opacity: 0.6}}
+        whileHover={{
+          scale:1.2,
+          rotate:15,
+          transition:{duration:0.5}
+        }}
+        exit={{opacity:1}}
+        />
       </div>
       <div className='text-3xl font-Enriqueta'>
         {props.cardinfo.title}
@@ -29,7 +53,7 @@ const Card = (props) => {
         <p className='border-gray-500 border-2 rounded-xl px-4 py-2 hover:'><a href={props.cardinfo.live}>Live Demo</a></p>
         <p className='border-gray-500 border-2 rounded-xl px-4 py-2 hover:'><a href={props.cardinfo.source}>Source</a></p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
