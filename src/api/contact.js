@@ -6,7 +6,7 @@ const sendMessage = async (formdata) => {
 
     // console.log(name, email, subject, message)
     
-    const response = await axios.post("http://localhost:8967/api/contact",{
+    const response = await axios.post("https://portfoliobackend-552r.onrender.com/api/contact",{
         name,
         email,
         subject,
@@ -18,7 +18,7 @@ const sendMessage = async (formdata) => {
 
 const getMessages = async (req,res) => {
     try {
-        const contactmsgs = await axios.get('http://localhost:8967/api/contact')
+        const contactmsgs = await axios.get('https://portfoliobackend-552r.onrender.com/api/contact')
 
         return contactmsgs
     } catch (err) {
