@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import {sendMessage} from '../api/contact'
+import { motion } from 'framer-motion'
 
 const Form = () => {
 
@@ -8,12 +9,14 @@ const Form = () => {
   const [email,setEmail]= useState("")
   const [message,setMessage]= useState("")
   const [subject,setSubject]= useState("")
+  const [sent,setSent] = useState(false)
 
   const handleformsubmit = async(e) => {
     e.preventDefault()
     const res = await  sendMessage({name,email,subject,message})
 
     if(res.data.success) {
+      setSent(true)
       setSubject("")
       setName("")
       setEmail("")
@@ -21,10 +24,31 @@ const Form = () => {
     }
 
   }
+
+  const closepopup = () => {
+    setSent(false)
+  }
   
   return (
-    
-    <div className='w-1/2'>
+      <div className='w-1/2'>
+        {
+          sent ? (
+            <motion.div className=' flex justify-between items-center border-white border-2 right-6 text-xl font-Enriqueta text-medium text-white py-5 px-5 w-64 fixed top-36 bg-gray-600 rounded-xl '
+            initial={{opacity:0,translateX:200}}
+            animate={{opacity:1,translateX:0}}
+            transition ={{
+              duration:0.4,
+              ease:'easeInOut',
+              type:"spring",
+              stiffness:150
+            }}
+            >
+              <p>Sent Successfully</p>
+               <button onClick={closepopup} className='rounded-full border-gray-800 border-2 w-12 h-12 flex justify-center items-center hover:bg-gray-400 cursor-pointer'>X</button>
+            </motion.div>
+          ) : ("")
+        }
+        
       <form className='w-full h-full flex flex-col gap-8 justify-start items-center px-16 py-8' onSubmit={handleformsubmit}>
               <div className='text-3xl text-white font-medium font-Enriqueta'>Get In Touch</div>
         <div className='w-full flex flex-col gap-2'>
