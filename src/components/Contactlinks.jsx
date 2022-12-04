@@ -2,10 +2,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const Contactlinks = () => {
 
-  const listVariant = {
-    init:{opacity:0,translateX:-100},
+  // const listVariant = {
+  //   init:{opacity:0,translateX:-100},
   
-  }
+  // }
   
   return (
     <motion.div className='w-1/2  flex flex-col justify-start items-center'

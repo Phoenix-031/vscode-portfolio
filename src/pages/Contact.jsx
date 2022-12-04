@@ -1,7 +1,7 @@
 import React from 'react'
 import Form from '../components/Form'
 import Contactlinks from '../components/Contactlinks'
-import  {motion,Variants} from 'framer-motion'
+import  {motion} from 'framer-motion'
 
 const Contact = () => {
 
