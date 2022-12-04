@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Contact from '../icons/Contact'
+// import Contact from '../icons/Contact'
 
 const sendMessage = async (formdata) => {
     const {name,email,subject,message} = {...formdata}
