@@ -22,13 +22,58 @@ const About = () => {
           <p>         I'm a computer Science and Engineering student and an aspiring software Engineer. I love to solve or atleast try to come up with a solution to real world problems with the help of Technolodgy, the new technolodgies rolling out everyday keeps me on edge. I'm a keen learner spending most of my time working on projects involving various tech stacks. I love competitve programming it's and i have a particular interest towards malware analysis and design. I love Open Source and have been contributer in various events thereby addying to my learning experiences.
 
           </p>
-          <ul className='flex gap-4 justify-start items-center pt-5 flex-wrap'>
-            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Competitve Programming</li>
-            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>FullStack(Backend Heavy)</li>
-            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Open source</li>
-            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Malware analysis</li>
-            <li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'>Devops</li>
-          </ul>
+          <motion.ul className='flex gap-4 justify-start items-center pt-5 flex-wrap'>
+            <motion.li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'
+            initial={{opacity:0,translateX:-100}}
+            animate={{opacity:1,translateX:0}}
+            transition={{
+              duration:0.5,
+              delay:0.1,
+              type:"spring",
+              stiffness:100
+            }}
+            >Competitve Programming</motion.li>
+            <motion.li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'
+                        initial={{opacity:0,translateX:-100}}
+            animate={{opacity:1,translateX:0}}
+            transition={{
+              duration:0.5,
+              delay:0.1,
+              type:"spring",
+              stiffness:100
+            }}
+            >FullStack(Backend Heavy)</motion.li>
+            <motion.li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'
+                        initial={{opacity:0,translateX:-100}}
+            animate={{opacity:1,translateX:0}}
+            transition={{
+              duration:0.5,
+              delay:0.2,
+              type:"spring",
+              stiffness:100
+            }}
+            >Open source</motion.li>
+            <motion.li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'
+                        initial={{opacity:0,translateX:-100}}
+            animate={{opacity:1,translateX:0}}
+            transition={{
+              duration:0.5,
+              delay:0.3,
+              type:"spring",
+              stiffness:100
+            }}
+            >Malware analysis</motion.li>
+            <motion.li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'
+                        initial={{opacity:0,translateX:-100}}
+            animate={{opacity:1,translateX:0}}
+            transition={{
+              duration:0.5,
+              delay:0.4,
+              type:"spring",
+              stiffness:100
+            }}
+            >Devops</motion.li>
+          </motion.ul>
         </div>
       </div>
     </motion.div>
