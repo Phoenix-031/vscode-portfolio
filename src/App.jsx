@@ -1,4 +1,4 @@
-import {React,useEffect} from 'react'
+import {React} from 'react'
 import './dist/style.css'
 import { Routes,Route } from 'react-router-dom'
 import ProfileLogin from './pages/ProfileLogin'

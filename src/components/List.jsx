@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link,useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { createContext,useContext,useEffect } from 'react'
+// import { createContext,useContext,useEffect } from 'react'
 
 import ricon from '../icons/png/react.png'
 import hicon from '../icons/png/html.png'
@@ -10,7 +10,7 @@ import micon from '../icons/png/md.png'
 import jicon from '../icons/png/js.png'
 import jsonicon from '../icons/png/json.png'
 
-const ListContext = createContext(JSON.parse(localStorage.getItem('listtabs')))
+// const ListContext = createContext(JSON.parse(localStorage.getItem('listtabs')))
 
 
 const List = (props) => {
