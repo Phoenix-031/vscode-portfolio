@@ -37,7 +37,7 @@ const Home = () => {
           }}
           // end={{translateY:-100}}
           >
-            {/* <img src={profileimg} alt="" className=''/> */}
+            <img src={profileimg} alt="" className=''/>
           </motion.div>
           <div>
             <span className='font-cursive1 text-sm absolute left-0 bottom-20'>&lt;body/&gt;</span>
