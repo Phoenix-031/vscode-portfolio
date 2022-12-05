@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link,useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { createContext,useContext,useEffect } from 'react'
 
 import ricon from '../icons/png/react.png'
 import hicon from '../icons/png/html.png'
@@ -9,8 +10,18 @@ import micon from '../icons/png/md.png'
 import jicon from '../icons/png/js.png'
 import jsonicon from '../icons/png/json.png'
 
+const ListContext = createContext(JSON.parse(localStorage.getItem('listtabs')))
+
+
 const List = (props) => {
     const location = useLocation()
+
+    // const handleclick = (e) => {
+    //     console.log(e)
+    //     // const tabsarr = JSON.stringify((JSON.parse(localStorage.getItem("tabs"))).push(e.target.href))
+        
+    //     // localStorage.setItem('tabs',tabsarr)
+    // }
     
   return (
     <>
@@ -26,6 +37,8 @@ const List = (props) => {
                     translateY:-100
                 }}
 
+                // onClick={handleclick}
+
                 >
                     <img src={ricon} alt=""  height={16} width={16}/>
                     <Link to="/">home.jsx</Link>
@@ -36,6 +49,7 @@ const List = (props) => {
                 transition={{
                     delay:0.3
                 }}
+                // onClick={handleclick}
                 >
                     <img src={hicon} alt=""  height={16} width={16}/>
                      <Link to='/about'>about.html</Link>
@@ -46,6 +60,7 @@ const List = (props) => {
                 transition={{
                     delay:0.4
                 }}
+                // onClick={handleclick}
                 >
                     <img src={jicon} alt="" height={16} width={16} />
                     <Link to='/projects'>projects.js</Link>
@@ -56,6 +71,7 @@ const List = (props) => {
                 transition={{
                     delay:0.5
                 }}
+                // onClick={handleclick}
                 >
                     <img src={jsonicon} alt="" height={16} width={16}/>
                     <Link to='/blogs'>blogs.json</Link>
@@ -66,6 +82,7 @@ const List = (props) => {
                 transition={{
                     delay:0.6
                 }}
+                // onClick={handleclick}
                 >
                     <img src={cicon} alt=""  height={16} width={16}/>
                     <Link to='/contact'>contact.css</Link>
@@ -76,6 +93,7 @@ const List = (props) => {
                 transition={{
                     delay:0.7
                 }}
+                // onClick={handleclick}
                 >
                     <img src={micon} alt=""  height={16} width={16}/>
                     <Link to='/github'>github.md</Link>

@@ -1,4 +1,4 @@
-import {React} from 'react'
+import {React,useEffect} from 'react'
 import './dist/style.css'
 import { Routes,Route } from 'react-router-dom'
 import ProfileLogin from './pages/ProfileLogin'
@@ -18,10 +18,15 @@ import Settings from './pages/Settings'
 
 const App = () => {
 
+//   useEffect(() => {
+//   localStorage.setItem("tabs", JSON.stringify(["/"]))
+// }, [])
+
       // const location = useLocation()
   
   return (
-     <Routes >
+    <div className='overflow-y-auto'>
+           <Routes >
       <Route exact path="/dashboard" element={ <ProfileLogin /> } />
       <Route exact path="/" element={ <Portfoliocontent /> } >
           <Route exact path="" element={ <Home /> } />
@@ -33,6 +38,7 @@ const App = () => {
           <Route exact path="settings" element={ <Settings /> } />
       </Route>
     </Routes> 
+    </div>
   )
 }
 
