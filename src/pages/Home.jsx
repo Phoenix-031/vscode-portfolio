@@ -1,6 +1,7 @@
 import React from 'react'
 import  {motion} from 'framer-motion'
 import profileimg from '../assets/profile2.jpg'
+import Typinganimation from '../components/Typinganimation'
 
 const Home = () => {
   return (
@@ -31,10 +32,10 @@ const Home = () => {
         </div>
 
 
-        <div className='h-full flex flex-col w-2/3 justify-center items-baseline px-10 gap-4'>
+        <div className='h-full flex flex-col w-2/3 justify-center items-baseline px-10 gap-6'>
           <div>
             <p>Hi There</p>
-            <div></div>
+            <div className='flex gap-3 text-3xl font-Enriqueta text-bold'>I'm  <span><Typinganimation /></span></div>
           </div>
 
           <div>I'm a Webdeveloper working on fullstack projects and interested in malware analysis, trying to build something valuable for the comminuty and overengineering more or less eveything! </div>
@@ -48,7 +49,7 @@ const Home = () => {
 
           <div className='w-full flex gap-4 justify-start items-center'>
             <div>
-              <button className='border-white border-2 py-4 px-10 rounded-3xl font-semibold font-Enriqueta hover:text-yellow-500 relative before:absolute before:w-[0%] before:bg-red-800 before:h-full before:top-0 before:left-0 before:-z-10 hover:before:w-[100%] z-1'>Resume</button>
+              <button className='border-white border-2 py-4 px-10 rounded-3xl font-semibold font-Enriqueta hover:text-yellow-500'>Resume</button>
               <span></span>
             </div>
             <div>
