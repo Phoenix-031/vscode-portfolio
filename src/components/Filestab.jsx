@@ -20,7 +20,7 @@ const Filestab = () => {
         <p>
           <img src={ricon} alt="" width={18} height={18} />
         </p>
-        <Link to='/home'>home.jsx</Link>
+        <Link to='/'>home.jsx</Link>
       </div>
       <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')} >
         <p>

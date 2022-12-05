@@ -1,7 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import {sendMessage} from '../api/contact'
 import { motion } from 'framer-motion'
+import Msgsend from './Msgsend'
+import sicon from '../icons/png/success.png'
+// import Progress from './Progress'
 
 const Form = () => {
 
@@ -10,13 +13,41 @@ const Form = () => {
   const [message,setMessage]= useState("")
   const [subject,setSubject]= useState("")
   const [sent,setSent] = useState(false)
+  const [sending,setSending] = useState(false)
+  // const [progress, setProgress] = useState(0)
+  // const [running, setRunning] = useState(false)
 
+  // useEffect(()=>{
+
+  //   let interval = undefined
+    
+  //   if(running) {
+  //     interval = setInterval(()=>{
+  //       setProgress((progress) => progress+1)
+  //     },30)
+  //   } else {
+  //     clearInterval(interval)
+  //   }
+  // },[running])
+
+  // useEffect(()=>{
+  //   if(progress === 100) {
+  //     setProgress(0)
+  //     setRunning(false)
+  //   }
+  // },[progress])
+  
   const handleformsubmit = async(e) => {
     e.preventDefault()
+    // console.log({name,email,subject,message})
+    setSending(true)
     const res = await  sendMessage({name,email,subject,message})
 
     if(res.data.success) {
-      setSent(true)
+      setSending(false)   //loader
+      setSent(true)       //popup
+
+      //form related
       setSubject("")
       setName("")
       setEmail("")
@@ -25,15 +56,22 @@ const Form = () => {
 
   }
 
-  const closepopup = () => {
-    setSent(false)
-  }
+  useEffect(()=>{
+    if(sent) {
+      setTimeout(() => {
+        setSent(false)
+      },1500)
+    } else {
+      setSent(false)
+    }
+  },[sent])
+  
   
   return (
       <div className='w-1/2'>
         {
           sent ? (
-            <motion.div className=' flex justify-between items-center border-white border-2 right-6 text-xl font-Enriqueta text-medium text-white py-5 px-5 w-64 fixed top-36 bg-gray-600 rounded-xl '
+            <motion.div className='h-16 w-72 flex flex-col justify-between items-centerright-6 text-xl font-Enriqueta text-medium text-white fixed top-5 right-10 bg-gray-600'
             initial={{opacity:0,translateX:200}}
             animate={{opacity:1,translateX:0}}
             transition ={{
@@ -43,8 +81,13 @@ const Form = () => {
               stiffness:150
             }}
             >
-              <p>Sent Successfully</p>
-               <button onClick={closepopup} className='rounded-full border-gray-800 border-2 w-12 h-12 flex justify-center items-center hover:bg-gray-400 cursor-pointer'>X</button>
+              <div className='w-full  pt-3 px-5 flex justify-between items-center'>
+                <p>Sent Successfully</p>
+                <button  className=' border-gray-800 border-2cursor-pointer'>
+                  <img src={sicon} alt="" height={30} width={30}/>
+                </button>
+              </div>
+              {/* <Progress progwidth = {progress} /> */}
             </motion.div>
           ) : ("")
         }
@@ -73,7 +116,10 @@ const Form = () => {
         </div>
 
         <div>
-          <button className='border-white border-2 bg-gray-500 text-xl text-gray-900 font-Enriqueta py-3 px-5 rounded-lg font-semibold transition-colors duration-100 ease-in hover:bg-gray-600 hover:text-white' >Send Message</button>
+          {
+            sending ? (<Msgsend />) : (<button className='border-white border-2 bg-gray-500 text-xl text-gray-900 font-Enriqueta py-3 px-5 rounded-lg font-semibold transition-colors duration-100 ease-in hover:bg-gray-600 hover:text-white' 
+             >Send Message</button>)
+          }
         </div>
       </form>
     </div>

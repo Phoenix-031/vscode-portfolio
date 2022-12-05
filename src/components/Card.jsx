@@ -24,27 +24,26 @@ const Card = (props) => {
       stiffness:100
      }}
      >
-      <div className='overflow-hidden'>
-        <motion.img src={props.cardinfo.imgurl} alt="" className='transition-all duration-75 ease-in hover:rotate-6 hover:scale-100'
-        initial={{opacity: 0.6}}
+      <div className='overflow-hidden h-52 rounded-lg w-full'>
+        <motion.img src={props.cardinfo.imgurl} alt="" className=' border-white border-2 transition-all duration-75 ease-in hover:rotate-6 hover:scale-100'
+        initial={{opacity: 0.8}}
         whileHover={{
-          scale:1.2,
-          rotate:15,
+          scale:1.05,
           transition:{duration:0.5}
         }}
         exit={{opacity:1}}
         />
-      </div>
-      <div className='text-3xl font-Enriqueta'>
+      </div> 
+      <div className='text-2xl font-Enriqueta'>
         {props.cardinfo.title}
       </div>
       <p className='flex flex-wrap w-full overflow-hidden text-xl font-varela text-center '>
         {props.cardinfo.description}
       </p>
-      <div className='flex gap-2 justify-start items-center w-full flex-wrap'>
+      <div className='flex gap-2 justify-start items-center w-full flex-wrap text-sm font-semibold'>
         {
           props.cardinfo.tags && props.cardinfo.tags.map((tag,ind) => (
-            <p className='border-gray-400 border-2 rounded-xl py-1 px-3' key={ind}>{tag}</p>
+            <p className='border-gray-400 border-2 rounded-2xl py-2 px-3' key={ind}>{tag}</p>
           )
           )
         }

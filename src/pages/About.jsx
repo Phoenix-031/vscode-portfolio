@@ -5,9 +5,13 @@ import  {motion} from 'framer-motion'
 const About = () => {
   return (
     <motion.div className='row-start-2 bg-drk00 h-full overflow-auto' 
-        initial={{opacity:0}}
+    initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}
+    transition={{
+      duration:0.2,
+      ease:'easeIn'
+    }}
     >
       <div className='w-full flex justify-center items-center text-2xl text-white font-varela font-medium h-40'>
         <h1 className=''>

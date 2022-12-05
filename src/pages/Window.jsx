@@ -24,7 +24,7 @@ const Window = () => {
 
         <AnimatePresence>
           <Routes  location={location} key={location.pathname}>
-              <Route exact path="home" element={ <Home /> } />
+              <Route exact path="" element={ <Home /> } />
               <Route exact path="about" element={ <About /> } />
               <Route exact path="blogs" element={ <Blogs /> } />
               <Route exact path="contact" element={ <Contact /> } />

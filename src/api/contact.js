@@ -6,7 +6,7 @@ const sendMessage = async (formdata) => {
 
     // console.log(name, email, subject, message)
     
-    const response = await axios.post("https://portfoliobackend-552r.onrender.com/api/contact",{
+    const response = await axios.post("https://witty-frog-tiara.cyclic.app/api/contact",{
         name,
         email,
         subject,
@@ -18,14 +18,14 @@ const sendMessage = async (formdata) => {
 
 const getMessages = async (req,res) => {
     try {
-        const contactmsgs = await axios.get('https://portfoliobackend-552r.onrender.com/api/contact')
+        const contactmsgs = await axios.get(' https://witty-frog-tiara.cyclic.app/api/contact')
 
         return contactmsgs
     } catch (err) {
         console.log(err)
         res.status(500).json({
             success:false,
-            msg:"messages couls not be fetched"
+            msg:"messages could not be fetched"
         })
         
     }
