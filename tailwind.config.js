@@ -37,7 +37,9 @@ module.exports = {
         'poppins':["Poppins","sans-serif"],
         'Enriqueta':["Enriqueta","sans-serif"],
         'urbanist':["Urbanist","sans-serif"],
-        'varela':["Varela","sans-serif"]
+        'varela':["Varela","sans-serif"],
+        'roboto':["Roboto","sans-serif"],
+        'cursive1':["Nothing You Could Do","sans-serif"],
       }
     },
   },
