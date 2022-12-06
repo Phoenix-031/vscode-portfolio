@@ -9,9 +9,11 @@ import micon from '../icons/png/md.png'
 import jicon from '../icons/png/js.png'
 import jsonicon from '../icons/png/json.png'
 import { TabContext } from '../context/TabContext'
+import Cross from '../icons/Cross'
+import { RemoveTab } from '../context/Actions'
 
 const Filestab = () => {
-
+  
   const location = useLocation()
   const returnElement = (item) => {
         if(item === '/') {
@@ -21,6 +23,7 @@ const Filestab = () => {
                   <img src={ricon} alt="" width={18} height={18} />
                 </p>
                 <Link to='/'>home.jsx</Link>
+                <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross/></span>
               </div>
           )
       } else if (item === '/projects') {
@@ -30,6 +33,7 @@ const Filestab = () => {
                       <img src={jicon} alt="" width={20} height={20} />
                     </p>
                     <Link to='/projects'>projects.js</Link>
+                    <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/projects'><Cross/></span>
                   </div>
         )
       } else if(item === '/about') {
@@ -39,6 +43,7 @@ const Filestab = () => {
                       <img src={hicon} alt="" width={20} height={20} />
                     </p>
                     <Link to='/about'>about.html</Link>
+                    <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/about'><Cross/></span>
                   </div>
         )
       } else if(item === '/contact') {
@@ -48,6 +53,7 @@ const Filestab = () => {
                     <img src={cicon} alt="" width={20} height={20} />
                   </p>
                   <Link to='/contact'>contact.css</Link>
+                  <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/contact'><Cross/></span>
                 </div>
         )
   } else if(item === '/github') {
@@ -57,6 +63,7 @@ const Filestab = () => {
                 <img src={micon} alt="" width={20} height={20} />
               </p>
               <Link to='/github'>github.md</Link>
+              <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/github'><Cross/></span>
             </div> 
     )
   } else if(item === '/blogs') {
@@ -66,13 +73,21 @@ const Filestab = () => {
           <img src={jsonicon} alt="" width={20} height={20} />
         </p>
         <Link to='/blogs'>blogs.json</Link>
+        <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/blogs'><Cross/></span>
       </div>
     )
   }
 }
   
 
-  const {tabs,} = useContext(TabContext)
+  const {tabs,dispatch} = useContext(TabContext)
+
+
+    const handleclose = (e) => {
+    console.log(e.target.parentElement.attributes.id.value)
+    dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
+  }
+  
   
   return (
     <div className='bg-drk01 flex justify-start items-center'>

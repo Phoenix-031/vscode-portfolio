@@ -25,7 +25,7 @@ const App = () => {
       // const location = useLocation()
   
   return (
-    <div className='overflow-y-auto'>
+    <div className='overflow-x-auto w-screen h-screen'>
            <Routes >
       <Route exact path="/dashboard" element={ <ProfileLogin /> } />
       <Route exact path="/" element={ <Portfoliocontent /> } >
