@@ -32,7 +32,7 @@ const Sidenav = () => {
 
        <div className="flex flex-col justify-end items-center bg-drk00   row-start-5 cursor-pointer pb-3 w-full">
         <div className='cursor-pointer w-full bg-drk00 flex justify-center items-center py-2  hover:bg-drk01'>
-          <Link to='/dashboard'><Profile /></Link>
+          <Link to='/dashboardlogin'><Profile /></Link>
         </div>
         <div className='cursor-pointer w-full bg-drk00 flex justify-center items-center py-2  hover:bg-drk01'>
           <Link to='/settings'><Settings /></Link>

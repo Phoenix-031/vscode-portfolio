@@ -27,7 +27,8 @@ const App = () => {
   return (
     <div className='overflow-x-auto w-screen h-screen'>
            <Routes >
-      <Route exact path="/dashboard" element={ <ProfileLogin /> } />
+      <Route exact path="/dashboardlogin" element={ <ProfileLogin /> } />
+      <Route exact path="/admin"/>
       <Route exact path="/" element={ <Portfoliocontent /> } >
           <Route exact path="" element={ <Home /> } />
           <Route exact path="about" element={ <About /> } />

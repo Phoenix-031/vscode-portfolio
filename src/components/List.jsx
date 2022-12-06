@@ -19,14 +19,16 @@ const List = (props) => {
     // const [state,dispatch] = useReducer(Reducer,INITIAL_STATE)
     
     const handleclick = (e) => {
-        console.log(e.target.attributes[0].nodeValue)
-        dispatch(AddTab(e.target.attributes[0].nodeValue))
+        // console.log(e.target.attributes[0].nodeValue)
+        console.log(e.target.attributes.id.value)
+        dispatch(AddTab(e.target.attributes.id.value))
     }
     
   return (
     <>
             <motion.ul className={`w-full pl-4 text-green-500 flex flex-col transition-all duration-100 ease-in-out`}>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}
+                <Link to='/'>
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-100}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
@@ -38,68 +40,98 @@ const List = (props) => {
                 }}
 
                 onClick={handleclick}
-                key={'/'}
+                id='/'
 
                 >
                     <img src={ricon} alt=""  height={16} width={16}/>
-                    <Link className='py-1' to="/">home.jsx</Link>
+                    {/* <Link to="/">home.jsx</Link> */}
+                    home.jsx
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')}
+                </Link>
+
+
+                <Link to='/about'>
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-100}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
                     delay:0.3
                 }}
                 onClick={handleclick}
-                key='/about'
+                id='/about'
                 >
                     <img src={hicon} alt=""  height={16} width={16}/>
-                     <Link className='py-1' to='/about'>about.html</Link>
+                     {/* <Link to='/about'>about.html</Link> */}
+                     about.html
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')}
+                </Link>
+
+
+                <Link to='/projects'>
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-90}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
                     delay:0.4
                 }}
                 onClick={handleclick}
+                id='/projects'
                 >
                     <img src={jicon} alt="" height={16} width={16} />
-                    <Link className='py-1' to='/projects'>projects.js</Link>
+                    {/* <Link to='/projects'>projects.js</Link> */}
+                    projects.js
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/blogs' ? 'bg-drk00' : 'bg-drk01')}
+                </Link>
+
+
+                <Link to='/blogs'>
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/blogs' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-80}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
                     delay:0.5
                 }}
                 onClick={handleclick}
+                id='/blogs'
                 >
                     <img src={jsonicon} alt="" height={16} width={16}/>
-                    <Link className='py-1' to='/blogs'>blogs.json</Link>
+                    {/* <Link to='/blogs'>blogs.json</Link> */}
+                    blogs.json
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/contact' ? 'bg-drk00' : 'bg-drk01')}
+                </Link>
+
+                <Link to='/contact'>
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/contact' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-75}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
                     delay:0.6
                 }}
                 onClick={handleclick}
+                id='/contact'
                 >
                     <img src={cicon} alt=""  height={16} width={16}/>
-                    <Link className='py-1' to='/contact'>contact.css</Link>
+                    {/* <Link to='/contact'>contact.css</Link> */}
+                    contact.css
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')}
+                </Link>
+
+
+                <Link to={'/github'}>
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-70}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
                     delay:0.7
                 }}
                 onClick={handleclick}
+                id='/github'
                 >
                     <img src={micon} alt=""  height={16} width={16}/>
-                    <Link className='py-1' to='/github'>github.md</Link>
+                    {/* <Link to='/github'>github.md</Link> */}
+                    github.md
                 </motion.li>
+                </Link>
             </motion.ul>
     </>
   )
