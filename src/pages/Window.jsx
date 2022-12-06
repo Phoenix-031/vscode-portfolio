@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Route,Routes, useNavigate } from 'react-router-dom'
+import { Route,Routes, useNavigate,Navigate } from 'react-router-dom'
 import Filestab from '../components/Filestab'
 import Home from './Home'
 import About from './About'
@@ -28,7 +28,7 @@ const Window = () => {
           navigate(tabs[tabs.length-1])
         }
       // eslint-disable-next-line react-hooks/exhaustive-deps
-      },[tabs,location.pathname])
+      },[tabs])
   
   return (
     
