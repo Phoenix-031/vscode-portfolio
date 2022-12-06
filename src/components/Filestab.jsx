@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useContext} from 'react'
 import { Link,useLocation } from 'react-router-dom'
 
 
@@ -8,57 +8,81 @@ import cicon from '../icons/png/css.png'
 import micon from '../icons/png/md.png'
 import jicon from '../icons/png/js.png'
 import jsonicon from '../icons/png/json.png'
-// import { useState } from 'react'
+import { TabContext } from '../context/TabContext'
 
 const Filestab = () => {
 
   const location = useLocation()
+  const returnElement = (item) => {
+        if(item === '/') {
+          return(
+              <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}>
+                <p>
+                  <img src={ricon} alt="" width={18} height={18} />
+                </p>
+                <Link to='/'>home.jsx</Link>
+              </div>
+          )
+      } else if (item === '/projects') {
+        return(
+                  <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')} >
+                    <p>
+                      <img src={jicon} alt="" width={20} height={20} />
+                    </p>
+                    <Link to='/projects'>projects.js</Link>
+                  </div>
+        )
+      } else if(item === '/about') {
+        return(
+                  <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')} >
+                    <p>
+                      <img src={hicon} alt="" width={20} height={20} />
+                    </p>
+                    <Link to='/about'>about.html</Link>
+                  </div>
+        )
+      } else if(item === '/contact') {
+        return(
+                <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/contact' ? 'bg-drk00' : 'bg-drk01')} >
+                  <p>
+                    <img src={cicon} alt="" width={20} height={20} />
+                  </p>
+                  <Link to='/contact'>contact.css</Link>
+                </div>
+        )
+  } else if(item === '/github') {
+    return (
+            <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')} >
+              <p>
+                <img src={micon} alt="" width={20} height={20} />
+              </p>
+              <Link to='/github'>github.md</Link>
+            </div> 
+    )
+  } else if(item === '/blogs') {
+    return (
+      <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/blogs' ? 'bg-drk00' : 'bg-drk01')} >
+        <p>
+          <img src={jsonicon} alt="" width={20} height={20} />
+        </p>
+        <Link to='/blogs'>blogs.json</Link>
+      </div>
+    )
+  }
+}
+  
 
-  // const [tabs,setTabs] = useState(JSON.parse(localStorage.getItem('tabs')))
-
-  // const returnElement = (item) => {
-  //       if(item === '/') {
-  //         return(
-  //             <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}>
-  //             <p>
-  //               <img src={ricon} alt="" width={18} height={18} />
-  //             </p>
-  //             <Link to='/'>home.jsx</Link>
-  //           </div>
-  //         )
-  //     } else if (item === '/projects') {
-  //       return(
-  //                 <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')} >
-  //       <p>
-  //         <img src={jicon} alt="" width={20} height={20} />
-  //       </p>
-  //       <Link to='/projects'>projects.js</Link>
-  //     </div>
-  //       )
-  //     } else if(item === '/about') {
-  //       return(
-  //                 <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')} >
-  //       <p>
-  //         <img src={hicon} alt="" width={20} height={20} />
-  //       </p>
-  //       <Link to='/about'>about.html</Link>
-  //     </div>
-  //       )
-  //                 }
-  // }
-
+  const {tabs,} = useContext(TabContext)
   
   return (
     <div className='bg-drk01 flex justify-start items-center'>
 
-      {/* {
-        tabs.map(item => (
-          returnElement(item)
-        ))
-      } */}
+      {
+        tabs?.map(tab => (returnElement(tab)))
+      }
 
       
-      <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}>
+      {/* <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}>
         <p>
           <img src={ricon} alt="" width={18} height={18} />
         </p>
@@ -93,7 +117,7 @@ const Filestab = () => {
           <img src={micon} alt="" width={20} height={20} />
         </p>
         <Link to='/github'>github.md</Link>
-      </div>
+      </div> */}
     </div>
   )
 }
