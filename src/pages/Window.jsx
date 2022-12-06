@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Route,Routes, useNavigate,Navigate } from 'react-router-dom'
+import { Route,Routes, useNavigate } from 'react-router-dom'
 import Filestab from '../components/Filestab'
 import Home from './Home'
 import About from './About'
@@ -13,7 +13,6 @@ import { TabContext } from '../context/TabContext'
 
 import { AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
-import useLastTab from '../hooks/useLastTab'
 
 
 const Window = () => {
@@ -21,18 +20,14 @@ const Window = () => {
       const location = useLocation()
       const navigate = useNavigate()
       
-      const {tabs,dispatch} = useContext(TabContext)
-
-      const NavigateTab = (tab) =>{
-        console.log(tab)
-        useNavigate(tab)
-      }
+      const {tabs,} = useContext(TabContext)
 
       useEffect(() => {
         if(tabs[tabs.length-1] !== location.pathname) {
           console.log(tabs[tabs.length-1])
           navigate(tabs[tabs.length-1])
         }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       },[tabs,location.pathname])
   
   return (
