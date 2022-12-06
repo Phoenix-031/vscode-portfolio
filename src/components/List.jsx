@@ -14,7 +14,7 @@ import { AddTab } from '../context/Actions'
 
 const List = (props) => {
     const location = useLocation()
-    const {tabs,dispatch} = useContext(TabContext)
+    const {dispatch} = useContext(TabContext)
 
     // const [state,dispatch] = useReducer(Reducer,INITIAL_STATE)
     
