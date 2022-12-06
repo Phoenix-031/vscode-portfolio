@@ -26,7 +26,7 @@ const List = (props) => {
   return (
     <>
             <motion.ul className={`w-full pl-4 text-green-500 flex flex-col transition-all duration-100 ease-in-out`}>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-100}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
@@ -42,9 +42,9 @@ const List = (props) => {
 
                 >
                     <img src={ricon} alt=""  height={16} width={16}/>
-                    <Link to="/">home.jsx</Link>
+                    <Link className='py-1' to="/">home.jsx</Link>
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')}
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-100}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
@@ -54,9 +54,9 @@ const List = (props) => {
                 key='/about'
                 >
                     <img src={hicon} alt=""  height={16} width={16}/>
-                     <Link to='/about'>about.html</Link>
+                     <Link className='py-1' to='/about'>about.html</Link>
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')}
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-90}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
@@ -65,9 +65,9 @@ const List = (props) => {
                 onClick={handleclick}
                 >
                     <img src={jicon} alt="" height={16} width={16} />
-                    <Link to='/projects'>projects.js</Link>
+                    <Link className='py-1' to='/projects'>projects.js</Link>
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/blogs' ? 'bg-drk00' : 'bg-drk01')}
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/blogs' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-80}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
@@ -76,9 +76,9 @@ const List = (props) => {
                 onClick={handleclick}
                 >
                     <img src={jsonicon} alt="" height={16} width={16}/>
-                    <Link to='/blogs'>blogs.json</Link>
+                    <Link className='py-1' to='/blogs'>blogs.json</Link>
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/contact' ? 'bg-drk00' : 'bg-drk01')}
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/contact' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-75}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
@@ -87,9 +87,9 @@ const List = (props) => {
                 onClick={handleclick}
                 >
                     <img src={cicon} alt=""  height={16} width={16}/>
-                    <Link to='/contact'>contact.css</Link>
+                    <Link className='py-1' to='/contact'>contact.css</Link>
                 </motion.li>
-                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')}
+                <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-70}}
                 animate={{opacity:1,translateY:0}}
                 transition={{
@@ -98,7 +98,7 @@ const List = (props) => {
                 onClick={handleclick}
                 >
                     <img src={micon} alt=""  height={16} width={16}/>
-                    <Link to='/github'>github.md</Link>
+                    <Link className='py-1' to='/github'>github.md</Link>
                 </motion.li>
             </motion.ul>
     </>
