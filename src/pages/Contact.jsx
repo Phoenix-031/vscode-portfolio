@@ -1,12 +1,14 @@
-import {React,useState} from 'react'
+import {React} from 'react'
 import Form from '../components/Form'
 import Contactlinks from '../components/Contactlinks'
 import  {motion} from 'framer-motion'
 import Terminal from '../components/Terminal'
+import { useContext } from 'react'
+import { TabContext } from '../context/TabContext'
 
 const Contact = () => {
 
-  const [terminal, setTerminal] = useState(true)
+  const {terminal} = useContext(TabContext)
 
   const pagetrans = {
     hidden:{opacity:0},
