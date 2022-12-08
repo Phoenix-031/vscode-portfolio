@@ -20,7 +20,7 @@ const Home = () => {
           <span className='font-cursive1 fixed text-xs sm:text-sm pl-5 sm:static top-24'>&lt;head&gt;</span>
           <span className='font-cursive1 fixed text-xs sm:text-sm pl-5 sm:static top-[120px]'>&lt;head/&gt;</span>
         </span>
-        <span className='font-cursive1 fixed text-xs sm:text-sm  left-16 top-[140px] sm:translate-y-32 sm:absolute'>&lt;body&gt;</span>
+        <span className='font-cursive1 fixed text-xs sm:text-sm  left-16 top-[140px] sm:top-0 sm:left-0 sm:translate-y-32 sm:absolute'>&lt;body&gt;</span>
           
           <motion.div className='rounded-full object-contain overflow-hidden w-62 sm:w-72 h-62 sm:h-72 border-gray-500 border-8 hidden sm:block sm:visible'
           // initial={{translateY:0}}
