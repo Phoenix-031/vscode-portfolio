@@ -13,14 +13,14 @@ const Home = () => {
       <div className='flex flex-col justify-center items-center'>
       </div>
       <div className=' w-full h-full flex sm:flex-2 gap-3 sm:gap-5 justify-center items-center sm:px-10 '>
-        <div className='w-full sm:w-1/3 h-full flex flex-col justify-center items-center relative'>
+        <div className='sm:w-1/3 h-full flex flex-col justify-center items-center'>
 
-        <span className='font-cursive1 text-xs sm:text-sm top-0 absolute left-0'>&lt;html&gt;</span>
-        <span className='flex flex-col gap-2 sm:gap-5 top-5 sm:top-10 left-5 absolute'>
-          <span className='font-cursive1 text-xs sm:text-sm pl-5'>&lt;head&gt;</span>
-          <span className='font-cursive1 text-xs sm:text-sm pl-5'>&lt;head\&gt;</span>
+        <span className='font-cursive1 text-xs sm:text-sm sm:top-0 sm:left-0 fixed sm:absolute left-16 top-16'>&lt;html&gt;</span>
+        <span className='flex flex-col fixed sm:gap-5  sm:top-10 sm:left-5 sm:absolute top-22 left-20'>
+          <span className='font-cursive1 fixed text-xs sm:text-sm pl-5 sm:static top-24'>&lt;head&gt;</span>
+          <span className='font-cursive1 fixed text-xs sm:text-sm pl-5 sm:static top-[120px]'>&lt;head/&gt;</span>
         </span>
-        <span className='font-cursive1 text-xs sm:text-sm absolute left-0 top-0 translate-y-16 sm:translate-y-32'>&lt;body&gt;</span>
+        <span className='font-cursive1 fixed text-xs sm:text-sm  left-16 top-[140px] sm:translate-y-32 sm:absolute'>&lt;body&gt;</span>
           
           <motion.div className='rounded-full object-contain overflow-hidden w-62 sm:w-72 h-62 sm:h-72 border-gray-500 border-8 hidden sm:block sm:visible'
           // initial={{translateY:0}}
@@ -38,15 +38,15 @@ const Home = () => {
           >
             <img src={profileimg} alt="" className=''/>
           </motion.div>
-          <div>
+          <div className='fixed left-12 bottom-7 sm:left-0 sm:bottom-0 sm:static'>
             <span className='font-cursive1 text-xs sm:text-sm absolute left-0 bottom-10 sm:bottom-20'>&lt;body/&gt;</span>
-            <span className='font-cursive1 absolute bottom-1 sm:bottom-5 text-xs sm:text-sm left-0'>&lt;html\&gt;</span>
+            <span className='font-cursive1 absolute bottom-1 sm:bottom-5 text-xs sm:text-sm left-0'>&lt;html/&gt;</span>
           </div>
           
         </div>
 
 
-        <div className='h-full flex flex-col w-full sm:w-2/3 justify-center items-baseline px-5 sm:px-10 gap-4 sm:gap-8'>
+        <div className='h-full flex flex-col w-full sm:w-2/3 justify-center items-baseline sm:px-10 gap-4 sm:gap-8'>
           <div>
             <p>Hi There</p>
             <div className='flex gap-3 text-xl sm:text-3xl font-Enriqueta text-bold'>I'm  <span className='text-xl sm:text-4xl font-roboto font-extrabold text-green-600 capitalize tracking-normal sm:tracking-wide'><Typinganimation /></span></div>

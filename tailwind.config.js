@@ -11,6 +11,12 @@ module.exports = {
       'sm':'640px'
     },
     extend: {
+      spacing:{
+        '21px':'21px',
+        '22px':'22px',
+        '23px':'23px',
+        '26px':'26px',
+      },
       colors:{
         'drk01': "#1f2428",
         'drk00':"#24292e",
