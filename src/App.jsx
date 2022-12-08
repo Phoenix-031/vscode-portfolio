@@ -18,7 +18,7 @@ import Inbox from './components/Admindashboard/Inbox'
 const App = () => {
   
   return (
-    <div className='overflow-x-auto w-screen h-screen'>
+    <div className='overflow-auto w-screen h-screen'>
            <Routes >
               <Route exact path="/dashboardlogin" element={ <ProfileLogin /> } />
               <Route exact path="/admin" element={<Admin /> }>
