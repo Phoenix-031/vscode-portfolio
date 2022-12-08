@@ -1,8 +1,12 @@
 import React from 'react'
 import profileimg from '../assets/profile2.jpg'
 import  {motion} from 'framer-motion'
+import { useState } from 'react'
 
 const About = () => {
+
+  const [loaded,setLoaded] = useState(false)
+  
   return (
     <motion.div className='row-start-2 bg-drk00 h-full overflow-auto' 
     initial={{opacity:0}}

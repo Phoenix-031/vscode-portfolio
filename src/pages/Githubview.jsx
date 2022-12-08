@@ -60,7 +60,7 @@ const Githubview = () => {
       <motion.div 
     className="h-full overflow-auto bg-drk00"
       >
-        <div className='row-start-2 bg-drk00 flex flex-col justify-start items-center gap-4 xl:gap-6 h-full '>
+        <div className='row-start-2 bg-drk00 flex flex-col justify-center items-center gap-4 xl:gap-6 h-full '>
 
           <div className='flex justify-center items-center gap-4 grid-cols-none grid-rows-nonemt-4 sm:mt-8 py-4 sm:py-8 w-full md:w-full lg:w-8/12 bg-drk01 sm:flex-row flex-col'>
             <div className='font-poppins text-lg sm:text-xl text-white flex gap-2 justify-center items-center '>
