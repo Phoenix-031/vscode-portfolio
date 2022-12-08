@@ -1,4 +1,4 @@
-import React, { useContext,useState,useReducer } from 'react'
+import React, { useContext} from 'react'
 import { Route,Routes, useNavigate } from 'react-router-dom'
 import Filestab from '../components/Filestab'
 import Home from './Home'
@@ -10,8 +10,6 @@ import Githubview from "./Githubview"
 import Settings from './Settings'
 import { useLocation } from 'react-router-dom'
 import { TabContext } from '../context/TabContext'
-import Reducer from '../context/Reducer'
-import { INITIAL_STATE } from '../context/TabContext'
 
 import { AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'

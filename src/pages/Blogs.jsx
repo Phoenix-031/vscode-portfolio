@@ -1,10 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import {motion} from 'framer-motion'
-import { useReducer } from 'react'
 import Terminal from '../components/Terminal'
-import Reducer from '../context/Reducer'
-import { INITIAL_STATE, TabContext } from '../context/TabContext'
-import { useEffect } from 'react'
+import { TabContext } from '../context/TabContext'
+
 
 const Blogs = () => {
 
