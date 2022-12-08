@@ -1,9 +1,11 @@
+import { ACTION_TYPES } from "./ActionTypes"
+
 export const AddTab = (tabname) => ({
-    type:"ADD_TAB",
+    type:ACTION_TYPES.ADD_TAB,
     payload:tabname
 })
 
 export const RemoveTab = (tabname) => ({
-    type:"REMOVE_TAB",
+    type:ACTION_TYPES.REMOVE_TAB,
     payload:tabname
 })

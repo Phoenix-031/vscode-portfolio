@@ -9,9 +9,9 @@ const Contact = () => {
     hidden:{opacity:0},
     visible:{opacity:1}
   }
-  
+  // mobile:flex-col
   return (
-    <motion.div className='row-start-2 bg-drk00 w-full flex overflow-auto'
+    <motion.div className='row-start-2 bg-drk00 w-full flex overflow-auto flex-col sm:flex-row'
     variants={pagetrans}
     initial= "hidden"
     animate = "visible"

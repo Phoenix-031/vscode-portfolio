@@ -18,7 +18,7 @@ const Filestab = () => {
   const returnElement = (item) => {
         if(item === '/') {
           return(
-              <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}>
+              <div className={`flex gap-2 justify-center items-center text-green-500 sm:text-sm text-xs border-gray-800 px-6 cursor-pointer h-full border-1   hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}>
                 <p>
                   <img src={ricon} alt="" width={18} height={18} />
                 </p>
@@ -28,7 +28,7 @@ const Filestab = () => {
           )
       } else if (item === '/projects') {
         return(
-                  <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')} >
+                  <div className={`flex gap-2 justify-center items-center text-green-500 sm:text-sm text-xs border-gray-800 px-6 cursor-pointer h-full border-1   hover:bg-drk00 `+ (location.pathname === '/projects' ? 'bg-drk00' : 'bg-drk01')} >
                     <p>
                       <img src={jicon} alt="" width={20} height={20} />
                     </p>
@@ -38,7 +38,7 @@ const Filestab = () => {
         )
       } else if(item === '/about') {
         return(
-                  <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')} >
+                  <div className={`flex gap-2 justify-center items-center text-green-500 sm:text-sm text-xs border-gray-800 px-6 cursor-pointer h-full border-1   hover:bg-drk00 `+ (location.pathname === '/about' ? 'bg-drk00' : 'bg-drk01')} >
                     <p>
                       <img src={hicon} alt="" width={20} height={20} />
                     </p>
@@ -48,7 +48,7 @@ const Filestab = () => {
         )
       } else if(item === '/contact') {
         return(
-                <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/contact' ? 'bg-drk00' : 'bg-drk01')} >
+                <div className={`flex gap-2 justify-center items-center text-green-500 sm:text-sm text-xs border-gray-800 px-6 cursor-pointer h-full border-1   hover:bg-drk00 `+ (location.pathname === '/contact' ? 'bg-drk00' : 'bg-drk01')} >
                   <p>
                     <img src={cicon} alt="" width={20} height={20} />
                   </p>
@@ -58,7 +58,7 @@ const Filestab = () => {
         )
   } else if(item === '/github') {
     return (
-            <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')} >
+            <div className={`flex gap-2 justify-center items-center text-green-500 sm:text-sm text-xs border-gray-800 px-6 cursor-pointer h-full border-1   hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')} >
               <p>
                 <img src={micon} alt="" width={20} height={20} />
               </p>
@@ -68,7 +68,7 @@ const Filestab = () => {
     )
   } else if(item === '/blogs') {
     return (
-      <div className={`flex gap-2 justify-center items-center text-green-500 text-sm border-gray-800 px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/blogs' ? 'bg-drk00' : 'bg-drk01')} >
+      <div className={`flex gap-2 justify-center items-center text-green-500 sm:text-sm text-xs border-gray-800 px-6 cursor-pointer h-full border-1   hover:bg-drk00 `+ (location.pathname === '/blogs' ? 'bg-drk00' : 'bg-drk01')} >
         <p>
           <img src={jsonicon} alt="" width={20} height={20} />
         </p>
@@ -90,7 +90,7 @@ const Filestab = () => {
   
   
   return (
-    <div className='bg-drk01 flex justify-start items-center'>
+    <div className='bg-drk01 flex justify-start items-center overflow-auto'>
 
       {
         tabs?.map(tab => (returnElement(tab)))

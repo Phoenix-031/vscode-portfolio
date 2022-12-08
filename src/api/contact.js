@@ -16,18 +16,15 @@ const sendMessage = async (formdata) => {
     return response
 }
 
-const getMessages = async (req,res) => {
+const getMessages = async () => {
     try {
-        const contactmsgs = await axios.get(' https://witty-frog-tiara.cyclic.app/api/contact')
+        // const contactmsgs = await axios.get('https://witty-frog-tiara.cyclic.app/api/contact')
+        const contactmsgs = await axios.get('http://localhost:8967/api/contact')
+
 
         return contactmsgs
     } catch (err) {
         console.log(err)
-        res.status(500).json({
-            success:false,
-            msg:"messages could not be fetched"
-        })
-        
     }
 }
 

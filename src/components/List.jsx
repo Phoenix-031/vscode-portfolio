@@ -26,7 +26,8 @@ const List = (props) => {
     
   return (
     <>
-            <motion.ul className={`w-full pl-4 text-green-500 flex flex-col transition-all duration-100 ease-in-out`}>
+            <motion.ul className={`w-full pl-4 text-green-500 flex flex-col transition-all duration-100 ease-in-out `}
+            >
                 <Link to='/'>
                 <motion.li  className={`flex justify-start items-center gap-2 cursor-pointer py-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}
                 initial={{opacity:0,translateY:-100}}

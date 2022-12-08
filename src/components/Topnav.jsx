@@ -2,9 +2,9 @@ import React from 'react'
 
 const Topnav = () => {
   return (
-    <div className='flex justify-between text-white px-2 items-center  w-100 bg-drk00 border-black row-start-1 row-span-1'>
+    <div className='flex justify-between text-white sm:px-2 px-1 items-center  w-100 bg-drk00 border-black row-start-1 row-span-1'>
             <div>
-              <ul className='font-normal text-sm flex justify-start items-center gap-3'>
+              <ul className='font-normal sm:text-sm text-xs flex justify-start items-center sm:gap-3 gap-2'>
                 <li className='cursor-pointer'>File</li>
                 <li className='cursor-pointer'>Edit</li>
                 <li className='cursor-pointer' >Selection</li>
@@ -14,8 +14,8 @@ const Topnav = () => {
                 <li className='cursor-pointer'>Help</li>
               </ul> 
             </div>
-            <div className=''>Visual Studio Code</div>
-            <div className='flex gap-2'>
+            <div className='sm:text-lg text-xs hidden sm:visible sm:block'>Visual Studio Code</div>
+            <div className='sm:flex sm:gap-2 gap-1 hidden'>
               <div className='w-4 h-4 bg-yellow-300 rounded-full'></div>
               <div className='w-4 h-4 bg-green-400 rounded-full'></div>
               <div className='w-4 h-4 bg-red-600 rounded-full'></div>

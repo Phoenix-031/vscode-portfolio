@@ -32,7 +32,7 @@ const Window = () => {
   
   return (
     
-    <div className='col-start-3 grid grid-rows-windiv overflow-hidden h-full'>
+    <div className=' grid grid-rows-windiv overflow-hidden h-full sm:col-start-3 col-start-2'>
         <Filestab className="sticky" />
 
         <AnimatePresence>

@@ -5,7 +5,7 @@ import Window from './Window'
 
 const Content = () => {
   return (
-    <div className='row-start-2 row-end-3 grid grid-cols-collayout h-full overflow-hidden'>
+    <div className='row-start-2 row-end-3 grid h-full overflow-hidden sm:grid-cols-collayout grid-cols-mobilr-s-grid'>
         <Sidenav />
         <Sidefilestab />
         <Window />
@@ -15,3 +15,5 @@ const Content = () => {
 }
 
 export default Content
+
+// mobile:grid-cols-mobilr-s-grid

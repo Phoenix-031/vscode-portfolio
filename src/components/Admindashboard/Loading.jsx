@@ -1,5 +1,5 @@
 import React from 'react'
-import '../dist/loadingstyle.css'
+import '../../dist/adminloading.css'
 
 const Projectloading = () => {
   return (

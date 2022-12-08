@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,tsx}"],
   theme: {
+    screens:{
+      'mobile':'320px',
+      'mobile-m':'375px',
+      'mobile-l':'425px',
+      'tablet':'768px',
+      'lg':'1020px',
+      'sm':'640px'
+    },
     extend: {
       colors:{
         'drk01': "#1f2428",
@@ -10,7 +18,8 @@ module.exports = {
       },
       gridTemplateColumns:{
          '32': 'repeat(32, minmax(0, 1fr))',
-         'collayout':'50px minmax(100px,200px) 1fr'
+         'collayout':'40px minmax(100px,200px) 1fr',
+         'mobilr-s-grid':'50px 1fr'
       },
       gridTemplateRows:{
         '32':'repeat(32,minmax(0,1fr)',
