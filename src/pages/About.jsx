@@ -1,14 +1,19 @@
 import React from 'react'
 import profileimg from '../assets/profile2.jpg'
 import  {motion} from 'framer-motion'
-// import { useState } from 'react'
+// import { useState } from 'react
+import { TabContext } from '../context/TabContext'
+import { useContext } from 'react'
+import Terminal from '../components/Terminal'
 
 const About = () => {
 
   // const [loaded,setLoaded] = useState(false)
+    const {terminal} = useContext(TabContext)
   
   return (
-    <motion.div className='row-start-2 bg-drk00 h-full overflow-auto' 
+    <>
+  <motion.div className='row-start-2 bg-drk00 h-full overflow-auto' 
     initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}
@@ -85,6 +90,11 @@ const About = () => {
         </div>
       </div>
     </motion.div>
+
+    {
+      terminal ? <Terminal /> :null
+    }
+    </>
   )
 }
 

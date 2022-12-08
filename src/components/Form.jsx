@@ -83,7 +83,7 @@ const Form = () => {
             >
               <div className='w-full  pt-3 sm:px-5 px-2 flex justify-between items-center'>
                 <p>Sent Successfully</p>
-                <button  className=' border-gray-800 border-2 cursor-pointer'>
+                <button  className=' cursor-pointer'>
                   <img src={sicon} alt="" height={30} width={30}/>
                 </button>
               </div>

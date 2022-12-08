@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import {motion} from 'framer-motion'
+import { useReducer } from 'react'
+import Terminal from '../components/Terminal'
+import Reducer from '../context/Reducer'
+import { INITIAL_STATE, TabContext } from '../context/TabContext'
+import { useEffect } from 'react'
 
 const Blogs = () => {
+
+  const {terminal} = useContext(TabContext)
+
+
   return (
+        <>
     <motion.div className='row-start-2 bg-drk00  text-white text-lg sm:text-xl font-poppins'
     //     initial={{opacity:0}}
     // animate = {{opacity:1}}
@@ -10,6 +20,12 @@ const Blogs = () => {
     >
       Blogs section
     </motion.div>
+
+      {
+        terminal ? <Terminal /> : console.log(terminal)
+      }
+        </>
+    
   )
 }
 

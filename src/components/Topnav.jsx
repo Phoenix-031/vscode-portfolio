@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TerminalToggle } from '../context/Actions'
+import { TabContext } from '../context/TabContext'
 
 const Topnav = () => {
+
+  const {terminal,dispatch}  = useContext(TabContext)
+  console.log(terminal)
+
+  const handleTerminalToggle = () => {
+    dispatch(TerminalToggle(!terminal))
+    console.log(terminal)
+  }
+  
   return (
     <div className='flex justify-between text-white sm:px-2 px-1 items-center  w-100 bg-drk00 border-black row-start-1 row-span-1'>
             <div>
@@ -10,7 +21,7 @@ const Topnav = () => {
                 <li className='cursor-pointer' >Selection</li>
                 <li className='cursor-pointer'>View</li>
                 <li className='cursor-pointer'>Run</li>
-                <li className='cursor-pointer'>Terminal</li>
+                <li className='cursor-pointer' onClick={handleTerminalToggle}>Terminal</li>
                 <li className='cursor-pointer'>Help</li>
               </ul> 
             </div>

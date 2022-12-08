@@ -2,10 +2,17 @@ import React from 'react'
 import  {motion} from 'framer-motion'
 import profileimg from '../assets/profile2.jpg'
 import Typinganimation from '../components/Typinganimation'
+import { TabContext } from '../context/TabContext'
+import { useContext } from 'react'
+import Terminal from '../components/Terminal'
 
 const Home = () => {
+
+    const {terminal} = useContext(TabContext)
+  
   return (
-    <motion.div className=' bg-drk00 row-start-2 text-white text-sm md:text-xl font-poppins relative md:overflow-y-auto h-full'
+    <>
+<motion.div className=' bg-drk00 row-start-2 text-white text-sm md:text-xl font-poppins relative md:overflow-y-auto h-full'
     initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}
@@ -73,6 +80,11 @@ const Home = () => {
 
       </div>
     </motion.div>
+
+    {
+      terminal ? <Terminal /> : null
+    }
+    </>
   )
 }
 

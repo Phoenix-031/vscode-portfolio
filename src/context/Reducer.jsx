@@ -21,6 +21,14 @@ const Reducer = (state,action) => {
                ...state,
                 tabs: [...state.tabs, action.payload]
             };
+
+        case "TERMINAL_TOGGLE" :
+            
+        console.log(action.payload)
+        return {
+            ...state,terminal: action.payload
+        }
+
         default:
             return state;
     }}

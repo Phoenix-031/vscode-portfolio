@@ -32,7 +32,8 @@ module.exports = {
       gridTemplateRows:{
         '32':'repeat(32,minmax(0,1fr)',
         'flaybout':'30px 1fr 30px',
-        'windiv':'35px 1fr'
+        'windiv':'35px 1fr',
+        'terminal':'35px 60% 40%',
       },
       gridColumn:{
         'span-32':'span 32/ span 32',

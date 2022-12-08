@@ -9,3 +9,8 @@ export const RemoveTab = (tabname) => ({
     type:ACTION_TYPES.REMOVE_TAB,
     payload:tabname
 })
+
+export const TerminalToggle = (val) => ({
+    type:ACTION_TYPES.TERMINAL_TOGGLE,
+    payload:val
+})

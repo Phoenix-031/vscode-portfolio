@@ -4,11 +4,15 @@ import { useState,useEffect } from 'react'
 import {getAllProjects} from '../api/projects'
 import Projectloading from '../components/Projectloading'
 import  {motion} from 'framer-motion'
+import { useContext } from 'react'
+import { TabContext } from '../context/TabContext'
+import Terminal from '../components/Terminal'
 
 const Projects = () => {
 
   const[projects,setProjects] = useState([])
   const[isloading, setIsloading] = useState(true)
+    const {terminal} = useContext(TabContext)
 
 
   useEffect(() => {
@@ -36,6 +40,7 @@ const Projects = () => {
   } else {
 
       return (
+        <>
     <motion.div 
     initial={{opacity:0}}
     animate = {{opacity:1}}
@@ -98,6 +103,11 @@ const Projects = () => {
       }
     </div>
     </motion.div>
+
+    {
+      terminal ? <Terminal /> :null
+    }
+        </>
   )
     
   }

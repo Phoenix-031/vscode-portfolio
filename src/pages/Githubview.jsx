@@ -6,6 +6,9 @@ import {Githubdata,Githubrepo} from '../api/github'
 import Projectloading from '../components/Projectloading'
 import Loadmore from '../components/Loadmore'
 import  {motion} from 'framer-motion'
+import Terminal from '../components/Terminal'
+import { useContext } from 'react'
+import { TabContext } from '../context/TabContext'
 
 const Githubview = () => {
 
@@ -15,7 +18,7 @@ const Githubview = () => {
   const [page,setPage] = useState(1)
   const [info,setInfo] = useState("")
   const scrolldown = useRef(null)
-
+    const {terminal} = useContext(TabContext)
   useEffect(() => {
     console.log(scrolldown.current)
     scrolldown.current?.scrollIntoView({behavior:'smooth'})
@@ -57,6 +60,7 @@ const Githubview = () => {
   } else {
 
     return (
+      <>
       <motion.div 
     className="h-full overflow-auto bg-drk00 flex-col w-full justify-center"
       >
@@ -92,6 +96,11 @@ const Githubview = () => {
 
         <div  ref={scrolldown}></div>
       </motion.div>
+
+      {
+        terminal ? <Terminal /> :null
+      }
+      </>
   )
 
   }
