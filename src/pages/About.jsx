@@ -18,11 +18,11 @@ const About = () => {
           <span className='relative block before:block before:absolute before:bottom-10 before:font-Enriqueta before:text-xl sm:before:text-3xl before:right-32 sm:before:right-36 before:content-["<h1>"]  after:block after:absolute after:top-10 after:left-32 sm:after:left-36 after:font-Enriqueta after:text-xl sm:after:text-3xl after:content-["</h1>"]' >About Me</span>
         </h1>
       </div>
-      <div className="flex flex-wrap flex-col sm:flex-row sm:flex-nowrap gap-2 sm:gap-4 justify-between items-center px-5 py-5 sm:px-10 sm:py-10">
-        <div className='rounded-lg sm:rounded-xl overflow-hidden sm:h-96 w-full'>
-          <img src={profileimg} alt="" className='object-contain' />
+      <div className=" flex flex-wrap flex-col sm:flex-col xl:flex-row sm:flex-nowrap gap-2 sm:gap-4 justify-between items-center px-5 py-5 xl:px-10 xl:py-10">
+        <div className=' rounded-lg sm:rounded-xl overflow-hidden sm:h-96 w-full flex justify-center xl:w-2/3'>
+          <img src={profileimg} alt="" className='object-contain sm:rounded-xl' />
         </div>
-        <div className='w-full sm:w-3/5 h-full text-poppins text-white text-lg sm:text-xl'>
+        <div className='w-full h-full text-poppins text-white text-lg sm:text-xl md:text-lg'>
           <p>         I'm a computer Science and Engineering student and an aspiring software Engineer. I love to solve or atleast try to come up with a solution to real world problems with the help of Technolodgy, the new technolodgies rolling out everyday keeps me on edge. I'm a keen learner spending most of my time working on projects involving various tech stacks. I love competitve programming it's and i have a particular interest towards malware analysis and design. I love Open Source and have been contributer in various events thereby addying to my learning experiences.
 
           </p>

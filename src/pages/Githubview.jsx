@@ -60,24 +60,24 @@ const Githubview = () => {
       <motion.div 
     className="h-full overflow-auto bg-drk00"
       >
-        <div className='row-start-2 bg-drk00 flex flex-col justify-start items-center gap-4 sm:gap-6 h-full '>
+        <div className='row-start-2 bg-drk00 flex flex-col justify-start items-center gap-4 xl:gap-6 h-full '>
 
-          <div className='flex justify-center items-center gap-4 grid-cols-none grid-rows-nonemt-4 sm:mt-8 py-4 sm:py-8 w-full sm:w-8/12 bg-drk01 sm:flex-row flex-col'>
+          <div className='flex justify-center items-center gap-4 grid-cols-none grid-rows-nonemt-4 sm:mt-8 py-4 sm:py-8 w-full md:w-full lg:w-8/12 bg-drk01 sm:flex-row flex-col'>
             <div className='font-poppins text-lg sm:text-xl text-white flex gap-2 justify-center items-center '>
-              <div className='rounded-full sm:w-24 sm:h-24 w-12 h-12 object-contain overflow-hidden '>
+              <div className='rounded-full sm:w-24 sm:h-24 md:h-20 md:w-20 w-12 h-12 object-contain overflow-hidden '>
                 <img src={info.avatar_url} alt="" />
               </div>
               <p>{info.login}</p>
             </div>
             {/* <p className='font-poppins text-xl text-white mobile:text-sm'></p> */}
             {/* <div> */}
-              <p className=' font-poppins text-sm sm:text-xl text-white '>{info.public_repos} Repos</p>
-              <p className=' font-poppins text-sm sm:text-xl text-white '>{info.followers} Followers</p>
-              <p className=' font-poppins text-sm sm:text-xl text-white '>{info.public_gists} Gists</p>
+              <p className=' font-poppins text-sm md:text-lg sm:text-xl text-white '>{info.public_repos} Repos</p>
+              <p className=' font-poppins text-sm md:text-lg sm:text-xl text-white '>{info.followers} Followers</p>
+              <p className=' font-poppins text-sm md:text-lg sm:text-xl text-white '>{info.public_gists} Gists</p>
             {/* </div> */}
           </div>
 
-          <div className='flex flex-wrap justify-center items-end gap-2 sm:gap-4 sm:pl-5 pt-2'>
+          <div className='flex flex-wrap justify-center items-end gap-2 lg:gap-4 xl:pl-5 pt-2'>
             {
               repos && repos.map((repo,ind) => (
                 <Githubcard cardno={ind} gitinfo = {repo} key={ind}/>
@@ -87,7 +87,7 @@ const Githubview = () => {
 
           <div className=' w-full py-5 flex justify-center items-center'>
             {
-              loadmore ? (<Loadmore />) : (<button id='loadmore' className={`bg-drk01 py-3 sm:px-10 px-5 text-white text-normal sm:text-medium font-poppins text-sm sm:text-xl rounded-lg `} onClick={loadmoredata} ref={scrolldown}>Load More</button>)
+              loadmore ? (<Loadmore />) : (<button id='loadmore' className={`bg-drk01 py-3 sm:px-10 px-5 text-white text-normal sm:text-medium font-poppins text-sm md:text-xl rounded-lg `} onClick={loadmoredata} ref={scrolldown}>Load More</button>)
             }
           </div>
         </div>

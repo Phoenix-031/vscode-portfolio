@@ -11,7 +11,7 @@ const Contact = () => {
   }
   // mobile:flex-col
   return (
-    <motion.div className='row-start-2 bg-drk00 w-full flex overflow-auto flex-col sm:flex-row'
+    <motion.div className='row-start-2 bg-drk00 w-full flex overflow-auto flex-col md:flex-col xl:flex-row'
     variants={pagetrans}
     initial= "hidden"
     animate = "visible"
