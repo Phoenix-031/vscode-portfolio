@@ -19,7 +19,7 @@ const sendMessage = async (formdata) => {
 const getMessages = async () => {
     try {
         // const contactmsgs = await axios.get('https://witty-frog-tiara.cyclic.app/api/contact')
-        const contactmsgs = await axios.get('http://localhost:8967/api/contact')
+        const contactmsgs = await axios.get('https://witty-frog-tiara.cyclic.app/api/contact')
 
 
         return contactmsgs

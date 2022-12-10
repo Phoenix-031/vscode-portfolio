@@ -2,7 +2,7 @@ import axios from "axios";
 
 const LoginAdmin = async(data) => {
     try {
-    const res = await axios.post("http://localhost:8967/api/auth",{
+    const res = await axios.post("https://witty-frog-tiara.cyclic.app/api/auth",{
         data
     })
 
@@ -16,7 +16,7 @@ const LoginAdmin = async(data) => {
 }
 
 const verfiyAdmin = async(data) => {
-    const res = await axios.get('http://localhost:8967/api/auth/verify',{
+    const res = await axios.get('https://witty-frog-tiara.cyclic.app/api/auth/verify',{
         headers: {
             'Content-Type': 'application/json',
             'token' : data
