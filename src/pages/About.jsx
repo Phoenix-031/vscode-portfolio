@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {React,useState} from 'react'
 import profileimg from '../assets/profile2.jpg'
 import  {motion} from 'framer-motion'
