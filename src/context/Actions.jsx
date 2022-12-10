@@ -14,3 +14,13 @@ export const TerminalToggle = (val) => ({
     type:ACTION_TYPES.TERMINAL_TOGGLE,
     payload:val
 })
+
+export const AdminLogin = (val) => ({
+    type:ACTION_TYPES.ADMIN_LOGIN,
+    payload:val
+})
+
+export const AdminLogout = (val) => ({
+    type:ACTION_TYPES.ADMIN_LOGOUT,
+    payload:val
+})

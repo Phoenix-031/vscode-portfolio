@@ -24,10 +24,19 @@ const Reducer = (state,action) => {
 
         case "TERMINAL_TOGGLE" :
             
-        console.log(action.payload)
         return {
             ...state,terminal: action.payload
         }
+
+        case "ADMIN_LOGIN":
+            return {
+                User: action.payload
+            }
+
+        case "ADMIN_LOGOUT":
+            return {
+                User: action.payload
+            }
 
         default:
             return state;
