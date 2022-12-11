@@ -16,7 +16,7 @@ const ContactView = () => {
     const [conlist,setConList] = useState([])
     const [empty,setEmpty] = useState(false)
 
-    useMemo(() => {
+    useEffect(() => {
       const getAllContacts = async() => {
         const con = await getMessages(user)
 
