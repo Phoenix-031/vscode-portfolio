@@ -84,7 +84,7 @@ const Card = (props) => {
   return (
    <>
    {
-    popup ? <Popup changeParentState= {togglePopup} /> : null
+    popup ? <Popup changeParentState= {togglePopup} cardinfo={props.cardinfo._id} /> : null
    }
 
    {modal ? 
