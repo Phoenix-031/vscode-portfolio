@@ -61,9 +61,9 @@ const ProfileLogin = () => {
               }}
               />
             </div>
-            <div className='border-white border-2 w-full flex justify-center'>
+            <div className=' w-full flex justify-center'>
               {
-                logging ? <ModalLoader /> : <button className='py-3 px-5 font-poppins text-sm lg:text-lg rounded-lg font-semibold'>Login</button>
+                logging ? <ModalLoader /> : <button className='py-3 px-16 bg-drk01 font-poppins text-sm lg:text-lg rounded-lg font-semibold'>Login</button>
               }
             </div>
           </form>
