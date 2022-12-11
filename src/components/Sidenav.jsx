@@ -21,7 +21,6 @@ const Sidenav = () => {
   const [modal,setModal] = useState(false)
   const [verified,setVerified] = useState(false)
   const {user,dispatch} = useContext(AdminContext)
-  // const naviagte = useNavigate()
 
 
   const handleAddProject = () => {
@@ -82,7 +81,6 @@ const Sidenav = () => {
           <div onClick={handleAddProject} className='relative'><Plus width={20} height={20} /></div>
           {/* <div onClick={handleMessages}><Messages width={20} height={20} /></div> */}
           <Link to='/admin/contacts'><Messages width={20} height={20} /></Link>
-          <div onClick={handleLogout}><Logout width={20} height={20} /></div>
           </div>
          ): null
          }
@@ -90,7 +88,9 @@ const Sidenav = () => {
 
        <div className="flex flex-col justify-end items-center bg-drk00   row-start-5 cursor-pointer pb-3 w-full">
         <div className='cursor-pointer w-full bg-drk00 flex justify-center items-center py-2  hover:bg-drk01'>
-          <Link to='/dashboardlogin'><Profile /></Link>
+          <Link to='/dashboardlogin'>{
+            user ? (<div onClick={handleLogout}><Logout width={20} height={20} /></div>) :<Profile />
+          }</Link>
         </div>
         <div className='cursor-pointer w-full bg-drk00 flex justify-center items-center py-2  hover:bg-drk01'>
           <Link to='/settings'><Settings /></Link>

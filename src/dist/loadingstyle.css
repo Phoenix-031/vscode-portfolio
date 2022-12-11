@@ -4,7 +4,7 @@ bodY {
   box-sizing: border-box;
 }
 .center {
-  height: 80vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ bodY {
 }
 .wave {
   width: 5px;
-  height: 50px;
+  height: 80px;
   background: linear-gradient(45deg, cyan, #fff);
   margin: 10px;
   animation: wave 1s linear infinite;

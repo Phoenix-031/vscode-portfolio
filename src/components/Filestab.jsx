@@ -23,7 +23,7 @@ const Filestab = () => {
                   <img src={ricon} alt="" width={18} height={18} />
                 </p>
                 <Link to='/'>home.jsx</Link>
-                {/* <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross/></span> */}
+                {/* <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross width={16} height={16}/></span> */}
               </div>
           )
       } else if (item === '/projects') {
@@ -33,7 +33,7 @@ const Filestab = () => {
                       <img src={jicon} alt="" width={20} height={20} />
                     </p>
                     <Link to='/projects'>projects.js</Link>
-                    <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/projects'><Cross/></span>
+                    <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/projects'><Cross width={16} height={16}/></span>
                   </div>
         )
       } else if(item === '/about') {
@@ -43,7 +43,7 @@ const Filestab = () => {
                       <img src={hicon} alt="" width={20} height={20} />
                     </p>
                     <Link to='/about'>about.html</Link>
-                    <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/about'><Cross/></span>
+                    <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/about'><Cross width={16} height={16}/></span>
                   </div>
         )
       } else if(item === '/contact') {
@@ -53,7 +53,7 @@ const Filestab = () => {
                     <img src={cicon} alt="" width={20} height={20} />
                   </p>
                   <Link to='/contact'>contact.css</Link>
-                  <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/contact'><Cross/></span>
+                  <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/contact'><Cross width={16} height={16}/></span>
                 </div>
         )
   } else if(item === '/github') {
@@ -63,7 +63,7 @@ const Filestab = () => {
                 <img src={micon} alt="" width={20} height={20} />
               </p>
               <Link to='/github'>github.md</Link>
-              <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/github'><Cross/></span>
+              <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/github'><Cross width={16} height={16}/></span>
             </div> 
     )
   } else if(item === '/blogs') {
@@ -73,7 +73,7 @@ const Filestab = () => {
           <img src={jsonicon} alt="" width={20} height={20} />
         </p>
         <Link to='/blogs'>blogs.json</Link>
-        <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/blogs'><Cross/></span>
+        <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/blogs'><Cross width={16} height={16}/></span>
       </div>
     )
   }

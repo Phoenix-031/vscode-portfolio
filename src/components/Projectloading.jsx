@@ -3,7 +3,6 @@ import '../dist/loadingstyle.css'
 
 const Projectloading = () => {
   return (
-    <div className=''>
         <div className="center">
         <div className="wave"></div>
         <div className="wave"></div>
@@ -16,7 +15,6 @@ const Projectloading = () => {
         <div className="wave"></div>
         <div className="wave"></div>
         </div>
-    </div>
   )
 }
 

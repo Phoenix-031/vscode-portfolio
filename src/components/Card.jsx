@@ -87,12 +87,15 @@ const Card = (props) => {
         type:"spring",
         stiffness:120,
       }}
-      >
-        <div className='max-h-max flex flex-col gap-6 justify-center items-center w-full px-10 py-3 mb-10 mt-5'>
-          <div className='flex flex-col gap-2 justify-center items-center'>
+      > 
+        <div className='max-h-max flex flex-col gap-6 justify-center items-center w-full px-10 py-3 mb-10 mt-5 overflow-auto'>
+            <div className=" w-full flex justify-end" onClick={() => setModal(false)}>
+              <Cross width={30} height={30} />
+            </div>
+          <div className='flex flex-col gap-2 justify-center items-center w-full'>
             <img src={props.cardinfo.imgurl} alt="" />
             <input className='rounded-lg font-poppins text-lg py-3 px-5 hidden' placeholder = 'Image' type="file" id='fileupload-btn'/>
-            <button onClick={() => {document.getElementById('fileupload-btn').click()}} className='text-lg py-3 px-5 font-poppins font-semibold rounded-lg bg-drk00'>Upload</button>
+            <button onClick={() => {document.getElementById('fileupload-btn').click()}} className='text-lg py-3 px-5 font-poppins font-semibold rounded-lg bg-drk00 max-w-max'>Upload</button>
           </div>
           <div className="w-full flex justify-start items-baseline flex-col"> 
             <p>Title</p>
@@ -114,7 +117,7 @@ const Card = (props) => {
             <div className="flex gap-3 jsutify-start items-center w-full flex-wrap">
               {modaltags.map(tag => (
                 <div className='bg-drk00 py-2 px-4 rounded-lg flex justify-center items-center gap-2'>{tag}
-                <div className='rounded-full' onClick={removetag}><Cross onClick={removetag}/></div>
+                <div className='rounded-full' onClick={removetag}><Cross width={16} height={16} /></div>
                 </div>
               ))}
             </div>
