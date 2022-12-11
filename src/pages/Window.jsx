@@ -15,6 +15,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
 import ContactView from './ContactView'
 import { AdminContext } from '../context/AdminContext'
+import Lol from '../components/Lol'
 
 
 const Window = () => {
@@ -52,7 +53,7 @@ const Window = () => {
               <Route exact path="settings" element={ <Settings /> } />
               <Route exact path="contacts" element={ <ContactView /> } />   
               <Route exact path="admin/contacts" element={
-                    user ? <ContactView /> : <Home />
+                    user ? <ContactView /> : <Lol />
                   } />  
           </Routes>
         </AnimatePresence>

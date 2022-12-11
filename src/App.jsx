@@ -16,6 +16,7 @@ import Settings from './pages/Settings'
 // import Inbox from './pages/Inbox'
 import ContactView from './pages/ContactView'
 import { AdminContext } from './context/AdminContext'
+import Lol from './components/Lol'
 
 const App = () => {
 
@@ -27,7 +28,7 @@ const App = () => {
            <Routes >
               <Route exact path="/dashboardlogin" element={ <ProfileLogin /> } />
               <Route exact path="/admin/contacts" element={
-                user ? <ContactView /> : <Home />
+                user ? <ContactView /> : <Lol />
               } />
               <Route exact path="/*" element={ <Portfoliocontent /> } >
                   <Route exact path="" element={ <Home /> } />

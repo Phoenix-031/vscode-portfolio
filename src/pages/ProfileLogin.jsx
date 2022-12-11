@@ -20,6 +20,8 @@ const ProfileLogin = () => {
     e.preventDefault()
     setLogging(true)
 
+    console.log(email,password,secret)
+
     const res =  await LoginAdmin({email, password, secret})
 
     if(res.data.success){
