@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import {motion} from 'framer-motion'
 import Terminal from '../components/Terminal'

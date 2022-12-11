@@ -20,7 +20,7 @@ const getMessages = async (data) => {
     
     try {
         // const contactmsgs = await axios.get('https://witty-frog-tiara.cyclic.app/api/contact')
-        const contactmsgs = await axios.get('http://localhost:8967/api/contact',{
+        const contactmsgs = await axios.get('https://witty-frog-tiara.cyclic.app/api/contact',{
             headers: {
                 'Content-Type': 'application/json',
                 'token':data

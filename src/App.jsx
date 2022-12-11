@@ -12,8 +12,6 @@ import Projects from './pages/Projects'
 import Blogs from './pages/Blogs'
 import Githubview from "./pages/Githubview"
 import Settings from './pages/Settings'
-// import Admin from './pages/Admin'
-// import Inbox from './pages/Inbox'
 import ContactView from './pages/ContactView'
 import { AdminContext } from './context/AdminContext'
 import Lol from './components/Lol'
