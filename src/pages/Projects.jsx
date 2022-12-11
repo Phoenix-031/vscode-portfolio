@@ -14,7 +14,6 @@ const Projects = () => {
   const[isloading, setIsloading] = useState(true)
     const {terminal} = useContext(TabContext)
 
-
   useEffect(() => {
     const projectData = async() =>{
       const projdata = await getAllProjects()

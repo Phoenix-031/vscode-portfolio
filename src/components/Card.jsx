@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import { verfiyAdmin } from '../api/user'
 import { useContext } from 'react'
 import { AdminContext } from '../context/AdminContext'
+import Popup from './Popup'
 
 const Card = (props) => {
 
@@ -23,6 +24,7 @@ const Card = (props) => {
   const [demo,setDemo] = useState(props.cardinfo.source)
   const [update,setUpdate] = useState(false)
   const [verified,setVerified] = useState(false)
+  const [popup,setPopup] = useState(false)
 
   useEffect(() => {
     const verifyAdminPriviledge = async () => {
@@ -67,18 +69,26 @@ const Card = (props) => {
   }
   
   const handleDelete = async() => {
-   const res = await removeProject(props.cardinfo._id)
+    setPopup(true)
+  //  const res = await removeProject(props.cardinfo._id)
 
-   if(res.data.success) {
-    alert("deleted successfully")
-  }
+  //  if(res.data.success) {
+  //   alert("deleted successfully")
+  // }
 }
+
+  const togglePopup = () =>{
+    setPopup(!popup)
+  }
   
   return (
    <>
+   {
+    popup ? <Popup changeParentState= {togglePopup} /> : null
+   }
 
    {modal ? 
-      <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl text-white font-urbanist w-full sm:w-1/2 h-[70%] overflow-y-auto top-20 z-20 fixed flex justify-center items-baseline'
+      <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl text-white font-urbanist w-full sm:w-1/2 h-[70%] overflow-y-auto left-5 top-20 z-20 fixed flex justify-center items-baseline'
       initial={{opacity:0,translateY:-150}}
       animate = {{opacity:1,translateY:0}}
       transition = {{
@@ -166,7 +176,7 @@ const Card = (props) => {
       <div className='text-xl xl:text-3xl md:text-2xl font-Enriqueta'>
         {props.cardinfo.title}
       </div>
-      <p className='flex flex-wrap w-full overflow-hidden text-sm sm:text-lg xl:text-2xl md:text-sm sm:text-lg font-varela text-center '>
+      <p className='flex flex-wrap w-full overflow-hidden text-sm sm:text-lg xl:text-2xl md:text-sm font-varela text-center '>
         {props.cardinfo.description}
       </p>
       <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm xl:text-xl md:text-sm sm:text-lg font-semibold'>

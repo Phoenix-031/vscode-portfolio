@@ -8,12 +8,16 @@ const Popup = (props) => {
     const handledelete = async(e) => {
 
             
-    // const res = await removeProject(props.cardinfo)
+    const res = await removeProject(props.cardinfo)
 
-    // if(res.data.success) {
-    //     alert("deleted successfully")
-    // }
-        console.log("asrgh")    
+    if(res.data.success) {
+        props.changeParentState()
+    }
+        // console.log("asrgh")    
+    }
+
+    const handledeny = () => {
+        props.changeParentState()
     }
     
   return (
@@ -27,12 +31,12 @@ const Popup = (props) => {
         type:'spring',
         stiffness:100
         }}
-        className="flex flex-col justify-center items-center gap-4 z-30 fixed top-20"
+        className="flex flex-col justify-center items-center gap-4 z-30 fixed top-20 w-full sm:max-w-max py-3 bg-drk00"
     >
-        <p>Delete this entry?</p>
-        <div className='flex justify-between items-center w-full'>
-            <button className='rounded-lg text-xl bg-drk01 font-poppins py-3 px-5 font-semibold' onClick={handledelete}>Confirm</button>
-            <button className='rounded-lg text-xl bg-drk01 font-poppins py-3 px-5 font-semibold' >Deny</button>
+        <p className='text-white font-poppins'>Delete this entry?</p>
+        <div className='flex justify-center gap-16 items-center w-full'>
+            <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledelete}>Confirm</button>
+            <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledeny} >Deny</button>
         </div>
     </motion.div>
 
