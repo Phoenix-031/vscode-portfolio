@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Adminnav from '../components/Admindashboard/Adminnav'
-import Inbox from '../components/Admindashboard/Inbox'
+import Inbox from './Inbox'
 
 
 const Admin = () => {

@@ -5,11 +5,9 @@ import { TabContext } from '../context/TabContext'
 const Topnav = () => {
 
   const {terminal,dispatch}  = useContext(TabContext)
-  console.log(terminal)
 
   const handleTerminalToggle = () => {
     dispatch(TerminalToggle(!terminal))
-    console.log(terminal)
   }
   
   return (

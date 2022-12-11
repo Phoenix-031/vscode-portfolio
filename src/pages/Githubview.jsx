@@ -20,7 +20,7 @@ const Githubview = () => {
   const scrolldown = useRef(null)
     const {terminal} = useContext(TabContext)
   useEffect(() => {
-    console.log(scrolldown.current)
+    // console.log(scrolldown.current)
     scrolldown.current?.scrollIntoView({behavior:'smooth'})
   },[repos])
 
@@ -41,14 +41,14 @@ const Githubview = () => {
     }
 
      getGithubdata()
-     console.log(info)
+    //  console.log(info)
     
   },[page])
 
   const loadmoredata = () => {
     if(page+1 <= 7){
       setLoadmore(!loadmore)
-      console.log(page)
+      // console.log(page)
       setPage(page+1)
     } else {
       document.getElementById('loadmore').classList.add("hidden")

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { getMessages } from '../../api/contact'
-import Loading from './Loading'
-import Contactcard from './Contactcard'
+import { getMessages } from '../api/contact'
+import Loading from '../components/Admindashboard/Loading'
+import Contactcard from '../components/Admindashboard/Contactcard'
 
 const Inbox = () => {
 
@@ -24,7 +24,8 @@ const Inbox = () => {
     <div className='border-white border-2 text-white font-Enriqueta w-full flex-1 gap-4 flex flex-wrap justify-center items-center px-5 py-5 bg-drk00'>
         {fetching ? (<Loading />) : (
             contactdata?.map((data,ind) => (
-                <Contactcard key={ind} carddata = {data}/>
+                // <Contactcard key={ind} carddata = {data}/>
+                "asrgo"
             ))
         )}
     </div>

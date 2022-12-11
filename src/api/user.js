@@ -3,7 +3,7 @@ import axios from "axios";
 const LoginAdmin = async(data) => {
     try {
     const res = await axios.post("https://witty-frog-tiara.cyclic.app/api/auth",{
-        data
+        data:data
     })
 
     return res

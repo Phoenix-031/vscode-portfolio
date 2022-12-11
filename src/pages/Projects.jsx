@@ -29,7 +29,7 @@ const Projects = () => {
   
 
   const handlefilter = async(e) => {
-    console.log(e.target.textContent)
+    // console.log(e.target.textContent)
 
     
   }

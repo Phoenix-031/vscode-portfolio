@@ -13,12 +13,15 @@ import { TabContext } from '../context/TabContext'
 
 import { AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
+import ContactView from './ContactView'
+import { AdminContext } from '../context/AdminContext'
 
 
 const Window = () => {
 
       const location = useLocation()
       const navigate = useNavigate()
+      const {user} = useContext(AdminContext)
 
       const {terminal} = useContext(TabContext)
 
@@ -47,7 +50,10 @@ const Window = () => {
               <Route exact path="projects" element={ <Projects /> } />
               <Route exact path="github" element={ <Githubview /> } />
               <Route exact path="settings" element={ <Settings /> } />
-              
+              <Route exact path="contacts" element={ <ContactView /> } />   
+              <Route exact path="admin/contacts" element={
+                    user ? <ContactView /> : <Home />
+                  } />  
           </Routes>
         </AnimatePresence>
       

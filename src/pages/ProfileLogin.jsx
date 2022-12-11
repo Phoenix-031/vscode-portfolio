@@ -21,14 +21,15 @@ const ProfileLogin = () => {
     setLogging(true)
 
     const res =  await LoginAdmin({email, password, secret})
-    console.log(res)
 
     if(res.data.success){
       setLogging(false)
       dispatch(AdminLogin(res.data.accessToken))
       navigate('/')
+    } else {
+      setLogging(false)
+      alert(res.data.msg)
     }
-    
   }
   
   return (

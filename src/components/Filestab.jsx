@@ -84,7 +84,7 @@ const Filestab = () => {
 
 
     const handleclose = (e) => {
-    console.log(e.target.parentElement.attributes.id.value)
+    // console.log(e.target.parentElement.attributes.id.value)
     dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
   }
   

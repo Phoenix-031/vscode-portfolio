@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import Code from '../icons/Code'
 import Plus from '../icons/Plus'
+import Messages from '../icons/Messages'
 import Logout from '../icons/Logout'
 import Contact from '../icons/Contact'
 import Edit from '../icons/Edit'
@@ -20,6 +21,8 @@ const Sidenav = () => {
   const [modal,setModal] = useState(false)
   const [verified,setVerified] = useState(false)
   const {user,dispatch} = useContext(AdminContext)
+  // const naviagte = useNavigate()
+
 
   const handleAddProject = () => {
     setModal(!modal)
@@ -44,6 +47,11 @@ const Sidenav = () => {
     dispatch(AdminLogout(false))
     alert("logged out successfully")
   }
+
+  // const handleMessages = () => {
+  //   console.log("asfkgjh")
+  //   // Navigate('/contacts')
+  // }
   
   return (
      <>
@@ -72,6 +80,8 @@ const Sidenav = () => {
          {verified ? (
           <div className="flex flex-col gap-3 justify-center items-center">
           <div onClick={handleAddProject} className='relative'><Plus width={20} height={20} /></div>
+          {/* <div onClick={handleMessages}><Messages width={20} height={20} /></div> */}
+          <Link to='/admin/contacts'><Messages width={20} height={20} /></Link>
           <div onClick={handleLogout}><Logout width={20} height={20} /></div>
           </div>
          ): null
