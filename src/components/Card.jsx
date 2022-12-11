@@ -78,7 +78,7 @@ const Card = (props) => {
    <>
 
    {modal ? 
-      <motion.div className='bg-drk01 text-lg rounded-2xl text-white font-urbanist w-1/2 h-[70%] overflow-y-auto top-20 z-20 fixed flex justify-center items-baseline'
+      <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl text-white font-urbanist w-full sm:w-1/2 h-[70%] overflow-y-auto top-20 z-20 fixed flex justify-center items-baseline'
       initial={{opacity:0,translateY:-150}}
       animate = {{opacity:1,translateY:0}}
       transition = {{
@@ -94,25 +94,25 @@ const Card = (props) => {
             </div>
           <div className='flex flex-col gap-2 justify-center items-center w-full'>
             <img src={props.cardinfo.imgurl} alt="" />
-            <input className='rounded-lg font-poppins text-lg py-3 px-5 hidden' placeholder = 'Image' type="file" id='fileupload-btn'/>
-            <button onClick={() => {document.getElementById('fileupload-btn').click()}} className='text-lg py-3 px-5 font-poppins font-semibold rounded-lg bg-drk00 max-w-max'>Upload</button>
+            <input className='rounded-lg font-poppins text-sm sm:text-lg py-3 px-5 hidden' placeholder = 'Image' type="file" id='fileupload-btn'/>
+            <button onClick={() => {document.getElementById('fileupload-btn').click()}} className='text-sm sm:text-lg py-3 px-5 font-poppins font-semibold rounded-lg bg-drk00 max-w-max'>Upload</button>
           </div>
           <div className="w-full flex justify-start items-baseline flex-col"> 
             <p>Title</p>
-            <input className='rounded-sm  border-b-1 bg-inherit font-poppins text-lg py-3 px-5 text-gray-600 focus:outline-none w-2/3' value={modaltitle} placeholder = 'Edit Title' type="text" 
+            <input className='rounded-sm  border-b-1 bg-inherit font-poppins text-sm sm:text-lg py-3 px-5 text-gray-600 focus:outline-none w-2/3' value={modaltitle} placeholder = 'Edit Title' type="text" 
             onChange={(e) => setModaltitle(e.target.value)}
             />
           </div>
           <div className="w-full flex justify-start items-baseline flex-col">
             <p className=''>Desctiption</p>
-            <input className='rounded-sm  border-b-1  bg-inherit font-poppins text-lg py-3 px-5 text-gray-600 focus:outline-none w-2/3' value={modaldescription} placeholder = 'Edit Description' type="text" 
+            <input className='rounded-sm  border-b-1  bg-inherit font-poppins text-sm sm:text-lg py-3 px-5 text-gray-600 focus:outline-none w-2/3' value={modaldescription} placeholder = 'Edit Description' type="text" 
             onChange={(e) => setModaldescription(e.target.value)}
             />
           </div>
           <div className='flex justify-center items-center flex-col gap-2 w-full'>
             <div className="flex justify-start items-center gap-2 w-full">
-              <input className='rounded-sm font-poppins text-lg py-3 px-5 text-gray-600 focus:outline-none bg-inherit border-b-1 w-2/3' value={taginp} onChange={(e) => setTanginp(e.target.value)} placeholder = 'Edit Tags' type="text" />
-              <button onClick={handletags} className='rounded-lg py-2 px-4 bg-drk00 text-lg text-white font-poppins font-semibold'>Add</button>
+              <input className='rounded-sm font-poppins text-sm sm:text-lg py-3 px-5 text-gray-600 focus:outline-none bg-inherit border-b-1 w-2/3' value={taginp} onChange={(e) => setTanginp(e.target.value)} placeholder = 'Edit Tags' type="text" />
+              <button onClick={handletags} className='rounded-lg py-2 px-4 bg-drk00 text-sm sm:text-lg text-white font-poppins font-semibold'>Add</button>
             </div>
             <div className="flex gap-3 jsutify-start items-center w-full flex-wrap">
               {modaltags.map(tag => (
@@ -122,12 +122,12 @@ const Card = (props) => {
               ))}
             </div>
           </div>
-          <div className='w-full flex gap-2 justify-between items-center'>
+          <div className='w-full flex gap-2 justify-between items-center flex-col sm:flex-row'>
             <div className='flex flex-col justify-center items-center'>Live
-              <input type="text" className='rounded-sm  border-b-1 bg-inherit  font-poppins text-lg py-3 px-5 text-gray-600 focus:outline-none w-full' value={live} onChange={(e) => setLive(e.target.value)}/>
+              <input type="text" className='rounded-sm  border-b-1 bg-inherit  font-poppins text-sm sm:text-lg py-3 px-5 text-gray-600 focus:outline-none w-full' value={live} onChange={(e) => setLive(e.target.value)}/>
             </div>
             <div className='flex flex-col justify-center items-center'>Source
-              <input type="text" className='rounded-sm  border-b-1 bg-inherit font-poppins text-lg py-3 px-5 text-gray-600 focus:outline-none w-full' value={demo} onChange={(e) => setDemo(e.target.value)}/>
+              <input type="text" className='rounded-sm  border-b-1 bg-inherit font-poppins text-sm sm:text-lg py-3 px-5 text-gray-600 focus:outline-none w-full' value={demo} onChange={(e) => setDemo(e.target.value)}/>
             </div>
           </div>
           {
@@ -137,7 +137,7 @@ const Card = (props) => {
       </motion.div>
     : null}
    
- <motion.div className='relative border-white border-2 rounded-lg md:rounded-xl max-h-max bg-gray-800 px-1 sm:px-3 py-2 sm:py-3 text-white text-sm md:text-lg font-urbanist w-full md:w-2/3 mobile-l:w-[90%] lg:w-[60%] xl:w-[40%] flex flex-col justify-start items-center gap-4 '
+ <motion.div className='relative border-white border-2 rounded-lg md:rounded-xl max-h-max bg-gray-800 px-1 sm:px-3 py-2 sm:py-3 text-white text-sm md:text-sm sm:text-lg font-urbanist w-full md:w-2/3 mobile-l:w-[90%] lg:w-[60%] xl:w-[40%] flex flex-col justify-start items-center gap-4 '
     initial={{opacity:0,
       translateX: props.cardno % 2 ===0 ? -150 : 150
     }}
@@ -166,10 +166,10 @@ const Card = (props) => {
       <div className='text-xl xl:text-3xl md:text-2xl font-Enriqueta'>
         {props.cardinfo.title}
       </div>
-      <p className='flex flex-wrap w-full overflow-hidden text-lg xl:text-2xl md:text-lg font-varela text-center '>
+      <p className='flex flex-wrap w-full overflow-hidden text-sm sm:text-lg xl:text-2xl md:text-sm sm:text-lg font-varela text-center '>
         {props.cardinfo.description}
       </p>
-      <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm xl:text-xl md:text-lg font-semibold'>
+      <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm xl:text-xl md:text-sm sm:text-lg font-semibold'>
         {
           props.cardinfo.tags && props.cardinfo.tags.map((tag,ind) => (
             <p className='border-gray-400 border-2 rounded-lg sm:rounded-2xl py-2 px-3' key={ind}>{tag}</p>
@@ -181,7 +181,7 @@ const Card = (props) => {
         <p className='border-gray-500 border-2 rounded-lg md:rounded-xl px-4 py-2'><a href={props.cardinfo.live}>Live Demo</a></p>
         {verified ? (
         <>
-        <div onClick={handleEditProject}><Edit width={30} height={30}/></div> 
+        <div onClick={handleEditProject}><Edit width={25} height={25}/></div> 
          <div onClick={handleDelete}><Bin /></div>
         </>
         )

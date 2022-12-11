@@ -22,6 +22,10 @@ const Sidenav = () => {
   const [verified,setVerified] = useState(false)
   const {user,dispatch} = useContext(AdminContext)
 
+  const changeModalState = () => {
+    setModal(!modal)
+  }
+
 
   const handleAddProject = () => {
     setModal(!modal)
@@ -56,7 +60,7 @@ const Sidenav = () => {
      <>
 
      {
-      modal ? <AddProjectModal /> : null
+      modal ? <AddProjectModal changeParentState = {changeModalState} /> : null
      }
      
  <div className=' flex flex-col justify-between items-center bg-drk00 '>
