@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import Code from '../icons/Code'
 import Plus from '../icons/Plus'
@@ -21,6 +21,7 @@ const Sidenav = () => {
   const [modal,setModal] = useState(false)
   const [verified,setVerified] = useState(false)
   const {user,dispatch} = useContext(AdminContext)
+  const navigate = useNavigate()
 
   const changeModalState = () => {
     setModal(!modal)
@@ -49,6 +50,7 @@ const Sidenav = () => {
   const handleLogout = () => {
     dispatch(AdminLogout(false))
     alert("logged out successfully")
+    navigate('/')
   }
 
   // const handleMessages = () => {
@@ -92,9 +94,11 @@ const Sidenav = () => {
 
        <div className="flex flex-col justify-end items-center bg-drk00   row-start-5 cursor-pointer pb-3 w-full">
         <div className='cursor-pointer w-full bg-drk00 flex justify-center items-center py-2  hover:bg-drk01'>
-          <Link to='/dashboardlogin'>{
-            user ? (<div onClick={handleLogout}><Logout width={20} height={20} /></div>) :<Profile />
-          }</Link>
+          {
+            user ? (<div onClick={handleLogout}><Logout width={20} height={20} /></div>) :(
+              <Link to='/dashboardlogin'><Profile /> </Link>
+            )
+          }
         </div>
         <div className='cursor-pointer w-full bg-drk00 flex justify-center items-center py-2  hover:bg-drk01'>
           <Link to='/settings'><Settings /></Link>

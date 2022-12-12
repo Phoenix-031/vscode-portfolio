@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../components/Card'
 import { useState,useEffect } from 'react'
-import {getAllProjects} from '../api/projects'
+import {filterProjects, getAllProjects} from '../api/projects'
 import Projectloading from '../components/Projectloading'
 import  {motion} from 'framer-motion'
 import { useContext } from 'react'
@@ -28,9 +28,14 @@ const Projects = () => {
   
 
   const handlefilter = async(e) => {
-    // console.log(e.target.textContent)
+   
+    setIsloading(true)
 
-    
+    const filterData = await filterProjects(e.target.textContent)
+
+    setIsloading(false)
+
+    setProjects(filterData.data.data)
   }
   
 

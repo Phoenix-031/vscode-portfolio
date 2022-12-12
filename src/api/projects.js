@@ -1,14 +1,14 @@
 import axios from "axios";
 
 const getAllProjects = async () =>{
-    const response = await axios.get(" https://witty-frog-tiara.cyclic.app/api/projects");
+    const response = await axios.get("https://witty-frog-tiara.cyclic.app/api/projects");
 
     return response
 }
 
-const filterProjects = async () => {
+const filterProjects = async (filterId) => {
     try {
-        const response = await axios.get('https://witty-frog-tiara.cyclic.app/api/projects/:filterId')
+        const response = await axios.get(`https://witty-frog-tiara.cyclic.app/api/projects/${filterId}`)
 
         return response
         

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Edit from '../icons/Edit'
 import Cross from '../icons/Cross'
-import { removeProject, updateProject } from '../api/projects'
+import { updateProject } from '../api/projects'
 import ModalLoader from './ModalLoader'
 import Bin from '../icons/Bin'
 import { useEffect } from 'react'
@@ -70,11 +70,6 @@ const Card = (props) => {
   
   const handleDelete = async() => {
     setPopup(true)
-  //  const res = await removeProject(props.cardinfo._id)
-
-  //  if(res.data.success) {
-  //   alert("deleted successfully")
-  // }
 }
 
   const togglePopup = () =>{
