@@ -696,6 +696,10 @@ video {
   bottom: 0.25rem;
 }
 
+.top-0{
+  top: 0px;
+}
+
 .z-20{
   z-index: 20;
 }
