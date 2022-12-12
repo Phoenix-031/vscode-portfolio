@@ -15,7 +15,7 @@ const About = () => {
     const {terminal} = useContext(TabContext)
     const {user,} = useContext(AdminContext)
     const [modal,setModal] = useState(false)
-    const [aboutext,setAboutext] = useState("        I'm a computer Science and Engineering student and an aspiring software Engineer. I love to solve or atleast try to come up with a solution to real world problems with the help of Technolodgy, the new technolodgies rolling out everyday keeps me on edge. I'm a keen learner spending most of my time working on projects involving various tech stacks. I love competitve programming it's and i have a particular interest towards malware analysis and design. I love Open Source and have been contributer in various events thereby addying to my learning experiences.")
+    const [aboutext,setAboutext] = useState("        I'm a computer Science and Engineering student and an aspiring software Engineer. I love to solve or atleast try to come up with a solution to real world problems with the help of Technology, the new technologies rolling out everyday keeps me on edge. I'm a keen learner spending most of my time working on projects involving various tech stacks. I love competitve programming and I have a particular interest towards malware analysis and design. I love Open Source and have been contributor in various events thereby adding to my learning experiences.")
 
     const handleEdit = () => {
       setModal(!modal)
