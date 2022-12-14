@@ -18,6 +18,7 @@ module.exports = {
       },
       backgroundImage:{
         'bcol01':'linear-gradient(to left, rgb(249, 115, 22), rgb(253, 224, 71))',
+        'bcol01-right':'linear-gradient(to right, rgb(249, 115, 22), rgb(253, 224, 71))',
         'bcol02': 'linear-gradient(to right, rgb(251, 146, 60), rgb(251, 113, 133))',
         'bcol03':'linear-gradient(to left bottom, rgb(251, 113, 133), rgb(253, 186, 116))',
         'bcol04': 'linear-gradient(to left, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8))',

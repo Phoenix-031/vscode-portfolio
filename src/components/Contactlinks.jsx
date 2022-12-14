@@ -20,7 +20,7 @@ const Contactlinks = () => {
         <p className='w-full py-3 sm:px-4 px-2 text-white text-lg sm:text-2xl md:text-xl font-Enriqueta '>.socials &#123;</p>
         <motion.div className="flex flex-col justify-start items-baseline gap-2 w-full sm:px-12 px-5"
         >
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Github: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Github: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -29,7 +29,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
             >Phoenix-031 ;</motion.a></p>
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Twitter: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Twitter: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -38,7 +38,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
             >@__m6lw9r3__  ;</motion.a></p>
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Linkedin: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Linkedin: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -47,7 +47,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
             >Debayan pradhan ;</motion.a></p>
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Dev: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Dev: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -56,7 +56,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
             >Phoenix-031 ;</motion.a></p>
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Email: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Email: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -65,7 +65,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
             >pradhandebayan@gmail.com ;</motion.a></p>
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Medium: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Medium: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -74,7 +74,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
             >Phoenix-031 ;</motion.a></p>
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Linktree: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Linktree: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -83,7 +83,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
             >Phoenix-031 ;</motion.a></p>
-            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Instagram: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-orange-400 hover:text-orange-300 hover:scale-100'
+            <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Instagram: <motion.a href='https://github.com/Phoenix-031' className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400 '
             initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
@@ -97,8 +97,7 @@ const Contactlinks = () => {
         <div className="w-full">
             <p className='w-full py-3 sm:px-4 px-2 text-white text-lg sm:text-2xl md:text-xl  font-Enriqueta'>.cp &#123;</p>
             <div className="flex flex-col justify-start items-baseline sm:gap-2 w-full sm:px-12 px-5">
-                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Codechef: <motion.a href="/" className='font-poppins text-orange-400 hover:text-orange-300'
-                            initial={{opacity:0,translateY:-200}}
+                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Codechef: <motion.a href="/" className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400'              initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
               delay:0.8,
@@ -106,8 +105,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
                  > Codechef profile ;</motion.a></p>
-                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Codeforces: <motion.a href="/" className='font-poppins text-orange-400 hover:text-orange-300'
-                            initial={{opacity:0,translateY:-200}}
+                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Codeforces: <motion.a href="/" className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400'              initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
               delay:0.9,
@@ -115,8 +113,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
                 > Codeforces profile ;</motion.a></p>
-                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>LeetCode: <motion.a href="/" className='font-poppins text-orange-400 hover:text-orange-300'
-                            initial={{opacity:0,translateY:-200}}
+                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>LeetCode: <motion.a href="/" className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400'              initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
               delay:1,
@@ -124,8 +121,7 @@ const Contactlinks = () => {
               duration:0.3
             }}
                 > Leetcode profile ;</motion.a></p>
-                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Atcoder: <motion.a href="/" className='font-poppins text-orange-400 hover:text-orange-300'
-                            initial={{opacity:0,translateY:-200}}
+                <p className='text-lg sm:text-2xl md:text-xl  font-Enriqueta text-white '>Atcoder: <motion.a href="/" className='font-poppins text-transparent bg-clip-text bg-bcol05 hover:text-orange-400'              initial={{opacity:0,translateY:-200}}
             animate={{opacity:1,translateY:0}}
             transition={{
               delay:1.1,

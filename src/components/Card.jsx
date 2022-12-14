@@ -177,15 +177,15 @@ const Card = (props) => {
       <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm xl:text-xl md:text-sm sm:text-lg font-semibold'>
         {
           props.cardinfo.tags && props.cardinfo.tags.map((tag,ind) => (
-            <div className={`rounded-lg sm:rounded-xl py-1px px-1px class-b-${ind%3}`}>
-              <p className='bg-drk00 rounded-lg sm:rounded-xl py-3 px-5 hover:shadow-sh1 hover:shadow-drk00' key={ind}>{tag}</p>
+            <div className={`rounded-lg sm:rounded-xl py-1px px-1px class-b-${ind%3} hover:class-t-${ind%3}`}>
+              <p className='bg-drk00 rounded-lg sm:rounded-xl py-3 px-5' key={ind}>{tag}</p>
             </div>
           )
           )
         }
       </div>
       <div className='w-full flex justify-between items-center px-3'>
-        <p className='border-gray-500 border-2 rounded-lg md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live}>Live Demo</a></p>
+        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live}>Live Demo</a></p>
         {verified ? (
         <>
         <div onClick={handleEditProject}><Edit width={25} height={25}/></div> 
@@ -193,7 +193,7 @@ const Card = (props) => {
         </>
         )
         : null}
-        <p className='border-gray-500 border-2 rounded-lg md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.source}>Source</a></p>
+        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.source}>Source</a></p>
       </div>
     </motion.div>
    </>
