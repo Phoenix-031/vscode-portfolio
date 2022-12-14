@@ -128,7 +128,7 @@ const Filestab = () => {
         </p>
         <Link to='/contact'>contact.css</Link>
       </div>
-      <div className={`flex gap-2 justify-center items-center text-green-5001 text-xs sm:text-sm border-gray-800 px-4 sm:px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')} >
+      <div className={`flex gap-2 justify-center items-center text-green-500 text-xs sm:text-sm border-gray-800 px-4 sm:px-6 cursor-pointer h-full border-1 hover:bg-drk00 `+ (location.pathname === '/github' ? 'bg-drk00' : 'bg-drk01')} >
         <p>
           <img src={micon} alt="" width={20} height={20} />
         </p>
