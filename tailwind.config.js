@@ -14,7 +14,8 @@ module.exports = {
     },
     extend: {
       boxShadow:{
-        'sh1' :' rgba(50, 50, 93, 0.25) 0px 10px 100px -20px, rgba(0, 0, 0, 0.3) 0px 10px 60px -70px'
+        'sh1' :' rgba(50, 50, 93, 0.25) 0px 10px 100px -20px, rgba(0, 0, 0, 0.3) 0px 10px 60px -70px',
+        'sh2' : 'box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)'
       },
       backgroundImage:{
         'bcol01':'linear-gradient(to left, rgb(249, 115, 22), rgb(253, 224, 71))',
@@ -22,7 +23,8 @@ module.exports = {
         'bcol02': 'linear-gradient(to right, rgb(251, 146, 60), rgb(251, 113, 133))',
         'bcol03':'linear-gradient(to left bottom, rgb(251, 113, 133), rgb(253, 186, 116))',
         'bcol04': 'linear-gradient(to left, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8))',
-        'bcol05': 'linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))'
+        'bcol05': 'linear-gradient(to right, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))',
+        'bcol06': 'linear-gradient(to right, rgb(153, 27, 27), rgb(202, 138, 4), rgb(234, 179, 8))'
       },
       spacing:{
         '21px':'21px',
@@ -37,6 +39,7 @@ module.exports = {
         'drk00':"#24292e",
         'gry01' : '#3a435b',
         'skin':"#f9826c",
+        'gr1' : '#52a911'
       },
       gridTemplateColumns:{
          '32': 'repeat(32, minmax(0, 1fr))',
