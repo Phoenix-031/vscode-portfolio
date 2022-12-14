@@ -177,7 +177,7 @@ const Card = (props) => {
       <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm xl:text-xl md:text-sm sm:text-lg font-semibold'>
         {
           props.cardinfo.tags && props.cardinfo.tags.map((tag,ind) => (
-            <div className={`rounded-lg sm:rounded-xl py-1px px-1px class-b-${ind%3} hover:class-t-${ind%3}`}>
+            <div className={`rounded-lg sm:rounded-xl py-1px px-1px class-b-${ind%3}`}>
               <p className='bg-drk00 rounded-lg sm:rounded-xl py-3 px-5 hover:shadow-sh1 hover:shadow-drk00' key={ind}>{tag}</p>
             </div>
           )
