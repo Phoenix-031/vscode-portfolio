@@ -2,3 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .class-b-0 {
+        @apply bg-green-600
+    };
+    .class-b-1 {
+        @apply bg-orange-500
+    };
+    .class-b-2 {
+        @apply bg-rose-600
+    };
+    .class-t-0 {
+        @apply bg-green-600
+    };
+    .class-t-1 {
+        @apply bg-orange-500
+    };
+    .class-t-2 {
+        @apply bg-rose-600
+    };
+}

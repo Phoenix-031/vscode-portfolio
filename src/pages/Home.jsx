@@ -54,26 +54,28 @@ const Home = () => {
         <div className='h-full flex flex-col w-full xl:w-2/3 justify-center items-baseline xl:px-10 gap-4 xl:gap-8'>
           <div>
             <p>Hi There</p>
-            <div className='flex gap-3 text-xl lg:text-2xl xl:text-3xl font-Enriqueta text-bold'>I'm  <span className='text-xl sm:text-4xl md:text-2xl lg:text-3xl font-roboto font-extrabold text-green-600 capitalize tracking-normal sm:tracking-wide'><Typinganimation /></span></div>
+            <div className='flex gap-3 text-xl lg:text-2xl xl:text-3xl font-Enriqueta text-bold'>I'm  <span className='text-xl sm:text-4xl md:text-2xl lg:text-3xl font-roboto font-extrabold bg-clip-text text-transparent bg-bcol04 capitalize tracking-normal sm:tracking-wide'><Typinganimation /></span></div>
           </div>
 
-          <div className='md:text-lg'>I'm a Webdeveloper working on fullstack projects and interested in malware analysis, trying to build something valuable for the comminuty and overengineering more or less eveything! </div>
+          <div className='md:text-lg'>
+            <p>
+              I'm a Webdeveloper working on fullstack projects and interested in malware analysis, trying to build something valuable for the comminuty and overengineering more or less eveything! 
+            </p>
+          </div>
 
           <div className='flex w-full py-2 px-3 justify-start items-center gap-3'>
-            <a href="/"><i className="fa-brands border-white border-2 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:bg-gray-800 text-yellow-400 fa-twitter"></i></a>
-            <a href="/"><i className="fa-brands border-white border-2 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:bg-gray-800 text-yellow-400 fa-instagram"></i></a>
-            <a href="/"><i className="fa-brands border-white border-2 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:bg-gray-800 text-yellow-400 fa-facebook"></i></a>
-            <a href="/"><i className="fa-brands border-white border-2 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:bg-gray-800 text-yellow-400 fa-medium"></i></a>
+            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-twitter"></i></a>
+            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-instagram"></i></a>
+            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-facebook"></i></a>
+            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-medium"></i></a>
           </div>
 
           <div className='w-full flex gap-2 sm:gap-4 justify-start items-center'>
-            <div>
-              <button className='border-white border-2 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-3xl font-medium xl:font-semibold font-Enriqueta hover:text-yellow-500'>Resume</button>
-              <span></span>
+            <div className=' rounded-xl xl:rounded-xl bg-bcol02 py-1.2px px-1.2px'>
+              <button className='bg-drk01 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-xl font-medium xl:font-semibold font-Enriqueta hover:text-transparent hover:bg-clip-text hover:shadow-lg hover:shadow-gray-700 hover:text-gray-900 '>Resume</button>
             </div>
-            <div>
-              <button className='border-white border-2 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-3xl font-medium xl:font-semibold font-Enriqueta hover:text-yellow-500 relative before:absolute before:'>Sponser</button>
-              <span></span>
+            <div className=' rounded-xl xl:rounded-xl  bg-bcol02 py-1.2px px-1.2px'>
+              <button className='bg-drk01 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-xl font-medium xl:font-semibold font-Enriqueta hover:text-transparent hover:bg-clip-text hover:shadow-lg hover:shadow-gray-700 hover:text-gray-900  relative before:absolute before:'>Sponser</button>
             </div>
           </div>
         </div>

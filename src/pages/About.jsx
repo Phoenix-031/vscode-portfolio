@@ -79,7 +79,7 @@ const About = () => {
           </p>
           </div>
           <motion.ul className='flex gap-2 sm:gap-4 justify-start items-center pt-5 flex-wrap'>
-            <motion.li className='border-gray-700 py-3 px-4 sm px-4:sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-lg'
+            <motion.li className='text-transparent bg-clip-text bg-bcol05 hover:shadow-stone-400 font-semibold font-Enriqueta border-gray-600 py-3 px-4 sm px-4:sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-sh1'
             initial={{opacity:0,translateX:-100}}
             animate={{opacity:1,translateX:0}}
             transition={{
@@ -89,7 +89,7 @@ const About = () => {
               stiffness:100
             }}
             >Competitve Programming</motion.li>
-            <motion.li className='border-gray-700 py-3 px-4 sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-lg'
+            <motion.li className='text-transparent bg-clip-text bg-bcol05 hover:shadow-stone-400 font-semibold font-Enriqueta border-gray-600 py-3 px-4 sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-sh1'
                         initial={{opacity:0,translateX:-100}}
             animate={{opacity:1,translateX:0}}
             transition={{
@@ -99,7 +99,7 @@ const About = () => {
               stiffness:100
             }}
             >FullStack(Backend Heavy)</motion.li>
-            <motion.li className='border-gray-700 py-3 px-4 sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-lg'
+            <motion.li className='text-transparent bg-clip-text bg-bcol05 hover:shadow-stone-400 font-semibold font-Enriqueta border-gray-600 py-3 px-4 sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-sh1'
                         initial={{opacity:0,translateX:-100}}
             animate={{opacity:1,translateX:0}}
             transition={{
@@ -109,7 +109,7 @@ const About = () => {
               stiffness:100
             }}
             >Open source</motion.li>
-            <motion.li className='border-gray-700 py-3 px-4 sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-lg'
+            <motion.li className='text-transparent bg-clip-text bg-bcol05 hover:shadow-stone-400 font-semibold font-Enriqueta border-gray-600 py-3 px-4 sm:px-8 border-2 rounded-lg sm:rounded-xl hover:shadow-sh1'
                         initial={{opacity:0,translateX:-100}}
             animate={{opacity:1,translateX:0}}
             transition={{
@@ -119,7 +119,7 @@ const About = () => {
               stiffness:100
             }}
             >Malware analysis</motion.li>
-            <motion.li className='border-gray-700 py-3 px-8 border-2 rounded-xl hover:shadow-lg'
+            <motion.li className='text-transparent bg-clip-text bg-bcol05 hover:shadow-stone-400 font-semibold font-Enriqueta border-gray-600 py-3 px-8 border-2 rounded-xl hover:shadow-sh1'
                         initial={{opacity:0,translateX:-100}}
             animate={{opacity:1,translateX:0}}
             transition={{
