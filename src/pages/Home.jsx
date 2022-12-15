@@ -64,10 +64,10 @@ const Home = () => {
           </div>
 
           <div className='flex w-full py-2 px-3 justify-start items-center gap-3'>
-            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-twitter"></i></a>
-            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-instagram"></i></a>
-            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-facebook"></i></a>
-            <a href="/"><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-medium"></i></a>
+            <a href="https://twitter.com/m4lw4r3_01" target='_blank' rel='noreferrer'><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-twitter"></i></a>
+            <a href="https://www.instagram.com/__m6lw9r3___/"  target='_blank' rel='noreferrer'><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-instagram"></i></a>
+            <a href="https://www.facebook.com/debayan.pradhan.3"  target='_blank' rel='noreferrer'><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-facebook"></i></a>
+            <a href="https://medium.com/@phoenix01"  target='_blank' rel='noreferrer'><i className="fa-brands border-gray-400 border-1 hover:bg-bcol02 py-2 px-2 sm:py-4 sm:px-4 rounded-full hover:text-transparent hover:bg-clip-text text-gray-400 hover:shadow-lg hover:shadow-gray-700 fa-medium"></i></a>
           </div>
 
           <div className='w-full flex gap-2 sm:gap-4 justify-start items-center'>
