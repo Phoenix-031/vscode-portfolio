@@ -1,5 +1,6 @@
 import {React,useContext} from 'react'
 import { Link,useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 import ricon from '../icons/png/react.png'
@@ -79,12 +80,17 @@ const Filestab = () => {
   }
 }
   
-
+  const navigate = useNavigate()
   const {tabs,dispatch} = useContext(TabContext)
 
 
     const handleclose = (e) => {
-    // console.log(e.target.parentElement.attributes.id.value)
+      console.log(tabs.length=== 1)
+    if(tabs.length === 1) {
+      navigate('/open')
+    dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
+    
+    }
     dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
   }
   

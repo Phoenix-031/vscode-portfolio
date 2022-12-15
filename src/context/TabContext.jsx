@@ -2,7 +2,7 @@ import { createContext, useReducer, useEffect } from "react";
 import Reducer from './Reducer'
 
 const INITIAL_STATE = {
-    tabs:["/open"],
+    tabs:["/"],
     terminal:false,
 }
 
