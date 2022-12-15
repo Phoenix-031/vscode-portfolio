@@ -87,8 +87,8 @@ const Filestab = () => {
     const handleclose = (e) => {
       console.log(tabs.length=== 1)
     if(tabs.length === 1) {
+       dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
       navigate('/open')
-    dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
     
     }
     dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
