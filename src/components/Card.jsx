@@ -142,7 +142,7 @@ const Card = (props) => {
       </motion.div>
     : null}
    
- <motion.div className='border-1 border-gray-800 relative rounded-lg md:rounded-xl max-h-max bg-[#1d2128] px-1 sm:px-3 py-2 sm:py-3 text-white text-sm md:text-sm sm:text-lg font-urbanist w-full md:w-2/3 mobile-l:w-[90%] lg:w-[60%] xl:w-[40%] flex flex-col justify-start items-center gap-4 '
+ <motion.div className='border-1 border-gray-800 relative rounded-lg md:rounded-xl max-h-max bg-[#1d2128] px-1 sm:px-3 py-2 sm:py-3 text-white text-sm md:text-sm sm:text-lg font-urbanist w-full md:w-2/3 mobile-l:w-[90%] lg:w-[45%] xl:w-[30%] flex flex-col justify-start items-center gap-4 '
     initial={{opacity:0,
       translateX: props.cardno % 2 ===0 ? -150 : 150
     }}
@@ -168,24 +168,24 @@ const Card = (props) => {
         exit={{opacity:1}}
         />
       </div> 
-      <div className='text-xl xl:text-3xl md:text-2xl font-Enriqueta'>
+      <div className='text-xl md:text-2xl font-Enriqueta'>
         {props.cardinfo.title}
       </div>
-      <p className='flex flex-wrap w-full overflow-hidden text-sm sm:text-lg xl:text-2xl md:text-sm font-varela text-center '>
+      <p className='flex flex-wrap w-full overflow-hidden text-sm sm:text-lg  font-varela text-center '>
         {props.cardinfo.description}
       </p>
-      <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm xl:text-xl md:text-sm sm:text-lg font-semibold'>
+      <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm  sm:text-lg font-semibold'>
         {
           props.cardinfo.tags && props.cardinfo.tags.map((tag,ind) => (
-            <div className={`rounded-lg sm:rounded-xl py-1px px-1px class-b-${ind%3}`}>
-              <p className='bg-drk00 rounded-lg sm:rounded-xl py-3 px-5' key={ind}>{tag}</p>
+            <div className={`rounded-lg  py-1px px-1px class-b-${ind%3}`}>
+              <p className='bg-drk00 rounded-lg  py-2 px-2' key={ind}>{tag}</p>
             </div>
           )
           )
         }
       </div>
       <div className='w-full flex justify-between items-center px-3'>
-        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live} target='_blank' rel='noreferrer'>Live Demo</a></p>
+        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live} target='_blank' rel='noreferrer'>Live</a></p>
         {verified ? (
         <>
         <div onClick={handleEditProject}><Edit width={25} height={25}/></div> 

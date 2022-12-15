@@ -32,7 +32,7 @@ const Home = () => {
           // initial={{translateY:0}}
           animate={{
             translateY:[0, -20, 0],
-            boxShadow:['0px 0px 0px rgba(110,110,110,1)','0px 10px 10px -1px rgba(110,110,110,1)', '0px 0px 0px rgba(110,110,110,1)']
+            // boxShadow:['0px 0px 0px rgba(110,110,110,1)','0px 10px 10px -1px rgba(110,110,110,1)', '0px 0px 0px rgba(110,110,110,1)']
           }}
           transition={{
             duration:2,
