@@ -34,4 +34,17 @@ const getMessages = async (data) => {
     }
 }
 
-export {sendMessage,getMessages}
+const deleteContactMsg = async(contactId) => {
+    try {
+        
+        const response = await axios.delete(`https://portfoliobackend-production-b6e9.up.railway.app/api/contact/${contactId}`)
+        // const response = await axios.delete(`http://localhost:8967/api/contact/${contactId}`)
+        
+        return response
+    } catch (err) {
+        console.log(err)
+        
+    }
+}
+
+export {sendMessage,getMessages,deleteContactMsg}

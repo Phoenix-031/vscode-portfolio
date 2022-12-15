@@ -1054,6 +1054,11 @@ video {
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
+.border-gray-800{
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
+}
+
 .border-gray-900{
   --tw-border-opacity: 1;
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
@@ -1062,11 +1067,6 @@ video {
 .border-gray-500{
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
-}
-
-.border-gray-800{
-  --tw-border-opacity: 1;
-  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .border-white{
@@ -1378,6 +1378,11 @@ video {
   line-height: 1rem;
 }
 
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -1430,19 +1435,9 @@ video {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-gr1{
+.text-drk01{
   --tw-text-opacity: 1;
-  color: rgb(82 169 17 / var(--tw-text-opacity));
-}
-
-.text-green-600{
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
-.text-green-400{
-  --tw-text-opacity: 1;
-  color: rgb(74 222 128 / var(--tw-text-opacity));
+  color: rgb(31 36 40 / var(--tw-text-opacity));
 }
 
 .blur-sm{
@@ -1484,21 +1479,6 @@ video {
 
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.class-b-0{
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.class-b-1{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-}
-
-.class-b-2{
-  --tw-bg-opacity: 1;
-  background-color: rgb(225 29 72 / var(--tw-bg-opacity));
 }
 
 .before\:absolute::before{
@@ -1616,26 +1596,6 @@ video {
 .hover\:bg-clip-text:hover{
   -webkit-background-clip: text;
           background-clip: text;
-}
-
-.hover\:py-1:hover{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.hover\:px-1:hover{
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.hover\:py-1px:hover{
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-
-.hover\:px-1px:hover{
-  padding-left: 1px;
-  padding-right: 1px;
 }
 
 .hover\:text-orange-400:hover{
@@ -2149,10 +2109,6 @@ video {
 
   .lg\:gap-4{
     gap: 1rem;
-  }
-
-  .lg\:rounded-2xl{
-    border-radius: 1rem;
   }
 
   .lg\:rounded-lg{

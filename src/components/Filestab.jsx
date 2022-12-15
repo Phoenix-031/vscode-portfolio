@@ -23,7 +23,7 @@ const Filestab = () => {
                   <img src={ricon} alt="" width={18} height={18} />
                 </p>
                 <Link to='/'>home.jsx</Link>
-                {/* <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross width={16} height={16}/></span> */}
+                <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross width={16} height={16}/></span>
               </div>
           )
       } else if (item === '/projects') {

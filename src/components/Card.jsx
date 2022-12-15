@@ -185,7 +185,7 @@ const Card = (props) => {
         }
       </div>
       <div className='w-full flex justify-between items-center px-3'>
-        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live}>Live Demo</a></p>
+        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live} target='_blank' rel='noreferrer'>Live Demo</a></p>
         {verified ? (
         <>
         <div onClick={handleEditProject}><Edit width={25} height={25}/></div> 
@@ -193,7 +193,7 @@ const Card = (props) => {
         </>
         )
         : null}
-        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.source}>Source</a></p>
+        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.source} target='_blank' rel='noreferrer'>Source</a></p>
       </div>
     </motion.div>
    </>

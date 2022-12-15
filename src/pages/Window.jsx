@@ -16,6 +16,7 @@ import { useEffect } from 'react'
 import ContactView from './ContactView'
 import { AdminContext } from '../context/AdminContext'
 import Lol from '../components/Lol'
+import Open from './Open'
 
 
 const Window = () => {
@@ -52,6 +53,7 @@ const Window = () => {
               <Route exact path="github" element={ <Githubview /> } />
               <Route exact path="settings" element={ <Settings /> } />
               <Route exact path="contacts" element={ <ContactView /> } />   
+              <Route exact path="open" element={ <Open /> } />   
               <Route exact path="admin/contacts" element={
                     user ? <ContactView /> : <Lol />
                   } />  
