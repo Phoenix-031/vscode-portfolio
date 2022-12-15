@@ -6,7 +6,7 @@ const sendMessage = async (formdata) => {
 
     // console.log(name, email, subject, message)
     
-    const response = await axios.post("https://witty-frog-tiara.cyclic.app/api/contact",{
+    const response = await axios.post("https://portfoliobackend-production-b6e9.up.railway.app/api/contact",{
         name,
         email,
         subject,
@@ -19,8 +19,8 @@ const sendMessage = async (formdata) => {
 const getMessages = async (data) => {
     
     try {
-        // const contactmsgs = await axios.get('https://witty-frog-tiara.cyclic.app/api/contact')
-        const contactmsgs = await axios.get('https://witty-frog-tiara.cyclic.app/api/contact',{
+        // const contactmsgs = await axios.get('https://portfoliobackend-production-b6e9.up.railway.app/api/contact')
+        const contactmsgs = await axios.get('https://portfoliobackend-production-b6e9.up.railway.app/api/contact',{
             headers: {
                 'Content-Type': 'application/json',
                 'token':data
