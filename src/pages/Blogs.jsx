@@ -11,12 +11,12 @@ const Blogs = () => {
 
   return (
         <>
-    <motion.div className='row-start-2 bg-drk00  text-white text-lg sm:text-xl font-poppins'
+    <motion.div className='row-start-2 bg-drk00 text-lg sm:text-xl font-poppins flex justify-center items-center text-gray-600'
         initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}
     >
-      Blogs section
+      Blogs Coming up Soon!!!
     </motion.div>
 
       {
