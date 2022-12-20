@@ -4,6 +4,7 @@ import profileimg from '../assets/profile2.jpg'
 import Typinganimation from '../components/Typinganimation'
 import { TabContext } from '../context/TabContext'
 import { useContext } from 'react'
+import cv from '../assets/cv/DebayanPradhan.pdf'
 import Terminal from '../components/Terminal'
 
 const Home = () => {
@@ -72,7 +73,10 @@ const Home = () => {
 
           <div className='w-full flex gap-2 sm:gap-4 justify-start items-center'>
             <div className=' rounded-xl xl:rounded-xl bg-bcol02 py-1.2px px-1.2px'>
-              <button className='bg-drk01 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-xl font-medium xl:font-semibold font-Enriqueta hover:text-transparent hover:bg-clip-text hover:shadow-lg hover:shadow-gray-700 hover:text-gray-900 '>Resume</button>
+              <button className='bg-drk01 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-xl font-medium xl:font-semibold font-Enriqueta hover:text-transparent hover:bg-clip-text hover:shadow-lg hover:shadow-gray-700 hover:text-gray-900 '>
+                <a href=
+                {cv} download={cv}>Resume</a>
+                </button>
             </div>
             <div className=' rounded-xl xl:rounded-xl  bg-bcol02 py-1.2px px-1.2px'>
               <button className='bg-drk01 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-xl font-medium xl:font-semibold font-Enriqueta hover:text-transparent hover:bg-clip-text hover:shadow-lg hover:shadow-gray-700 hover:text-gray-900  relative before:absolute before:'>Sponser</button>
