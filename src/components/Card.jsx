@@ -2,18 +2,24 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Edit from '../icons/Edit'
 import Cross from '../icons/Cross'
+// eslint-disable-next-line no-unused-vars
 import { updateProject } from '../api/projects'
 import ModalLoader from './ModalLoader'
 import Bin from '../icons/Bin'
 import { useEffect } from 'react'
+// eslint-disable-next-line no-unused-vars
 import { verfiyAdmin } from '../api/user'
 import { useContext } from 'react'
 import { AdminContext } from '../context/AdminContext'
 import Popup from './Popup'
+import { VERIFY_ADMIN } from '../Queries/adminQuery'
+import { UPDATE_PROJECT } from '../Mutations/projectMutation'
+import { useLazyQuery,useMutation } from '@apollo/client'
 
 const Card = (props) => {
 
 
+  // eslint-disable-next-line no-unused-vars
   const {user} = useContext(AdminContext)
   const [modal,setModal] = useState(false)
   const [modaltitle,setModaltitle] = useState(props.cardinfo.title)
@@ -26,19 +32,42 @@ const Card = (props) => {
   const [verified,setVerified] = useState(false)
   const [popup,setPopup] = useState(false)
 
+  // eslint-disable-next-line no-unused-vars
+  const [Adminverification,{loading,error,data}] = useLazyQuery(VERIFY_ADMIN)
+  // eslint-disable-next-line no-unused-vars
+  const [updateProj,upres] = useMutation(UPDATE_PROJECT,{
+    fetchPolicy:"network-only",
+    onCompleted: (data) => {
+      if(data?.updateProject._id){
+        setUpdate(false)
+        setModal(false)
+      } else {
+        console.log("Project could not be updated")
+        setUpdate(false)
+        setModal(false)
+      }
+    }
+  })
+
   useEffect(() => {
     const verifyAdminPriviledge = async () => {
-      const res = await verfiyAdmin(localStorage.getItem('user'))
-
-      if(res.data.success){
+      // const res = await verfiyAdmin(localStorage.getItem('user'))
+       Adminverification({
+            variables:{
+              token:localStorage.getItem('user')
+    }
+       })
+      if(!loading && data?.verifyAdmin.success){
         setVerified(true)
-      } else {
+      } 
+      else {
         setVerified(false)
       }
     }
 
     verifyAdminPriviledge()
-  },[user])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[data])
 
   const handletags = (e) => {
 
@@ -61,11 +90,17 @@ const Card = (props) => {
   const handleformupadate = async (e) => {
     e.preventDefault()
     setUpdate(true)
-    const res = await updateProject({modaltitle,modaldescription,modaltags,live,demo},props.cardinfo._id)
-    if(res.data.success) {
-      setUpdate(false)
-      setModal(false)
-    }
+
+    updateProj({variables: {id:props.cardinfo._id,title:modaltitle,description:modaldescription,tags:modaltags,source:live,live:demo}})
+
+    // const id = upres.data?.updateProject._id
+    // console.log(id)
+    
+    // const res = await updateProject({modaltitle,modaldescription,modaltags,live,demo},props.cardinfo._id)
+    // if(res.data.success) {
+    //   setUpdate(false)
+    //   setModal(false)
+    // }
   }
   
   const handleDelete = async() => {
@@ -79,7 +114,7 @@ const Card = (props) => {
   return (
    <>
    {
-    popup ? <Popup changeParentState= {togglePopup} cardinfo={props.cardinfo._id} /> : null
+    popup ? <Popup changeParentState= {togglePopup} cardid={props.cardinfo._id} /> : null
    }
 
    {modal ? 

@@ -2,18 +2,39 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { removeProject } from '../api/projects'
+import { DELETE_PROJECT } from '../Mutations/projectMutation'
+import { useMutation } from '@apollo/client'
 
 const Popup = (props) => {
+    // console.log(props.cardid)
+
+    const [delProj,{loading,data}] = useMutation(DELETE_PROJECT,{
+        fetchPolicy:"network-only",
+        onCompleted:(data)=>{
+            if(data?.deleteProject._id.length > 0)
+               props.changeParentState()
+            else {
+                console.log("Project could not be deleted")
+                props.changeParentState()
+            }
+
+        }
+    })
 
     const handledelete = async(e) => {
 
             
-    const res = await removeProject(props.cardinfo)
+    // const res = await removeProject(props.cardinfo)
+    delProj({
+    variables:{
+            id:props.cardid
+        }
+    })
 
-    if(res.data.success) {
-        props.changeParentState()
-    }
-        // console.log("asrgh")    
+    // if(!loading &&  data?.deletepProject._id.length > 0) {
+    //     props.changeParentState()
+    // }
+
     }
 
     const handledeny = () => {

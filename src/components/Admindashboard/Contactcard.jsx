@@ -1,19 +1,38 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+// eslint-disable-next-line no-unused-vars
 import { deleteContactMsg } from '../../api/contact'
 import Bin from '../../icons/Bin'
+import { useMutation } from '@apollo/client'
+import { DELETE_MESSAGE } from '../../Mutations/contactMutation'
 
 const Contactcard = (props) => {
 
     // console.log(props.carddata)
+    // eslint-disable-next-line no-unused-vars
+    const [delcon,delres] = useMutation(DELETE_MESSAGE,{
+        fetchPolicy: "network-only",
+        onCompleted: (data) => {
+            if(data?.deleteMessage._id.length>0) {
+                navigate('/admin/contacts')
+            } else {
+                console.log("could not delete message")
+            }
+        },
+    })
 
     const navigate = useNavigate()
 
     const deleteContact = async() => {
-        const res =await deleteContactMsg(props.contact._id)
-        if(res.data.success) {
-            navigate('/admin/contacts')
-        }
+        // const res =await deleteContactMsg(props.contact._id)
+        delcon({
+            variables:{
+                id: props.contact._id
+            }
+        })
+        // if(res.data.success) {
+        //     navigate('/admin/contacts')
+        // }
 
     }
     

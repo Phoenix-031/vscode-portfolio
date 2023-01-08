@@ -1,42 +1,91 @@
 import React from 'react'
 import Card from '../components/Card'
-import { useState,useEffect } from 'react'
-import {filterProjects, getAllProjects} from '../api/projects'
+// eslint-disable-next-line no-unused-vars
+import { useEffect } from 'react'
+import { useState } from 'react'
+// import {filterProjects, getAllProjects} from '../api/projects'
 import Projectloading from '../components/Projectloading'
 import  {motion} from 'framer-motion'
 import { useContext } from 'react'
 import { TabContext } from '../context/TabContext'
 import Terminal from '../components/Terminal'
+import { useQuery,useLazyQuery} from '@apollo/client'
+import { GET_ALL_PROJECTS } from '../Queries/projectQuery'
+import { FILTER_PROJECT } from '../Queries/projectQuery'
 
 const Projects = () => {
 
+
+  //UPDATED TO APOLLO CLIENT
+
+  // USED WHEN WORKING WITH RESTAPI BACKEND
+  
   const[projects,setProjects] = useState([])
-  const[isloading, setIsloading] = useState(true)
+ 
+
+    // eslint-disable-next-line no-unused-vars
+    const {loading,data} = useQuery(GET_ALL_PROJECTS,{
+    pollInterval:500,
+    onCompleted: (data) => {
+      setIsloading(false)
+      setProjects(data.getAllProjects)
+    }
+    // fetchPolicy:"network-only"
+  })
+   const[isloading, setIsloading] = useState(loading)
+   // eslint-disable-next-line no-unused-vars
+   const[filterProj,filterres] = useLazyQuery(FILTER_PROJECT,{
+    onCompleted:(data) => {
+      console.log(data)
+      setProjects(data.filterProjects)
+      setIsloading(false)
+    },
+    fetchPolicy:"network-only"
+   })
+
+
+  //   useEffect(() => {
+  //   const projectData = async() =>{
+  //   //   const projdata = await getAllProjects()
+  //   //   setIsloading(!isloading)
+  //   //   setProjects(projdata.data.data)
+
+  //   await getProj()
+  //   if(!loading)console.log(data)
+
+  //   }
+    
+  //   projectData()
+
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // },[data])
+
+
     const {terminal} = useContext(TabContext)
 
-  useEffect(() => {
-    const projectData = async() =>{
-      const projdata = await getAllProjects()
-      setIsloading(!isloading)
-      setProjects(projdata.data.data)
-    }
-    
-    projectData()
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
   
 
   const handlefilter = async(e) => {
-   
-    setIsloading(true)
 
-    const filterData = await filterProjects(e.target.textContent)
+  // const [{loading,error,data}] = useLazyQuery(GET_ALL_PROJECTS)
+   setIsloading(true)
+  filterProj({
+    variables:{
+      id: e.target.textContent
+    }
+  })
 
-    setIsloading(false)
+    // const filterData = await filterProjects(e.target.textContent)
 
-    setProjects(filterData.data.data)
+    // setIsloading(false)
+
+    // setProjects(filterData.data.data)
   }
+
+
+  // const getProjectList = async () => {
+  // }
   
 
   if(isloading) {
@@ -101,7 +150,7 @@ const Projects = () => {
     
     <div className=' row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-4 xl:gap-6  justify-center items-center pt-5 md:py-3 xl:py-5 sm:overflow-auto md:overflow-x-hidden'>
       {
-        projects && projects.map((p,ind) => (
+        projects?.length > 0 && projects.map((p,ind) => (
           <Card cardinfo = {p} cardno = {ind} key={p._id}/>
         ))
       }

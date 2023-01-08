@@ -3,7 +3,10 @@ import { motion} from 'framer-motion'
 import { useState } from 'react'
 import ModalLoader from './ModalLoader'
 import Cross from '../icons/Cross'
+// eslint-disable-next-line no-unused-vars
 import { addProject } from '../api/projects'
+import { ADD_PROJECT } from '../Mutations/projectMutation'
+import { useMutation } from '@apollo/client'
 
 const AddProjectModal = (props) => {
 
@@ -13,7 +16,23 @@ const AddProjectModal = (props) => {
     const [modaltags,setModaltags] = useState([])
     const [live,setLive] = useState("")
     const [demo,setDemo] = useState("")
+    // eslint-disable-next-line no-unused-vars
     const [update,setUpdate] = useState(false)
+
+    // eslint-disable-next-line no-unused-vars
+    const [addProj,{loading,error,data}] = useMutation(ADD_PROJECT,
+      {
+        fetchPolicy: "network-only",
+        onCompleted:(data) => {
+          if(data?.addProject._id.length > 0) {
+            setUpdate(false)
+          }else {
+            console.log("Project could not be added")
+            setUpdate(false)
+          }
+        }
+      }
+    )
 
     
   const handletags = (e) => {
@@ -31,13 +50,25 @@ const AddProjectModal = (props) => {
  }
     
 
-   const handleformupadate = async () => {
-    // e.preventDefault()
+   const handleformupadate =  (e) => {
+    e.preventDefault()
     setUpdate(true)
-    const res = await addProject({modaltitle,modaldescription,modaltags,live,demo})
-    if(res.data.success) {
-      setUpdate(false)
-    }
+    // const res = await addProject({modaltitle,modaldescription,modaltags,live,demo})
+    addProj({
+        variables: {
+          title:modaltitle,
+          description:modaldescription,
+          tags:modaltags,
+          live:live,
+          source:demo
+    }})
+    if(error) 
+      console.log(error)
+    // if(!loading)
+    //   console.log(data)
+    // if(data?.addProject._id.length > 0) {
+    //   setUpdate(false)
+    // }
   }
     
   return (

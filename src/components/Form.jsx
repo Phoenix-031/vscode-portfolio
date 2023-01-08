@@ -1,9 +1,12 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
+// eslint-disable-next-line no-unused-vars
 import {sendMessage} from '../api/contact'
 import { motion } from 'framer-motion'
 import Msgsend from './Msgsend'
 import sicon from '../icons/png/success.png'
+import { useMutation } from '@apollo/client'
+import { SEND_MESSAGE } from '../Mutations/contactMutation'
 // import Progress from './Progress'
 
 const Form = () => {
@@ -16,6 +19,23 @@ const Form = () => {
   const [sending,setSending] = useState(false)
   // const [progress, setProgress] = useState(0)
   // const [running, setRunning] = useState(false)
+
+  // eslint-disable-next-line no-unused-vars
+  const [sendmsg,{loading,error,data}] = useMutation(SEND_MESSAGE,{
+    fetchPolicy:"network-only",
+    onCompleted: (data) => {
+      if(data?.sendMessage._id.length > 0) {
+        setSending(false)   //loader
+        setSent(true)       //popup
+
+        //form related
+        setSubject("")
+        setName("")
+        setEmail("")
+        setMessage("")
+      }
+    }
+  })
 
   // useEffect(()=>{
 
@@ -41,18 +61,26 @@ const Form = () => {
     e.preventDefault()
     // console.log({name,email,subject,message})
     setSending(true)
-    const res = await  sendMessage({name,email,subject,message})
+    // const res = await  sendMessage({name,email,subject,message})
+    sendmsg({
+      variables:{
+        name:name,
+        email:email,
+        subject:subject,
+        message:message
+      }
+    })
 
-    if(res.data.success) {
-      setSending(false)   //loader
-      setSent(true)       //popup
+    // if(res.data.success) {
+    //   setSending(false)   //loader
+    //   setSent(true)       //popup
 
-      //form related
-      setSubject("")
-      setName("")
-      setEmail("")
-      setMessage("")
-    }
+    //   //form related
+    //   setSubject("")
+    //   setName("")
+    //   setEmail("")
+    //   setMessage("")
+    // }
 
   }
 
