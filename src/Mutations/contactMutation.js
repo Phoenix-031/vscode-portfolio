@@ -9,9 +9,11 @@ const DELETE_MESSAGE = gql`
 `
 
 const SEND_MESSAGE = gql`
-  mutation sendMessage($name:String!,$email:String!,$message:String,$subject:String) {
-    sendMessage(name:$name,email:$email,message:$message,subject:$subject) {
+  mutation saveContact($name:String!,$email:String!,$message:String,$subject:String) {
+    saveContact(name:$name,email:$email,message:$message,subject:$subject) {
       _id
+      name
+      email
     }
   }
 `

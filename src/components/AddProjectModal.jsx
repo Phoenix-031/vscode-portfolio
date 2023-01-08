@@ -4,7 +4,7 @@ import { useState } from 'react'
 import ModalLoader from './ModalLoader'
 import Cross from '../icons/Cross'
 // eslint-disable-next-line no-unused-vars
-import { addProject } from '../api/projects'
+// import { addProject } from '../api/projects'
 import { ADD_PROJECT } from '../Mutations/projectMutation'
 import { useMutation } from '@apollo/client'
 

@@ -24,7 +24,7 @@ const Form = () => {
   const [sendmsg,{loading,error,data}] = useMutation(SEND_MESSAGE,{
     fetchPolicy:"network-only",
     onCompleted: (data) => {
-      if(data?.sendMessage._id.length > 0) {
+      if(data?.saveContact._id.length > 0) {
         setSending(false)   //loader
         setSent(true)       //popup
 
