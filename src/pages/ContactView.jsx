@@ -21,7 +21,7 @@ const ContactView = () => {
     const [fetching,setFetching] = useState(false)
 
     const {loading,error,data} = useQuery(GET_MESSAGES,{
-      fetchPolicy: "network-only",
+      fetchPolicy: "cache-first",
       pollInterval:800,
       onCompleted: (data) => {
         if(data?.getMessages){

@@ -25,7 +25,7 @@ const Projects = () => {
 
     // eslint-disable-next-line no-unused-vars
     const {loading,data} = useQuery(GET_ALL_PROJECTS,{
-    pollInterval:500,
+    pollInterval:1000,
     onCompleted: (data) => {
       setIsloading(false)
       setProjects(data.getAllProjects)
@@ -40,7 +40,7 @@ const Projects = () => {
       setProjects(data.filterProjects)
       setIsloading(false)
     },
-    fetchPolicy:"network-only"
+    fetchPolicy:"cache-and-network"
    })
 
 
