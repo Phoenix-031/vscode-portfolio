@@ -7,7 +7,7 @@ import {  TabContextProvider } from './context/TabContext';
 import { ApolloClient,ApolloProvider,InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: "http://localhost:8967/graphql",
+  uri: "https://portfoliobackend-production-b6e9.up.railway.app/graphql",
   cache: new InMemoryCache()
 })
 
