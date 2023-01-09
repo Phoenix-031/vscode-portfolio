@@ -10,8 +10,8 @@ import { useContext } from 'react'
 import { TabContext } from '../context/TabContext'
 import Terminal from '../components/Terminal'
 import { useQuery,useLazyQuery} from '@apollo/client'
-import { GET_ALL_PROJECTS } from '../Queries/projectQuery'
-import { FILTER_PROJECT } from '../Queries/projectQuery'
+import { GET_ALL_PROJECTS } from '../Queries/projectQuery.graphql'
+import { FILTER_PROJECT } from '../Queries/projectQuery.graphql'
 
 const Projects = () => {
 

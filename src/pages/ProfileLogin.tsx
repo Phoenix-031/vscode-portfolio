@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom'
 import { AdminContext } from '../context/AdminContext'
 import { AdminLogin } from '../context/Actions'
 import { useLazyQuery } from '@apollo/client'
-import { LOGIN_ADMIN } from '../Queries/adminQuery'
+import { LOGIN_ADMIN } from '../Queries/adminQuery.graphql'
 
 const ProfileLogin = () => {
 

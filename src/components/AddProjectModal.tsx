@@ -5,7 +5,7 @@ import ModalLoader from './ModalLoader'
 import Cross from '../icons/Cross'
 // eslint-disable-next-line no-unused-vars
 // import { addProject } from '../api/projects'
-import { ADD_PROJECT } from '../Mutations/projectMutation'
+import { ADD_PROJECT } from '../Mutations/projectMutation.graphql'
 import { useMutation } from '@apollo/client'
 
 interface ProjectProps {

@@ -14,8 +14,8 @@ import { useEffect } from 'react'
 // import { useContext } from 'react'
 // import { AdminContext } from '../context/AdminContext'
 import Popup from './Popup'
-import { VERIFY_ADMIN } from '../Queries/adminQuery'
-import { UPDATE_PROJECT } from '../Mutations/projectMutation'
+import { VERIFY_ADMIN } from '../Queries/adminQuery.graphql'
+import { UPDATE_PROJECT } from '../Mutations/projectMutation.graphql'
 import { useLazyQuery,useMutation } from '@apollo/client'
 
 interface CardProps {

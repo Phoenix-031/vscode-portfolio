@@ -4,7 +4,7 @@
 import {FC, MouseEvent} from 'react'
 import { motion } from 'framer-motion'
 // import { removeProject } from '../api/projects'
-import { DELETE_PROJECT } from '../Mutations/projectMutation'
+import { DELETE_PROJECT } from '../Mutations/projectMutation.graphql'
 import { useMutation } from '@apollo/client'
 
 interface PopupProps {

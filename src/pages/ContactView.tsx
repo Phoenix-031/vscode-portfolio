@@ -6,16 +6,16 @@ import Terminal from '../components/Terminal'
 import { TabContext } from '../context/TabContext'
 import Contactcard from '../components/Admindashboard/Contactcard'
 // import { getMessages } from '../api/contact'
-import { AdminContext } from '../context/AdminContext'
+// import { AdminContext } from '../context/AdminContext'
 import Projectloading from '../components/Projectloading'
 import { useQuery } from '@apollo/client'
-import GET_MESSAGES from '../Queries/contactQuery'
+import GET_MESSAGES from '../Queries/contactQuery.graphql'
 
 
 const ContactView = () => {
 
     const {terminal} = useContext(TabContext)
-    const {user} = useContext(AdminContext)
+    // const {user} = useContext(AdminContext)
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [conlist,setConList] = useState([])
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

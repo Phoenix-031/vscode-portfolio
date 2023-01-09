@@ -7,7 +7,7 @@ import { useState,useEffect,FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import Msgsend from './Msgsend'
 import { useMutation } from '@apollo/client'
-import { SEND_MESSAGE } from '../Mutations/contactMutation'
+import { SEND_MESSAGE } from '../Mutations/contactMutation.graphql'
 const sicon = require('../icons/png/success.png')
 
 // import Progress from './Progress'

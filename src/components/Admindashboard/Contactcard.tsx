@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { deleteContactMsg } from '../../api/contact'
 import Bin from '../../icons/Bin'
 import { useMutation } from '@apollo/client'
-import { DELETE_MESSAGE } from '../../Mutations/contactMutation'
+import { DELETE_MESSAGE } from '../../Mutations/contactMutation.graphql'
 
 interface ContactProps {
     contact : {
