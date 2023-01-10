@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import {useState} from 'react'
 import  {motion} from 'framer-motion'
-import { AdminContext } from '../context/AdminContext'
+// import { AdminContext } from '../context/AdminContext'
 import { TabContext } from '../context/TabContext'
 import { useContext } from 'react'
 import Terminal from '../components/Terminal'
@@ -14,19 +14,19 @@ const About = () => {
   // const [loaded,setLoaded] = useState(false)
 
     const {terminal} = useContext(TabContext)
-    const {user,} = useContext(AdminContext)
-    const [modal,setModal] = useState(false)
+    // const {user,} = useContext(AdminContext)
+    // const [modal,setModal] = useState(false)
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [aboutext,setAboutext] = useState<string>("        I'm a computer Science and Engineering student and an aspiring software Engineer. I love to solve or atleast try to come up with a solution to real world problems with the help of Technology, the new technologies rolling out everyday keeps me on edge. I'm a keen learner spending most of my time working on projects involving various tech stacks. I love competitve programming and I have a particular interest towards malware analysis and design. I love Open Source and have been contributor in various events thereby adding to my learning experiences.")
 
-    const handleEdit = () => {
-      setModal(!modal)
+    // const handleEdit = () => {
+    //   setModal(!modal)
 
-    }
+    // }
   
   return (
     <>
-    {
+    {/* {
       modal ? 
       (
         // <div className='w-screen blur-sm h-screen z-10 fixed border-white border-2'>
@@ -48,7 +48,7 @@ const About = () => {
         // </div>
       )
        :null
-    }
+    } */}
   <motion.div className='row-start-2 bg-drk00 h-full overflow-auto' 
     initial={{opacity:0}}
     animate = {{opacity:1}}
@@ -69,13 +69,10 @@ const About = () => {
         </div>
         <div className='w-full h-full text-poppins text-white text-lg sm:text-xl md:text-lg'>
           <div className='flex flex-col gap-2'>
-            {
-              user ? 
+     
               <div className='flex w-full justify-end items-center pr-5 pt-2'>
-                <div onClick={handleEdit}><Edit width={20} height={20} /></div>
-              </div> : 
-              null
-            }
+                <div ><Edit width={20} height={20} /></div>
+              </div>
           <p> 
             {aboutext}
           </p>
