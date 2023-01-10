@@ -6,7 +6,7 @@ import Edit from '../icons/Edit'
 import Cross from '../icons/Cross'
 // eslint-disable-next-line no-unused-vars
 // import { updateProject } from '../api/projects'
-import ModalLoader from './ModalLoader'
+import ModalLoader from './utils/ModalLoader'
 import Bin from '../icons/Bin'
 import { useEffect } from 'react'
 // eslint-disable-next-line no-unused-vars
@@ -14,8 +14,8 @@ import { useEffect } from 'react'
 // import { useContext } from 'react'
 // import { AdminContext } from '../context/AdminContext'
 import Popup from './Popup'
-import { VERIFY_ADMIN } from '../Queries/adminQuery.graphql'
-import { UPDATE_PROJECT } from '../Mutations/projectMutation.graphql'
+import { VERIFY_ADMIN } from '../services/api-v2/Queries/adminQuery.graphql'
+import { UPDATE_PROJECT } from '../services/api-v2/Mutations/projectMutation.graphql'
 import { useLazyQuery,useMutation } from '@apollo/client'
 
 interface CardProps {

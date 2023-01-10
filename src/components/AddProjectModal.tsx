@@ -1,11 +1,11 @@
 import React, { FC,MouseEvent } from 'react'
 import { motion} from 'framer-motion'
 import { useState } from 'react'
-import ModalLoader from './ModalLoader'
+import ModalLoader from './utils/ModalLoader'
 import Cross from '../icons/Cross'
 // eslint-disable-next-line no-unused-vars
 // import { addProject } from '../api/projects'
-import { ADD_PROJECT } from '../Mutations/projectMutation.graphql'
+import { ADD_PROJECT } from '../services/api-v2/Mutations/projectMutation.graphql'
 import { useMutation } from '@apollo/client'
 
 interface ProjectProps {

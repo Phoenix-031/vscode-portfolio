@@ -17,8 +17,8 @@ import AddProjectModal from './AddProjectModal'
 import { AdminContext } from '../context/AdminContext'
 import { AdminLogout } from '../context/Actions'
 import { useMutation, useQuery } from '@apollo/client'
-import { UPDATE_PROJECT } from '../Mutations/projectMutation.graphql'
-import { VERIFY_ADMIN } from '../Queries/adminQuery.graphql'
+import { UPDATE_PROJECT } from '../services/api-v2/Mutations/projectMutation.graphql'
+import { VERIFY_ADMIN } from '../services/api-v2/Queries/adminQuery.graphql'
 
 const Sidenav = () => {
 

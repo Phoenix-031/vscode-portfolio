@@ -4,12 +4,12 @@ import React, { useContext, useState } from 'react'
 import {motion} from 'framer-motion'
 import Terminal from '../components/Terminal'
 import { TabContext } from '../context/TabContext'
-import Contactcard from '../components/Admindashboard/Contactcard'
+import Contactcard from '../components/Contactcard'
 // import { getMessages } from '../api/contact'
 // import { AdminContext } from '../context/AdminContext'
 import Projectloading from '../components/Projectloading'
 import { useQuery } from '@apollo/client'
-import GET_MESSAGES from '../Queries/contactQuery.graphql'
+import GET_MESSAGES from '../services/api-v2/Queries/contactQuery.graphql'
 
 
 const ContactView = () => {

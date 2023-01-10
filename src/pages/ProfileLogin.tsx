@@ -1,12 +1,12 @@
 import React, { useContext,FormEvent } from 'react'
 import { useState } from 'react'
 // import {LoginAdmin} from '../api/user'
-import ModalLoader from '../components/ModalLoader'
+import ModalLoader from '../components/utils/ModalLoader'
 import {useNavigate} from 'react-router-dom'
 import { AdminContext } from '../context/AdminContext'
 import { AdminLogin } from '../context/Actions'
 import { useLazyQuery } from '@apollo/client'
-import { LOGIN_ADMIN } from '../Queries/adminQuery.graphql'
+import { LOGIN_ADMIN } from '../services/api-v2/Queries/adminQuery.graphql'
 
 const ProfileLogin = () => {
 

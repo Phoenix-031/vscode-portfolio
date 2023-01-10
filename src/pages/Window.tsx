@@ -15,7 +15,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
 import ContactView from './ContactView'
 import { AdminContext } from '../context/AdminContext'
-import Lol from '../components/Lol'
+import Lol from '../components/utils/Lol'
 import Open from './Open'
 
 

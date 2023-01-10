@@ -14,7 +14,7 @@ import Githubview from "./pages/Githubview"
 import Settings from './pages/Settings'
 import ContactView from './pages/ContactView'
 import { AdminContext } from './context/AdminContext'
-import Lol from './components/Lol'
+import Lol from './components/utils/Lol'
  
 const App :FC = () => {
 

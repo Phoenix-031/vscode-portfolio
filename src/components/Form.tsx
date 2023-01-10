@@ -5,9 +5,9 @@ import { useState,useEffect,FormEvent } from 'react'
 // eslint-disable-next-line no-unused-vars
 // import {sendMessage} from '../api/contact'
 import { motion } from 'framer-motion'
-import Msgsend from './Msgsend'
+import Msgsend from './utils/Msgsend'
 import { useMutation } from '@apollo/client'
-import { SEND_MESSAGE } from '../Mutations/contactMutation.graphql'
+import { SEND_MESSAGE } from '../services/api-v2/Mutations/contactMutation.graphql'
 const sicon = require('../icons/png/success.png')
 
 // import Progress from './Progress'
@@ -106,10 +106,10 @@ const Form = () => {
             initial={{opacity:0,translateX:200}}
             animate={{opacity:1,translateX:0}}
             transition ={{
-              // duration:0.4,
+              duration:0.4,
               // ease:'easeInOut',
-              // type:"spring",
-              // stiffness:150
+              type:"spring",
+              stiffness:150
             }}
             >
               <div className='w-full  pt-3 sm:px-5 px-2 flex justify-between items-center'>

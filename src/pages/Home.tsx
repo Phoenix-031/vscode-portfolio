@@ -1,6 +1,6 @@
 import React from 'react'
 import  {motion} from 'framer-motion'
-import Typinganimation from '../components/Typinganimation'
+import Typinganimation from '../components/utils/Typinganimation'
 import { TabContext } from '../context/TabContext'
 import { useContext } from 'react'
 import Terminal from '../components/Terminal'
