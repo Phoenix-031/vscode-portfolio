@@ -23,7 +23,7 @@ const Topnav = () => {
                 <li className='cursor-pointer'>Help</li>
               </ul> 
             </div>
-            <div className='sm:text-lg text-xs md:text-sm hidden sm:visible sm:block'>c</div>
+            <div className='sm:text-lg text-xs md:text-sm hidden sm:visible sm:block'>Visual Studio Code</div>
             <div className='sm:flex sm:gap-2 gap-1 hidden'>
               <div className='w-4 h-4 bg-yellow-300 rounded-full'></div>
               <div className='w-4 h-4 bg-green-400 rounded-full'></div>
