@@ -19,8 +19,9 @@ const Popup : FC<PopupProps> = (props) => {
     const [delProj,{loading,data}] = useMutation(DELETE_PROJECT,{
         fetchPolicy:"network-only",
         onCompleted:(data)=>{
-            if(data?.deleteProject._id.length > 0)
+            if(data?.deleteProject.success){
                props.changeParentState()
+            }
             else {
                 console.log("Project could not be deleted")
                 props.changeParentState()
@@ -35,7 +36,8 @@ const Popup : FC<PopupProps> = (props) => {
     // const res = await removeProject(props.cardinfo)
     delProj({
     variables:{
-            id:props.cardid
+            id:props.cardid,
+            token: localStorage.getItem('user')
         }
     })
 

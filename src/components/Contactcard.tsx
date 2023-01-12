@@ -24,7 +24,7 @@ const Contactcard : FC<ContactProps>= (props) => {
     const [delcon,delres] = useMutation(DELETE_MESSAGE,{
         fetchPolicy: "network-only",
         onCompleted: (data) => {
-            if(data?.deleteMessage._id.length>0) {
+            if(data?.deleteMessage.success) {
                 navigate('/admin/contacts')
             } else {
                 console.log("could not delete message")
@@ -38,7 +38,8 @@ const Contactcard : FC<ContactProps>= (props) => {
         // const res =await deleteContactMsg(props.contact._id)
         delcon({
             variables:{
-                id: props.contact._id
+                id: props.contact._id,
+                token: localStorage.getItem('user')
             }
         })
         // if(res.data.success) {

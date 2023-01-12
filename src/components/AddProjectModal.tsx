@@ -29,7 +29,7 @@ const AddProjectModal : FC<ProjectProps> = (props) => {
         // fetchPolicy: "network-only",
         onCompleted:(data) => {
           console.log(data)
-          if(data?.addProject._id.length > 0) {
+          if(data?.addProject.success) {
             setUpdate(false)
           }
         },
@@ -63,6 +63,7 @@ const AddProjectModal : FC<ProjectProps> = (props) => {
     // const res = await addProject({modaltitle,modaldescription,modaltags,live,demo})
     addProj({
       variables:{
+        token: localStorage.getItem('user'),
           title:modaltitle,
           description:modaldescription,
           tags:modaltags, 

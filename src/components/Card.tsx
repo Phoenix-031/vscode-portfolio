@@ -54,7 +54,7 @@ const Card :FC<CardProps> = (props) => {
   const [updateProj,upres] = useMutation(UPDATE_PROJECT,{
     fetchPolicy:"network-only",
     onCompleted: (data) => {
-      if(data?.updateProject._id){
+      if(data?.updateProject.success){
         setUpdate(false)
         setModal(false)
       } else {
@@ -107,7 +107,7 @@ const Card :FC<CardProps> = (props) => {
     e.preventDefault()
     setUpdate(true)
 
-    updateProj({variables: {id:props.cardinfo._id,title:modaltitle,description:modaldescription,tags:modaltags,source:live,live:demo}})
+    updateProj({variables: {token: localStorage.getItem('user'),id:props.cardinfo._id,title:modaltitle,description:modaldescription,tags:modaltags,source:live,live:demo}})
 
     // const id = upres.data?.updateProject._id
     // console.log(id)

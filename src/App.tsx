@@ -18,7 +18,7 @@ import Lol from './components/utils/Lol'
  
 const App :FC = () => {
 
-  const {user,} = useContext(AdminContext)  
+  const {user} = useContext(AdminContext)  
   // const navigate = useNavigate()
 
   return (

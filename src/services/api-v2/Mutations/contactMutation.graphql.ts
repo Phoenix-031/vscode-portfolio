@@ -1,9 +1,10 @@
 import {gql} from '@apollo/client'
 
 const DELETE_MESSAGE = gql`
-   mutation deleteMessage($id:ID!) {
-    deleteMessage(id:$id) {
-        _id
+   mutation deleteMessage($id:ID!,$token:String!) {
+    deleteMessage(id:$id,token:$token) {
+      message
+      success
     }
    }
 `
