@@ -16,7 +16,7 @@ const ProfileLogin = () => {
       fetchPolicy: "network-only",
       onCompleted: (data) => {
             if(data?.loginAdmin.success){
-              console.log(data)
+              // console.log(data)
           dispatch(AdminLogin(data.loginAdmin.accessToken))
           navigate('/')
             } else {
