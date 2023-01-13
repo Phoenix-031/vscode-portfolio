@@ -49,7 +49,18 @@ const Card :FC<CardProps> = (props) => {
   const [popup,setPopup] = useState<boolean>(false)
 
   // eslint-disable-next-line no-unused-vars
-  const [Adminverification,{loading,data}] = useLazyQuery(VERIFY_ADMIN)
+  const [Adminverification,{data}] = useLazyQuery(VERIFY_ADMIN,{
+    onCompleted: (data) => {
+      console.log(data);
+      if(data?.veriAdmin.success)
+          setVerified(true)
+    },
+    onError: (error) => {
+      console.log(error)
+      setVerified(false)
+
+    }
+  })
   // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   const [updateProj,upres] = useMutation(UPDATE_PROJECT,{
     fetchPolicy:"network-only",
@@ -73,12 +84,12 @@ const Card :FC<CardProps> = (props) => {
               token:localStorage.getItem('user')
     }
        })
-      if(!loading && data?.verifyAdmin.success){
-        setVerified(true)
-      } 
-      else {
-        setVerified(false)
-      }
+      // if(!loading && data?.verifyAdmin.success){
+      //   setVerified(true)
+      // } 
+      // else {
+      //   setVerified(false)
+      // }
     }
 
     verifyAdminPriviledge()

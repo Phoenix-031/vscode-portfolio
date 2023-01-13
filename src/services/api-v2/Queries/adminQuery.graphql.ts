@@ -11,7 +11,7 @@ const LOGIN_ADMIN = gql`
 
 const VERIFY_ADMIN = gql`
    query veriAdmin($token: String!) {
-    verifyAdmin(token:$token) {
+    veriAdmin(token:$token) {
         accessToken
         success
     }
