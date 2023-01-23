@@ -79,7 +79,7 @@ const Home = () => {
                 </button>
             </div>
             <div className=' rounded-xl xl:rounded-xl  bg-bcol02 py-1.2px px-1.2px'>
-              <button className='bg-drk01 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-xl font-medium xl:font-semibold font-Enriqueta hover:text-transparent hover:bg-clip-text hover:shadow-lg hover:shadow-gray-700 hover:text-gray-900  relative before:absolute before:'>Sponser</button>
+              <button className='bg-drk01 py-2 px-5 xl:py-4 xl:px-10 rounded-xl xl:rounded-xl font-medium xl:font-semibold font-Enriqueta hover:text-transparent hover:bg-clip-text hover:shadow-lg hover:shadow-gray-700 hover:text-gray-900  relative before:absolute before:'>Sponsor</button>
             </div>
           </div>
         </div>
