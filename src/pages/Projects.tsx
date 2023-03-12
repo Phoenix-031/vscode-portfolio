@@ -4,7 +4,7 @@ import Card from '../components/Card'
 // import { useEffect } from 'react'
 import { useState } from 'react'
 // import {filterProjects, getAllProjects} from '../api/projects'
-import Projectloading from '../components/Projectloading'
+// import Projectloading from '../components/Projectloading'
 import  {motion} from 'framer-motion'
 import { useContext } from 'react'
 import { TabContext } from '../context/TabContext'
@@ -12,6 +12,7 @@ import Terminal from '../components/Terminal'
 import { useQuery,useLazyQuery} from '@apollo/client'
 import { GET_ALL_PROJECTS } from '../services/api-v2/Queries/projectQuery.graphql'
 import { FILTER_PROJECT } from '../services/api-v2/Queries/projectQuery.graphql'
+import ProjectSkeleton from '../components/utils/ProjectSkeleton'
 
 const Projects = () => {
 
@@ -89,7 +90,16 @@ const Projects = () => {
   
 
   if(isloading) {
-    return <Projectloading />
+    // return <Projectloading />
+    return (
+      <div className=' row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-4 xl:gap-6  justify-center items-center pt-5 md:py-3 xl:py-5 sm:overflow-auto md:overflow-x-hidden scrollbar-hide'>
+        {
+          [1,2,3,4,5,6,7,8,9,10].map((item) => {
+            return <ProjectSkeleton key={item} />
+          })
+        }
+      </div>
+    )
   } else {
 
       return (
