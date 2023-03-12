@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { TabContext } from '../context/TabContext'
 import Cross from '../icons/Cross'
 import { RemoveTab } from '../context/Actions'
-import { XCircle } from 'react-feather'
+// import { XCircle } from 'react-feather'
 
 const ricon = require('../icons/png/react.png')
 const hicon = require('../icons/png/html.png')
@@ -25,11 +25,11 @@ const Filestab = () => {
                   <img src={ricon} alt="" width={18} height={18} />
                 </p>
                 <Link to='/'>home.jsx</Link>
-                <XCircle color='green' className='cursor-pointer border border-red-500' 
+                {/* <XCircle color='green' className='cursor-pointer' 
                 width={28} height={28}
                 onClick={handleclose} id='/'
-                />
-                {/* <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross width={16} height={16}/></span> */}
+                /> */}
+                <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross width={16} height={16}/></span>
               </div>
           )
       } else if (item === '/projects') {

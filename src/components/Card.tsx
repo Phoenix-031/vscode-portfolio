@@ -155,7 +155,7 @@ const Card :FC<CardProps> = (props) => {
     }
    }
    >
-      <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl text-white font-urbanist w-[95%] sm:w-1/2 h-[70%] overflow-y-auto flex justify-center items-baseline scrollbar-hide'
+      <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl text-white font-urbanist w-[95%] sm:w-1/2 h-[70%] overflow-y-auto flex justify-center items-baseline scrollbar-hide border border-gray-700'
       initial={{opacity:0,translateY:-150}}
       animate = {{opacity:1,translateY:0}}
       transition = {{

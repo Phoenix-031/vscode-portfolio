@@ -70,13 +70,13 @@ const Popup : FC<PopupProps> = (props) => {
                 type:'spring',
                 stiffness:100
             }}
-            className="flex flex-col justify-center items-center gap-4 sm:max-w-max py-3 bg-drk00 px-3 rounded-lg"
+            className="flex flex-col justify-center items-center gap-4 sm:max-w-max py-3 bg-drk00 px-3 rounded-lg border border-gray-700"
             id='not-wrapper'
         >
             <p className='text-white font-poppins'>Delete this entry?</p>
             <div className='flex justify-center gap-16 items-center w-full'>
-                <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledelete}>Confirm</button>
-                <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledeny} >Deny</button>
+                <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal border border-gray-700 text-white' onClick={handledelete}>Confirm</button>
+                <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal border border-gray-700 text-white' onClick={handledeny} >Deny</button>
             </div>
         </motion.div>
     </div>
