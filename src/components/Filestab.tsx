@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { TabContext } from '../context/TabContext'
 import Cross from '../icons/Cross'
 import { RemoveTab } from '../context/Actions'
+import { XCircle } from 'react-feather'
 
 const ricon = require('../icons/png/react.png')
 const hicon = require('../icons/png/html.png')
@@ -24,7 +25,11 @@ const Filestab = () => {
                   <img src={ricon} alt="" width={18} height={18} />
                 </p>
                 <Link to='/'>home.jsx</Link>
-                <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross width={16} height={16}/></span>
+                <XCircle color='green' className='cursor-pointer border border-red-500' 
+                width={28} height={28}
+                onClick={handleclose} id='/'
+                />
+                {/* <span onClick={handleclose} className="cursor-pointer hover:bg-drk01" id='/'><Cross width={16} height={16}/></span> */}
               </div>
           )
       } else if (item === '/projects') {
@@ -85,7 +90,8 @@ const Filestab = () => {
 
 
     const handleclose = (e : any) => {
-      console.log(tabs.length=== 1)
+      // console.log(e.target.parentElement)
+      // console.log(tabs.length=== 1)
     if(tabs.length === 1) {
        dispatch(RemoveTab(e.target.parentElement.attributes.id.value))
       navigate('/open')
@@ -97,13 +103,13 @@ const Filestab = () => {
   
   return (
     <>
-<div className='bg-drk01 sm:flex justify-start items-center overflow-auto hidden  '>
+<div className='bg-drk01 sm:flex justify-start items-center overflow-auto hidden scrollbar-hide '>
 
       {
         tabs?.map(tab => (returnElement(tab)))
       }
     </div>
-    <div className='bg-drk01 flex justify-start items-center overflow-auto sm:hidden  '>
+    <div className='bg-drk01 flex justify-start items-center overflow-auto sm:hidden scrollbar-hide '>
       <div className={`flex gap-2 justify-center items-center text-green-500 text-xs sm:text-sm border-gray-800 px-4 sm:px-6 cursor-pointer h-full border-1 hover:bg-drk00 ` + (location.pathname === '/home' ? 'bg-drk00' : 'bg-drk01')}>
         <p>
           <img src={ricon} alt="" width={18} height={18} />

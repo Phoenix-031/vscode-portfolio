@@ -79,7 +79,16 @@ const AddProjectModal : FC<ProjectProps> = (props) => {
   }
     
   return (
-    <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl border-gray-600 border-2 text-white font-urbanist w-[90%] sm:w-1/2 lg-[60%] h-[70%] overflow-y-auto left-5 sm:left-40 top-30 z-20 absolute flex justify-center items-baseline'
+    <div className='w-screen h-screen top-0 left-0 fixed flex justify-center items-center bg-blur/30 backdrop-blur-sm z-10 wrapper' 
+    id='wrapper'
+    onClick={(e : any) => {
+      // console.log(e.target.id)
+        if(e.target.id === 'wrapper'){
+          props.changeParentState()
+        }
+    }}
+    >
+    <motion.div className='scrollbar-hide bg-drk01 text-sm sm:text-lg rounded-2xl border-gray-600 border-2 text-white font-urbanist w-[90%] sm:w-1/2 lg-[60%] h-[70%] overflow-y-auto sm:left-40  flex justify-center items-baseline'
       initial={{opacity:0,translateX:-120,height:0}}
       animate = {{opacity:1,translateX:0,height:`${70}%`}}
       transition = {{
@@ -89,11 +98,12 @@ const AddProjectModal : FC<ProjectProps> = (props) => {
         stiffness:120,
       }}
       exit={{opacity:0,translateX:-120,height:0}}
+      id="not-wrapper"
       >
          <div className='max-h-max flex flex-col gap-6 justify-center items-center w-full px-10 py-3 mb-10 mt-5'>
-          <div className='w-full flex justify-end' onClick={() => props.changeParentState()}>
+          {/* <div className='w-full flex justify-end' onClick={() => props.changeParentState()}>
             <Cross width={25} height={25} />
-          </div>
+          </div> */}
           <div className='flex flex-col gap-2 justify-center items-center'>
             {/* <img src={} alt="" /> */}
             <input className='rounded-lg font-poppins text-sm sm:text-lg py-3 px-5 hidden' placeholder = 'Image' type="file" id='fileupload-btn'/>
@@ -137,6 +147,7 @@ const AddProjectModal : FC<ProjectProps> = (props) => {
           }
         </div>
       </motion.div>
+  </div>
   )
 }
 

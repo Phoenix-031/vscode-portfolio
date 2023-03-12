@@ -98,9 +98,9 @@ const Projects = () => {
     initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}
-    className="overflow-x-hidden h-full w-full bg-drk00"
+    className="overflow-x-hidden h-full w-full bg-drk00 scrollbar-hide"
     >
-      <motion.div className="w-full flex justify-start md:justify-center items-center py-2 px-3 gap-1 sm:gap-2 bg-drk00 overflow-auto ">
+      <motion.div className="w-full flex justify-start md:justify-center items-center py-2 px-3 gap-1 sm:gap-2 bg-drk00 overflow-auto scrollbar-hide ">
         <motion.span className='cursor-pointer text-xs lg:text-lg md:text-sm hover:bg-drk01 text-white font-varela border-white border-[1px] rounded-sm lg:rounded-lg hover:text-transparent hover:bg-clip-text hover:bg-bcol02 py-1 px-2 '
               initial={{opacity:0,translateY:-150}}
       animate={{opacity:1,translateY:0}}
@@ -148,7 +148,7 @@ const Projects = () => {
         >Applications</motion.span>
       </motion.div>
     
-    <div className=' row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-4 xl:gap-6  justify-center items-center pt-5 md:py-3 xl:py-5 sm:overflow-auto md:overflow-x-hidden'>
+    <div className=' row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-4 xl:gap-6  justify-center items-center pt-5 md:py-3 xl:py-5 sm:overflow-auto md:overflow-x-hidden scrollbar-hide'>
       {
         projects?.length > 0 && projects.map((p,ind) => (
           <Card cardinfo = {p} cardno = {ind} key={ind}/>

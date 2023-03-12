@@ -53,23 +53,33 @@ const Popup : FC<PopupProps> = (props) => {
     
   return (
 
-    <motion.div
-        initial={{ opacity: 0,translateY:-150 }}
-        animate={{ opacity: 1,translateY:0 }}
-        transition={{
-            duration: 0.5,
-            // ease: 'easeInOut',
-            type:'spring',
-            stiffness:100
-        }}
-        className="flex flex-col justify-center items-center gap-4 z-30 fixed top-20 w-full sm:max-w-max py-3 bg-drk00"
+    <div className='w-screen h-screen top-0 left-0 fixed flex justify-center items-center bg-blur/30 backdrop-blur-sm z-10'
+    id='wrapper'
+    onClick={(e : any) => {
+        if(e.target.id === 'wrapper') {
+            props.changeParentState()
+        }
+    }}
     >
-        <p className='text-white font-poppins'>Delete this entry?</p>
-        <div className='flex justify-center gap-16 items-center w-full'>
-            <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledelete}>Confirm</button>
-            <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledeny} >Deny</button>
-        </div>
-    </motion.div>
+        <motion.div
+            initial={{ opacity: 0,translateY:-150 }}
+            animate={{ opacity: 1,translateY:0 }}
+            transition={{
+                duration: 0.5,
+                // ease: 'easeInOut',
+                type:'spring',
+                stiffness:100
+            }}
+            className="flex flex-col justify-center items-center gap-4 sm:max-w-max py-3 bg-drk00 px-3 rounded-lg"
+            id='not-wrapper'
+        >
+            <p className='text-white font-poppins'>Delete this entry?</p>
+            <div className='flex justify-center gap-16 items-center w-full'>
+                <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledelete}>Confirm</button>
+                <button className='rounded-lg text-lg sm:text-xl bg-drk01 font-poppins py-3 px-5 font-normal text-white' onClick={handledeny} >Deny</button>
+            </div>
+        </motion.div>
+    </div>
 
   )
 }

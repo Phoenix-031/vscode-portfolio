@@ -39,7 +39,8 @@ module.exports = {
         'drk00':"#24292e",
         'gry01' : '#3a435b',
         'skin':"#f9826c",
-        'gr1' : '#52a911'
+        'gr1' : '#52a911',
+        "blur":"#101016",
       },
       gridTemplateColumns:{
          '32': 'repeat(32, minmax(0, 1fr))',

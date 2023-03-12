@@ -145,7 +145,17 @@ const Card :FC<CardProps> = (props) => {
    }
 
    {modal ? 
-      <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl text-white font-urbanist w-full sm:w-1/2 h-[70%] overflow-y-auto left-5 top-20 z-20 fixed flex justify-center items-baseline'
+   <div className='w-screen h-screen top-0 left-0 fixed flex justify-center items-center bg-blur/30 backdrop-blur-sm z-30'
+   id='wrapper'
+   onClick={(e : any) => {
+    // console.log(e.currentTarget.id)
+      if(e.target.id === 'wrapper'){
+        setModal(false)
+      }
+    }
+   }
+   >
+      <motion.div className='bg-drk01 text-sm sm:text-lg rounded-2xl text-white font-urbanist w-[95%] sm:w-1/2 h-[70%] overflow-y-auto flex justify-center items-baseline scrollbar-hide'
       initial={{opacity:0,translateY:-150}}
       animate = {{opacity:1,translateY:0}}
       transition = {{
@@ -202,6 +212,7 @@ const Card :FC<CardProps> = (props) => {
           }
         </div>
       </motion.div>
+   </div>
     : null}
    
  <motion.div className='border-1 border-gray-800 relative rounded-lg md:rounded-xl max-h-max bg-[#1d2128] px-1 sm:px-3 py-2 sm:py-3 text-white text-sm md:text-sm sm:text-lg font-urbanist w-full md:w-2/3 mobile-l:w-[90%] lg:w-[45%] xl:w-[30%] flex flex-col justify-start items-center gap-4 '
@@ -225,7 +236,7 @@ const Card :FC<CardProps> = (props) => {
         initial={{opacity: 0.8}}
         whileHover={{
           scale:1.05,
-          transition:{duration:0.5}
+          transition:{duration:0.1}
         }}
         exit={{opacity:1}}
         />
@@ -250,8 +261,8 @@ const Card :FC<CardProps> = (props) => {
         <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live} target='_blank' rel='noreferrer'>Live</a></p>
         {verified ? (
         <>
-        <div onClick={handleEditProject}><Edit width={25} height={25}/></div> 
-         <div onClick={handleDelete}><Bin /></div>
+        <div className='cursor-pointer' onClick={handleEditProject}><Edit width={25} height={25}/></div> 
+         <div className='cursor-pointer' onClick={handleDelete}><Bin /></div>
         </>
         )
         : null}

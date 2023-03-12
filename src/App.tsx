@@ -1,5 +1,5 @@
 import {useContext,FC} from 'react'
-import './dist/style.css'
+import './tailwindstyle/style.css'
 import { Routes,Route } from 'react-router-dom'
 import ProfileLogin from './pages/ProfileLogin'
 

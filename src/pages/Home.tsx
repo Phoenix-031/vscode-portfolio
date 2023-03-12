@@ -13,13 +13,13 @@ const Home = () => {
   
   return (
     <>
-<motion.div className=' bg-drk00 row-start-2 text-white text-sm md:text-xl font-poppins relative md:overflow-y-auto h-full'
+<motion.div className=' bg-drk00 row-start-2 text-white text-sm md:text-xl font-poppins relative md:overflow-y-auto h-full scrollbar-hide'
     initial={{opacity:0}}
     animate = {{opacity:1}}
     exit={{opacity:0}}
     >
 
-      <div className=' w-full h-full flex xl:flex-2 gap-3 xl:gap-5 justify-center items-center md:px-10 md:flex-col overflow-y-auto xl:flex-row py-5'>
+      <div className=' w-full h-full flex xl:flex-2 gap-3 xl:gap-5 justify-center items-center md:px-10 md:flex-col overflow-y-auto xl:flex-row py-5 scrollbar-hide'>
         <div className='xl:w-1/3 h-full flex flex-col justify-center items-center'>
 
         <span className='font-cursive1 text-xs sm:text-sm sm:top-0 sm:left-0 fixed sm:absolute left-16 top-16 md:hidden xl:visible xl:block'>&lt;html&gt;</span>

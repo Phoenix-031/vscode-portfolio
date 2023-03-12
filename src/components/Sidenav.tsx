@@ -127,7 +127,7 @@ const Sidenav = () => {
          </div>
          {user.User ? (
           <div className="flex flex-col gap-3 justify-center items-center">
-          <div onClick={handleAddProject} className='relative'><Plus width={20} height={20} /></div>
+          <div onClick={handleAddProject} className='relative cursor-pointer'><Plus width={20} height={20} /></div>
           {/* <div onClick={handleMessages}><Messages width={20} height={20} /></div> */}
           <Link to='/admin/contacts'><Messages width={20} height={20} /></Link>
           </div>

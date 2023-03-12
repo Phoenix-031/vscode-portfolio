@@ -70,13 +70,13 @@ const Githubview = () => {
     return (
       <>
       <motion.div 
-    className="h-full overflow-auto bg-drk00 flex-col w-full justify-center"
+    className="h-full overflow-auto bg-drk00 flex-col w-full justify-center scrollbar-hide"
       >
         <div className='row-start-2 bg-drk00 flex flex-col justify-center items-center gap-4 xl:gap-6 h-max'>
 
           <div className='flex justify-center items-center gap-4 sm:mt-8 py-4 w-full md:w-full lg:w-8/12 bg-drk01 flex-col lg:flex-row'>
             <div className='font-poppins text-lg sm:text-xl text-white flex gap-2 justify-center items-center '>
-              <div className='rounded-full sm:w-24 sm:h-24 md:h-20 md:w-20 w-12 h-12 object-contain overflow-auto  '>
+              <div className='rounded-full sm:w-24 sm:h-24 md:h-20 md:w-20 w-12 h-12 object-contain overflow-auto scrollbar-hide '>
                 <img src={info!.avatar_url} alt="" />
               </div>
               <p>{info!.login}</p>
