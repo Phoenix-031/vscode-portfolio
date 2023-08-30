@@ -92,7 +92,7 @@ const Projects = () => {
   if(isloading) {
     // return <Projectloading />
     return (
-      <div className=' row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-4 xl:gap-6  justify-center items-center pt-5 md:py-3 xl:py-5 sm:overflow-auto md:overflow-x-hidden scrollbar-hide'>
+      <div className='row-start-2 bg-drk00 flex flex-wrap w-full h-full gap-4 xl:gap-6 justify-center items-center pt-5 md:py-3 xl:py-5 sm:overflow-auto md:overflow-x-hidden scrollbar-hide'>
         {
           [1,2,3,4,5,6,7,8,9,10].map((item) => {
             return <ProjectSkeleton key={item} />
