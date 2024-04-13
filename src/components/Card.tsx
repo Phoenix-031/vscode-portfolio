@@ -9,10 +9,6 @@ import Cross from '../icons/Cross'
 import ModalLoader from './utils/ModalLoader'
 import Bin from '../icons/Bin'
 import { useEffect } from 'react'
-// eslint-disable-next-line no-unused-vars
-// import { verfiyAdmin } from '../api/user'
-// import { useContext } from 'react'
-// import { AdminContext } from '../context/AdminContext'
 import Popup from './Popup'
 import { VERIFY_ADMIN } from '../services/api-v2/Queries/adminQuery.graphql'
 import { UPDATE_PROJECT } from '../services/api-v2/Mutations/projectMutation.graphql'
@@ -56,7 +52,7 @@ const Card :FC<CardProps> = (props) => {
           setVerified(true)
     },
     onError: (error) => {
-      console.log(error)
+      // console.log(error)
       setVerified(false)
 
     }
@@ -215,7 +211,7 @@ const Card :FC<CardProps> = (props) => {
    </div>
     : null}
    
- <motion.div className='border-1 border-gray-800 relative rounded-lg md:rounded-xl max-h-max bg-[#1d2128] px-1 sm:px-3 py-2 sm:py-3 text-white text-sm md:text-sm sm:text-lg font-urbanist w-full md:w-2/3 mobile-l:w-[90%] lg:w-[45%] xl:w-[30%] flex flex-col justify-start items-center gap-4 '
+ <motion.div className='border-1 border-gray-800 relative rounded-lg md:rounded-xl h-[600px] bg-[#1d2128] sm:p-5 md:p-5 p-3 text-white text-sm md:text-sm sm:text-lg font-urbanist w-full md:w-2/3 mobile-l:w-[90%] lg:w-[45%] xl:w-[30%] flex flex-col justify-start items-center gap-4 '
     initial={{opacity:0,
       translateX: props.cardno % 2 ===0 ? -150 : 150
     }}
@@ -231,7 +227,7 @@ const Card :FC<CardProps> = (props) => {
      }}
 
      >
-      <div className='overflow-hidden h-52 rounded-lg w-full'>
+      <div className='overflow-hidden h-52 rounded-lg w-full flex-2'>
         <motion.img src={props.cardinfo.imgurl} alt="" className='border-gray-900 border-1 transition-all duration-75 ease-in hover:rotate-6 hover:scale-100'
         initial={{opacity: 0.8}}
         whileHover={{
@@ -241,24 +237,24 @@ const Card :FC<CardProps> = (props) => {
         exit={{opacity:1}}
         />
       </div> 
-      <div className='text-xl md:text-2xl font-Enriqueta'>
+      <div className='text-xl md:text-2xl font-Enriqueta flex-1 p-0'>
         {props.cardinfo.title}
       </div>
-      <p className='flex flex-wrap w-full overflow-hidden text-sm sm:text-lg  font-varela text-center '>
+      <p className='flex align-baseline flex-1 flex-wrap w-full overflow-hidden text-sm sm:text-lg  font-varela text-center'>
         {props.cardinfo.description}
       </p>
-      <div className='flex gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm  sm:text-lg font-semibold'>
+      <div className='flex flex-1 gap-1 sm:gap-2 justify-start items-center w-full flex-wrap text-sm  sm:text-lg font-semibold'>
         {
           props.cardinfo.tags && props.cardinfo.tags.map((tag,ind) => (
-            <div className={`rounded-lg  py-1px px-1px class-b-${ind%3}`}>
+            <div className={`rounded-lg  py-[1px] px-[1px] class-b-${ind%3}`}>
               <p className='bg-drk00 rounded-lg  py-2 px-2' key={ind}>{tag}</p>
             </div>
           )
           )
         }
       </div>
-      <div className='w-full flex justify-between items-center px-3'>
-        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live} target='_blank' rel='noreferrer'>Live</a></p>
+      <div className='w-full flex-1 flex justify-between items-end'>
+        <button className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.live} target='_blank' rel='noreferrer'>Live</a></button>
         {verified ? (
         <>
         <div className='cursor-pointer' onClick={handleEditProject}><Edit width={25} height={25}/></div> 
@@ -266,7 +262,7 @@ const Card :FC<CardProps> = (props) => {
         </>
         )
         : null}
-        <p className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.source} target='_blank' rel='noreferrer'>Source</a></p>
+        <button className='border-gray-500 border-2 rounded-lg font-semibold font-poppins md:rounded-xl px-4 py-2 sm:px-5 sm:py-3'><a href={props.cardinfo.source} target='_blank' rel='noreferrer'>Source</a></button>
       </div>
     </motion.div>
    </>
