@@ -227,8 +227,8 @@ const Card :FC<CardProps> = (props) => {
      }}
 
      >
-      <div className='overflow-hidden h-52 rounded-lg w-full flex-2'>
-        <motion.img src={props.cardinfo.imgurl} alt="" className='border-gray-900 border-1 transition-all duration-75 ease-in hover:rotate-6 hover:scale-100'
+      <div className='overflow-hidden h-52 rounded-lg w-full flex-2 flex justify-center items-center'>
+        <motion.img src={props.cardinfo.imgurl} alt="" className='transition-all duration-75 ease-in hover:rotate-6 hover:scale-100 object-cover h-full'
         initial={{opacity: 0.8}}
         whileHover={{
           scale:1.05,
